@@ -143,9 +143,9 @@ results = faq_store.similarity_search(query, k=3)
 
 ## Deployment Checklist
 
-* [ ] Prepare documents (CSV, JSON, text files)
-* [ ] Select appropriate `chunk_size` (test 500, 750, 1000)
-* [ ] Choose embedding model (English or multilingual)
-* [ ] Build and save FAISS index
-* [ ] Test retrieval with sample queries
-* [ ] Monitor and tune the `k` value for similarity search
+* Prepare documents (CSV, JSON, text files)
+* Select appropriate `chunk_size` (test 500, 750, 1000)
+* Choose embedding model (English or multilingual)
+* Build and save FAISS index
+* Test retrieval with sample queries
+* Monitor and tune the `k` value for similarity search

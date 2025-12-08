@@ -8,7 +8,8 @@ pre: " <b> 1.8. </b> "
 
 
 ### Week 8 Objectives:
-
+* Review of AWS Well-Architected Framework for OJT Midterm Exam
+  
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- | 
@@ -20,3 +21,4 @@ pre: " <b> 1.8. </b> "
 
 ### Week 8 Achievements:
 
+- Determine my knowledge level in the field of AWS Well-Architecture Framework

@@ -1,36 +1,50 @@
 ---
 title: "Sharing and Feedback"
-date: "2024-01-01"
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
-
 ### Overall Evaluation
 
 **1. Working Environment**  
-The working environment is very friendly and open. FCJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+
+- Professional, well-structured, and supportive; strong team spirit and high-quality learning materials.
 
 **2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+
+- Excellent mentorship availability and guidance; mentors and peers actively support mentees.
 
 **3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+
+- Highly relevant: hands-on tasks and workshops reinforced practical skills linked to academic learning.
 
 **4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+
+- Very strong — workshops (GameDays) and practical exercises accelerated applied learning.
 
 **5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+
+- Very positive; collaborative community and peer support are major strengths.
 
 **6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+
+- Adequate overall; recommend adding regular competency assessments and a mentor directory for better matching.
+
+---
+
+### Personal Sharing & Feedback 
+
+This internship gave me a completely new perspective and a breakthrough growth mindset. I was fortunate to learn and work alongside highly skilled colleagues and mentors, which raised my sense of responsibility to a level I had not experienced before. Team spirit is very strong — mentees actively support one another and mentors are always ready to help.
+
+I value this community not only for the rich technical knowledge it provides, but also for how it fosters a growth mindset. Workshops, GameDays, and discussion sessions sparked countless new ideas, clarified my career direction, and expanded my professional network with senior practitioners who served as great sources of motivation.
+
+The professional working environment, high-quality learning materials, and hands-on exercises built my resilience and the determination to persist through challenges. To further improve the experience for future mentees, I suggest:
+
+- Introduce more regular competency assessment rounds so mentees receive continuous feedback and a clearer development path.
+- Publish a mentor directory that lists each mentor's focus areas and strengths, making it easier for mentees to choose the right mentor for specific technical questions.
+
+These small changes will improve mentor–mentee matching and increase the practical impact of the program for all participants.
 
 ---
 
@@ -41,7 +55,19 @@ The company provides an internship allowance and offers flexible working hours w
 
 ---
 
+### Additional Questions (answers)
+
+- **Most satisfying:** Working with top-tier mentors and peers, gaining a growth mindset, and the hands-on workshops (GameDays) that sparked practical ideas.
+- **Should improve:** Add regular competency assessments and a mentor directory by specialization to help mentees choose appropriate support.
+- **Recommend to a friend?:** Yes. The program combines professional mentorship, practical materials, and strong team spirit — excellent for career direction and skill growth.
+
+---
+
 ### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+
+- **Suggestions:** Run periodic evaluation rounds (quarterly or per sprint) and publish a mentor skills directory (areas of focus, strengths).
+- **Continue program?:** Yes — I would like to remain involved and recommend expanding mentor–mentee matching features.
+- **Other comments:** The community culture is a major strength; invest further in small group coaching and structured feedback loops.
+
+---
+

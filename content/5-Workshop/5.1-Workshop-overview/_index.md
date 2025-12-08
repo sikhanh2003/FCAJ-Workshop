@@ -18,4 +18,4 @@ pre: " <b> 5.1. </b> "
 * **"Deploy AWS AgentCore"** — understand how to deploy AWS AgentCore.
 * **"Publish API"** — learn how to call AgentCore through an API.
 
-![overview](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+![overview](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.1-Workshop-overview/kientruc.png)

@@ -6,99 +6,97 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+# Summary Report: “Kick-off AWS FCJ Workforce - FPTU OJT FALL 2025"
+
 ### Event Objectives
 
-- Celebrate the students who successfully joined the **AWS First Cloud Journey – Training on the Job (OJT FALL 2025)** program
-- Mark the beginning of a structured learning journey and real-world cloud experience with **Amazon Web Services (AWS)**
-- Equip participants with hands-on skills in **Cloud, DevOps, Security, AI/ML, and Data & Analytics**
-- Connect students with the **AWS Study Group community (47,000+ members)** and AWS partner companies
-- Build a strong bridge between **knowledge – technology – career**, empowering a new generation of AWS Builders in Vietnam
+- Introduce students to the **AWS First Cloud Journey – Training on the Job (OJT FALL 2025)** program
+- Provide participants with a clear roadmap to develop real-world cloud skills through actual AWS environments
+- Inspire students to pursue careers in **Cloud, DevOps, AI/ML, and Data Engineering**
+- Strengthen the connection between learners, AWS experts, and partner companies in Vietnam
+- Foster a growing community of cloud builders who can continuously learn, experiment, and innovate
 
 ### Speakers
 
-- **Nguyen Tran Phuoc Bao** – Head of Corporate Relations, FPT University
-- **Nguyen Gia Hung** – Head of Solutions Architect, AWS Vietnam
-- **Do Huy Thang** – DevOps Lead, VNG
-- **Danh Hoang Hieu Nghi** – GenAI Engineer, Renova
-- **Bui Ho Linh Nhi** – AI Engineer, SoftwareOne
-- **Pham Nguyen Hai Anh** – Cloud Engineer, G-Asia Pacific
-- **Nguyen Dong Thanh Hiep** – Principal Cloud Engineer, G-Asia Pacific
+- **Nguyen Tran Phuoc Bao** – Head of Corporate Relations, FPT University  
+- **Nguyen Gia Hung** – Head of Solutions Architect, AWS Vietnam  
+- **Do Huy Thang** – DevOps Lead, VNG  
+- **Danh Hoang Hieu Nghi** – GenAI Engineer, Renova  
+- **Bui Ho Linh Nhi** – AI Engineer, SoftwareOne  
+- **Pham Nguyen Hai Anh** – Cloud Engineer, G-Asia Pacific  
+- **Nguyen Dong Thanh Hiep** – Principal Cloud Engineer, G-Asia Pacific  
 
 ### Key Highlights
 
 #### Launching the AWS First Cloud Journey Workforce Program
 
-The first time I have seen such amazing people doing amazing activities in AWS HCMC. It's such an amazing thing that I have ever witnessed.
+Although this was not my first tech event, it was one of the few that truly gave me a sense of direction. Seeing more than 150 students gathered with the same goal — stepping into the AWS ecosystem — made the atmosphere extremely energetic.
 
-The event marked the **official kickoff** for more than 150 students in the OJT Fall 2025 cohort.  
-Since its inception in 2021, the AWS First Cloud Journey has supported **2,000+ students**, with many alumni now working at leading technology companies in Vietnam and abroad.
+The kickoff highlighted the growth of the AWS First Cloud Journey, which since 2021 has supported **2,000+ students**, many of whom now contribute to large-scale systems and cloud infrastructures across Vietnam.
 
-Throughout the kickoff, speakers shared insights on:
+Speakers delivered invaluable insights on:
 
-- The future of **Cloud Computing** in Vietnam
-- Career pathways in **DevOps, Cloud, and AI/ML**
-- Workforce trends and market demands in the coming years
+- Cloud adoption and the future demand for skilled cloud practitioners in Vietnam  
+- Real responsibilities of Cloud Engineers, DevOps Engineers, and AI/ML Engineers  
+- Skills companies value most when hiring students or fresh graduates  
 
 #### Event Agenda Overview
 
-- **8:30 – 9:00** | Check-in, Networking & Group Photos
-- **9:00 – 9:15** | Opening remarks from FPT University
-- **9:15 – 9:40** | _AWS First Cloud Journey & Future Direction_ – Nguyen Gia Hung
-- **9:40 – 10:05** | _DevOps & Career Opportunities_ – Do Huy Thang
-- **10:05 – 10:20** | Tea Break & Networking
-- **10:20 – 10:40** | _From FCJ to GenAI Engineer_ – Danh Hoang Hieu Nghi
-- **10:40 – 11:00** | _She in Tech – The FCJ Journey_ – Bui Ho Linh Nhi
-- **11:00 – 11:20** | _A Day in the Life of a Cloud Engineer_ – Pham Nguyen Hai Anh
-- **11:20 – 11:40** | _Becoming a Cloud Engineer_ – Nguyen Dong Thanh Hiep
-- **11:40 – 12:00** | Q&A Session & Final Group Photos
+- **8:30 – 9:00** | Check-in & Welcome Activities  
+- **9:00 – 9:15** | Opening Speech – FPT University  
+- **9:15 – 9:40** | _AWS First Cloud Journey – Vision & Impact_  
+- **9:40 – 10:05** | _DevOps in Real Projects_ – Do Huy Thang  
+- **10:05 – 10:20** | Tea Break  
+- **10:20 – 10:40** | _Transitioning from FCJ to GenAI Engineer_ – Danh Hoang Hieu Nghi  
+- **10:40 – 11:00** | _Women in Tech – Personal Journey_ – Bui Ho Linh Nhi  
+- **11:00 – 11:20** | _Cloud Engineer Daily Workflow_ – Pham Nguyen Hai Anh  
+- **11:20 – 11:40** | _Becoming a Professional Cloud Engineer_ – Nguyen Dong Thanh Hiep  
+- **11:40 – 12:00** | Q&A and Group Photos  
 
 ### Key Takeaways
 
-#### Career Insights & Development Strategy
+#### Career Insights & Growth Direction
 
-- **Cloud and DevOps** remain among the most in-demand technology fields
-- Speakers emphasized essential skills:
-  - Cloud fundamentals (IAM, VPC, Compute, Storage…)
-  - CI/CD & DevOps mindset
-  - Analytical thinking and problem-solving
-- A recommended learning path for students:
-  **Cloud Foundation → Hands-on Projects → DevOps Tools → Specialization (AI/ML, Security, Data)**
+- Cloud Engineering and DevOps remain core skillsets that companies actively invest in  
+- Foundational AWS services like IAM, EC2, S3, Lambda, and VPC are crucial stepping stones  
+- The ideal learning progression involves:  
+  **Core AWS Skills → Hands-on Labs → DevOps Practices → Specialized Domains (AI/ML, Security, Data)**  
 
 #### Industry & Alumni Perspectives
 
-- AWS reaffirmed its mission to **build the next generation of AWS Builders in Vietnam**
-- Tech companies highlighted hiring needs in:
-  - Cloud Engineering
-  - DevOps Engineering
-  - AI/ML Engineering
-  - Data Engineering
-- Alumni shared how self-learning, hands-on practice, and community engagement shaped their success.
+- Speakers emphasized that the cloud industry is shifting from **theoretical knowledge** to **practical, outcome-based skills**
+- Alumni stories illustrated how dedication, curiosity, and consistent practice can compensate for lack of experience
+- Hiring needs continue to expand in:
+  - Cloud Engineering  
+  - DevOps Automation  
+  - AI/ML Solutions  
+  - Data Pipelines & Analytics  
 
 ### Applying to Work
 
-- Start building **AWS fundamentals**: IAM, EC2, S3, VPC
-- Begin practicing with **DevOps tools**: Git, Docker, CI/CD (GitHub Actions)
-- Develop **mini-projects** and write technical documentation
-- Join **AWS Study Group events, workshops, and mentoring sessions**
-- Gradually explore advanced topics: Serverless, Containers, IaC, AI/ML
+- Begin with mastering core AWS services and understanding how they interact  
+- Use version control and basic DevOps tools for personal projects  
+- Build small cloud-based apps and document solutions  
+- Participate in workshops, hackathons, and AWS Study Group activities  
+- Gradually explore complex topics such as infrastructure-as-code, serverless architecture, and observability  
 
 ### Event Experience
 
-As an intern of the **AWS FCJ HCMC Team**, attending the Kick-off AWS First Cloud Journey Workforce OJT FALL 2025 was an inspiring and motivating experience.
+Attending the AWS FCJ OJT FALL 2025 Kick-off was an insightful and refreshing experience for me as a participant.  
+Unlike previous events I joined, this one focused heavily on **practical skill-building** and **realistic career expectations**, which I personally appreciated.
 
-#### What I learned from the event
+#### What I Learned from the Event
 
-- A clearer understanding of the Cloud & DevOps career landscape in Vietnam
-- Valuable inspiration from FCJ alumni who have successfully built their careers
-- Essential mindsets emphasized throughout the event:
-  - Self-learning
-  - Experimentation
-  - Embracing challenges
-- The importance of **networking** and staying connected with peers and mentors
+- A clearer understanding of how cloud roles operate in real environments  
+- The importance of continuous experimentation, even when failing  
+- The mindset that learning cloud is not just about tools — it’s about thinking systematically  
+- Motivation from alumni who started exactly where I am today  
 
 #### Networking & Community
 
-- Met mentors, speakers, AWS specialists, and engineers working in cloud, DevOps, and AI
-- Built a strong network with teammates and fellow FCJ participants
+- Connected with AWS experts, engineers, and FCJ mentors  
+- Expanded my network with peers who share the same passion for cloud  
+- Learned how valuable community-driven learning can be  
 
-> The kickoff event not only provided career insights and technical direction, but also fueled my motivation to begin my journey toward becoming an **AWS Builder**.
+> The kickoff event gave me both the clarity and motivation I needed to begin my journey as a future **AWS Builder**. It was not only a launchpad for the program but also a personal push to commit fully to the world of cloud computing.
+

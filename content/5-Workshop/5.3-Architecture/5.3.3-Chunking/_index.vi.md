@@ -135,10 +135,10 @@ results = faq_store.similarity_search(query, k=3)
 
 ## Checklist Triển khai
 
-- [ ] Chuẩn bị documents (CSV, JSON, text files)
-- [ ] Chọn chunk_size phù hợp (test với 500, 750, 1000)
-- [ ] Chọn embedding model (tiếng Anh hoặc đa ngôn ngữ)
-- [ ] Tạo và lưu FAISS index
-- [ ] Test retrieval với các query mẫu
-- [ ] Monitor và điều chỉnh k value
+- Chuẩn bị documents (CSV, JSON, text files)
+- Chọn chunk_size phù hợp (test với 500, 750, 1000)
+- Chọn embedding model (tiếng Anh hoặc đa ngôn ngữ)
+- Tạo và lưu FAISS index
+- Test retrieval với các query mẫu
+- Monitor và điều chỉnh k value
 

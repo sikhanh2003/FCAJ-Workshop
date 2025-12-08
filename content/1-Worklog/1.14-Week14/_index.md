@@ -5,26 +5,37 @@ weight: 14
 chapter: false
 pre: " <b> 1.14. </b> "
 ---
-{{% notice warning %}} 
+<!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
-### Week 12 Objectives:
+### Week 14 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Test and finalize Project 1 production deployment.
+* Submit Project 1 and internship report.
+* Continue improving Project 1 and review AWS knowledge for OJT Final Interview.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   |                                                                                                     | 24/11/2025 | 24/11/2025      | |
-| 3   |                                                     | 25/11/2025 | 25/11/2025      |  |
-| 4   |  | 26/11/2025 | 26/11/2025      |  |
-| 5   |                             | 27/11/2025 | 27/11/2025      | |
-| 6   |                                                                                          | 28/11/2025 | 28/11/2025      |  |
-| 7   | | 29/11/2025 | 29/11/2025 | |
+| 2   |  - **Project 1**: Test production on the deployment environment and fix if any issue                                                                                                   | 08/12/2025 | 08/12/2025      | |
+| 3   |  - **Project 1**: Submit the Project 1 <br> - Submit the Internship Report                                                   | 09/12/2025 | 09/12/2025      |  |
+| 4   |  - Continue improve the Project 1 and Review the AWS knownledge for the OJT Final Interview | 10/12/2025 | 10/12/2025      |  |
+| 5   |  - Continue improve the Project 1 and Review for AWS knownledge the OJT Final Interview                           | 11/12/2025 | 11/12/2025      | |
+| 6   |  - Continue improve the Project 1 and Review for AWS knownledge the OJT Final Interview                                                                                        | 12/12/2025 | 12/12/2025      |  |
 
 
-### Week 12 Achievements:
+### Week 14 Achievements:
 
+* Tested Project 1 production deployment and fixed any issues.
+
+* Submitted Project 1 deliverables.
+
+* Submitted internship report.
+
+* Continued improving Project 1 features and functionality.
+
+* Reviewed AWS knowledge areas for OJT Final Interview preparation.
+
+* Enhanced overall readiness for project handover and interview.

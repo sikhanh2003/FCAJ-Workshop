@@ -18,4 +18,4 @@ pre : " <b> 5.1. </b> "
 + **"Deploy Aws Agent Core"** tim hiểu cách mà triển khai được Aws Agent Core
 + **"Triển khai API"** cách gọi Agent Core thông qua API
 + 
-![overview](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+![overview](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.1-Workshop-overview/kientruc.png)
