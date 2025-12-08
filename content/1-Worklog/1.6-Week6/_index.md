@@ -22,10 +22,10 @@ pre: " <b> 1.6. </b> "
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
 | 2   | - Learn about Blockchain <br> - Learn about Web3/ Web2 to Web3 <br> - Learn about dApps <br> - Research about products based on Blockchain and built on/ using AWS Service                                                                                                   | 13/10/2025 | 13/10/2025      | <https://www.hackquest.io/quest> |
 | 3   | - Use Axios to replace Fetch in Project 1 <br> - Learn about Move (Web3 Language) <br> - Continue completing Proposal for Project 1                                                    | 14/10/2025 | 14/10/2025      |  |
-| 4   | - Explore & research VPBank Hackathon's challenges <br> - Learn about Move (Web3 Language) <br> - Learn about smart contract <br> - Continue completing Proposal for Project 1 <br>| 15/10/2025 | 15/10/2025      |  |
-| 5   | - Explore & research VPBank Hackathon's challenges <br> - Learn about Move (Web3 Language) <br> - Learn about smart contract <br> - Continue completing Proposal for Project 1 <br> -                        | 16/10/2025 | 16/10/2025      |  |
-| 6   | - Explore & research VPBank Hackathon's challenges - Learn about Move (Web3 Language) <br> - Learn about smart contract <br> - Continue completing Proposal for Project 1                       | 17/10/2025 | 17/10/2025      |  |
-
+| 4   | - Explore & research VPBank Hackathon's challenges <br> - Learn about Move (Web3 Language) <br> - Learn about smart contract <br> - Continue completing Proposal for Project 1 <br>| 15/10/2025 | 15/10/2025      | https://www.vpbank.com.vn/tin-tuc/thong-cao-bao-chi/2025/khoi-dong-vpbank-technology-hackathon-2025-senior-track-co-hoi-gia-nhap-doi-ngu-cong-nghe-vpbank |
+| 5   | - Event: **DX<inAction> Talk #7: Reinventing DevSecOps with AWS Generative AI** <br> - Write Event Reacap <br> - Explore & research VPBank Hackathon's challenges <br> - Learn about Move (Web3 Language) <br> - Learn about smart contract <br> - Continue completing Proposal for Project 1 <br>                       | 16/10/2025 | 16/10/2025      |  |
+| 6   | - Explore & research VPBank Hackathon's challenges <br> - Learn about Move (Web3 Language) <br> - Learn about smart contract <br> - Continue completing Proposal for Project 1                       | 17/10/2025 | 17/10/2025      |  |
+| 7   | - Event: **KICK - OFF VPBANK TECHNOLOGY HACKATHON 2025** | 18/10/2025 | 19/10/2025| |
 
 ### Week 6 Achievements:
 

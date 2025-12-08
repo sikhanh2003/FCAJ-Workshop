@@ -1,116 +1,104 @@
 ---
 title: "Event 1"
-date: "2025-09-18"
+date: "2025-09-06"
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-<!-- {{% notice warning %}} 
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}} -->
-
-# Summary Report: AWS Cloud Day 2025
-
 ### Event Objectives
 
-- Showcase AI and cloud adoption strategies for Vietnamese enterprises.
-- Share best practices for cloud migration and modernization.
-- Explore Generative AI and Blockchain integration with AWS services.
-- Explore AWS security at scale
+- Celebrate the students who successfully joined the **AWS First Cloud Journey – Training on the Job (OJT FALL 2025)** program
+- Mark the beginning of a structured learning journey and real-world cloud experience with **Amazon Web Services (AWS)**
+- Equip participants with hands-on skills in **Cloud, DevOps, Security, AI/ML, and Data & Analytics**
+- Connect students with the **AWS Study Group community (47,000+ members)** and AWS partner companies
+- Build a strong bridge between **knowledge – technology – career**, empowering a new generation of AWS Builders in Vietnam
 
 ### Speakers
 
-- **H.E. Pham Duc Long** – Vice Minister of Science and Technology, Vietnam
-- **H.E. Marc E. Knapper** – US Ambassador to Vietnam
-- **Eric Yeo** – Country General Manager, AWS Vietnam
-- **Trang Phung** – CEO, U2U Network
-- **Hieu Hoang** – Senior Manager, Solutions Architecture, AWS
-
-### Role 
-- **Role in the event:** Attendee
+- **Nguyen Tran Phuoc Bao** – Head of Corporate Relations, FPT University
+- **Nguyen Gia Hung** – Head of Solutions Architect, AWS Vietnam
+- **Do Huy Thang** – DevOps Lead, VNG
+- **Danh Hoang Hieu Nghi** – GenAI Engineer, Renova
+- **Bui Ho Linh Nhi** – AI Engineer, SoftwareOne
+- **Pham Nguyen Hai Anh** – Cloud Engineer, G-Asia Pacific
+- **Nguyen Dong Thanh Hiep** – Principal Cloud Engineer, G-Asia Pacific
 
 ### Key Highlights
 
-#### AI & Cloud in Vietnamese Enterprises
+#### Launching the AWS First Cloud Journey Workforce Program
 
-- Vietnamese businesses face challenges in scaling due to legacy systems.
-- Cloud adoption drives efficiency in media and telecom sectors.
-- AWS services like serverless computing enhance application resilience.
+The first time I have seen such amazing people doing amazing activities in AWS HCMC. It's such an amazing thing that I have ever witnessed.
 
-#### Migration & Modernization
+The event marked the **official kickoff** for more than 150 students in the OJT Fall 2025 cohort.  
+Since its inception in 2021, the AWS First Cloud Journey has supported **2,000+ students**, with many alumni now working at leading technology companies in Vietnam and abroad.
 
-- Legacy system overhauls require phased migration strategies.
-- Containerization and automation improve scalability.
-- Security compliance is critical during cloud transitions.
+Throughout the kickoff, speakers shared insights on:
 
-#### GenAI & Blockchain
+- The future of **Cloud Computing** in Vietnam
+- Career pathways in **DevOps, Cloud, and AI/ML**
+- Workforce trends and market demands in the coming years
 
-- Generative AI (via Amazon Bedrock) powers scalable AI solutions.
-- Blockchain intersects with AI for secure, decentralized applications.
-- Web3 innovations enable new business models in Vietnam.
-  
-### AWS Security
-- AWS provides robust security frameworks for enterprises.
-  
+#### Event Agenda Overview
+
+- **8:30 – 9:00** | Check-in, Networking & Group Photos
+- **9:00 – 9:15** | Opening remarks from FPT University
+- **9:15 – 9:40** | _AWS First Cloud Journey & Future Direction_ – Nguyen Gia Hung
+- **9:40 – 10:05** | _DevOps & Career Opportunities_ – Do Huy Thang
+- **10:05 – 10:20** | Tea Break & Networking
+- **10:20 – 10:40** | _From FCJ to GenAI Engineer_ – Danh Hoang Hieu Nghi
+- **10:40 – 11:00** | _She in Tech – The FCJ Journey_ – Bui Ho Linh Nhi
+- **11:00 – 11:20** | _A Day in the Life of a Cloud Engineer_ – Pham Nguyen Hai Anh
+- **11:20 – 11:40** | _Becoming a Cloud Engineer_ – Nguyen Dong Thanh Hiep
+- **11:40 – 12:00** | Q&A Session & Final Group Photos
+
 ### Key Takeaways
 
-#### Design Mindset
+#### Career Insights & Development Strategy
 
-- **Business-first approach**: Prioritize business needs over technology.
-- **Cross-industry collaboration**: Align tech solutions with enterprise goals.
-- **Scalable architectures**: Use cloud to support growing business demands.
+- **Cloud and DevOps** remain among the most in-demand technology fields
+- Speakers emphasized essential skills:
+  - Cloud fundamentals (IAM, VPC, Compute, Storage…)
+  - CI/CD & DevOps mindset
+  - Analytical thinking and problem-solving
+- A recommended learning path for students:
+  **Cloud Foundation → Hands-on Projects → DevOps Tools → Specialization (AI/ML, Security, Data)**
 
-#### Technical Architecture
+#### Industry & Alumni Perspectives
 
-- **Serverless adoption**: Leverage AWS Lambda for cost-efficient scaling.
-- **AI-driven solutions**: Use Amazon Bedrock for GenAI applications.
-- **Blockchain integration**: Combine AWS services with decentralized tech.
-
-#### Modernization Strategy
-
-- **Phased migration**: Follow structured roadmaps for cloud transitions.
-- **Security focus**: Ensure compliance during modernization.
-- **Cost optimization**: Use AWS tools for efficient resource management.
+- AWS reaffirmed its mission to **build the next generation of AWS Builders in Vietnam**
+- Tech companies highlighted hiring needs in:
+  - Cloud Engineering
+  - DevOps Engineering
+  - AI/ML Engineering
+  - Data Engineering
+- Alumni shared how self-learning, hands-on practice, and community engagement shaped their success.
 
 ### Applying to Work
 
-- **Integrate GenAI**: Apply Amazon Bedrock to enhance FCJ's Projects with AI features.
-- **Adopt serverless**: Use AWS Lambda for scalable components in projects.
-- **Explore Blockchain**: Incorporate AWS Blockchain services into FCJ's Projects.
-- **Optimize migrations**: Apply phased approaches to team projects.
-- **Enhance collaboration**: Use insights to align tech and business teams.
+- Start building **AWS fundamentals**: IAM, EC2, S3, VPC
+- Begin practicing with **DevOps tools**: Git, Docker, CI/CD (GitHub Actions)
+- Develop **mini-projects** and write technical documentation
+- Join **AWS Study Group events, workshops, and mentoring sessions**
+- Gradually explore advanced topics: Serverless, Containers, IaC, AI/ML
 
 ### Event Experience
 
-Attending **AWS Cloud Day 2025** was highly valuable, offering deep insights into AI, cloud, and emerging technologies. Key experiences included:
+As an intern of the **AWS FCJ HCMC Team**, attending the Kick-off AWS First Cloud Journey Workforce OJT FALL 2025 was an inspiring and motivating experience.
 
-#### Learning from highly skilled speakers
-- AWS leaders and industry experts shared strategies for cloud adoption.
-- Real-world case studies from VTV Digital and Mobifone clarified practical applications.
+#### What I learned from the event
 
-#### Hands-on technical exposure
-- Participated in Generative AI GameDay, practicing AI model deployment.
-- Explored demos on containerization and serverless architectures.
-- Learned migration techniques through customer success stories.
+- A clearer understanding of the Cloud & DevOps career landscape in Vietnam
+- Valuable inspiration from FCJ alumni who have successfully built their careers
+- Essential mindsets emphasized throughout the event:
+  - Self-learning
+  - Experimentation
+  - Embracing challenges
+- The importance of **networking** and staying connected with peers and mentors
 
-#### Leveraging modern tools
-- Gained familiarity with Amazon Bedrock for AI-driven development.
-- Explored AWS tools for secure Blockchain integration.
-- Understood cost management via AWS Budgets and Pricing Calculator.
+#### Networking & Community
 
-#### Networking and discussions
-- Engaged with peers and experts, enhancing cross-team communication skills.
-- Exchanged ideas in the Startup Loft, sparking inspiration for FCJ's Projects.
+- Met mentors, speakers, AWS specialists, and engineers working in cloud, DevOps, and AI
+- Built a strong network with teammates and fellow FCJ participants
 
-#### Lessons learned
-- AI and cloud adoption require a business-first mindset for success.
-- Phased modernization ensures secure and scalable transitions.
-- Blockchain and Web3 offer innovative opportunities when paired with AWS.
-
-#### Some event photos
-![Event photo](/AWS-FCJ-Workshop-2025/images/photo1.jpg)
-![Event photo](/AWS-FCJ-Workshop-2025/images/photo5.jpg)
-![Event photo](/AWS-FCJ-Workshop-2025/images/photo6.jpg)
-
-> Overall, AWS Cloud Day 2025 enriched my technical knowledge and reshaped my approach to cloud engineering, equipping me with practical skills and inspiration for my internship projects and team contributions.
+> The kickoff event not only provided career insights and technical direction, but also fueled my motivation to begin my journey toward becoming an **AWS Builder**.

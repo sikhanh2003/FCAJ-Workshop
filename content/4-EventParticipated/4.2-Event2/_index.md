@@ -1,116 +1,112 @@
 ---
 title: "Event 2"
-date: "2025-10-03"
+date: "2025-09-19"
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-<!-- {{% notice warning %}} 
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}} -->
-
-# Summary Report: “AI-Driven Development Life Cycle: Reimagining Software Engineering”
+# Summary Report: AWS Cloud Day 2025
 
 ### Event Objectives
 
-- Introduce the transformative impact of generative AI on software development.
-- Demonstrate AI-driven tools like Amazon Q Developer and Kiro for the development lifecycle.
-- Explore automation of repetitive tasks to boost developer productivity.
-- Highlight best practices for integrating AI into architecture, development, testing, deployment, and maintenance.
+- Showcase AI and cloud adoption strategies for Vietnamese enterprises.
+- Share best practices for cloud migration and modernization.
+- Explore Generative AI and Blockchain integration with AWS services.
+- Explore AWS security at scale
 
 ### Speakers
 
-- **Toan Huynh** – Instructor, AWS GenAI Specialist
-- **My Nguyen** – Instructor, AI Development Expert
-- **Diem My** – Coordinator, AWS Event Team
-- **Dai Truong** – Coordinator, AWS Event Team
-- **Dinh Nguyen** – Coordinator, AWS Event Team
+- **H.E. Pham Duc Long** – Vice Minister of Science and Technology, Vietnam
+- **H.E. Marc E. Knapper** – US Ambassador to Vietnam
+- **Eric Yeo** – Country General Manager, AWS Vietnam
+- **Trang Phung** – CEO, U2U Network
+- **Hieu Hoang** – Senior Manager, Solutions Architecture, AWS
+
+### Role 
+- **Role in the event:** Attendee
 
 ### Key Highlights
 
-#### Impact of Generative AI on Software Development
+#### AI & Cloud in Vietnamese Enterprises
 
-- Generative AI streamlines the software development lifecycle (SDLC).
-- Automates repetitive tasks, reducing manual effort.
-- Enhances focus on creative, high-value development tasks.
+- Vietnamese businesses face challenges in scaling due to legacy systems.
+- Cloud adoption drives efficiency in media and telecom sectors.
+- AWS services like serverless computing enhance application resilience.
 
-#### Amazon Q Developer Demonstration
+#### Migration & Modernization
 
-- Supports end-to-end SDLC: planning, coding, testing, deployment, and maintenance.
-- Automates code generation, debugging, and optimization.
-- Integrates with IDEs to improve developer efficiency.
+- Legacy system overhauls require phased migration strategies.
+- Containerization and automation improve scalability.
+- Security compliance is critical during cloud transitions.
 
-#### Kiro Demonstration
+#### GenAI & Blockchain
 
-- Showcases AI-driven tools for rapid prototyping and deployment.
-- Enables seamless integration with AWS services.
-- Simplifies complex workflows through AI assistance.
-
-#### Practical Applications of AI-Driven Development
-
-- AI reduces time spent on undifferentiated tasks.
-- Improves code quality and accelerates delivery timelines.
-- Supports secure and scalable application management.
-
+- Generative AI (via Amazon Bedrock) powers scalable AI solutions.
+- Blockchain intersects with AI for secure, decentralized applications.
+- Web3 innovations enable new business models in Vietnam.
+  
+### AWS Security
+- AWS provides robust security frameworks for enterprises.
+  
 ### Key Takeaways
 
 #### Design Mindset
 
-- **AI-first approach**: Prioritize AI tools to enhance development workflows.
-- **Developer empowerment**: Focus on creative tasks by automating routine work.
-- **Collaborative tools**: Align technical and business goals using AI insights.
+- **Business-first approach**: Prioritize business needs over technology.
+- **Cross-industry collaboration**: Align tech solutions with enterprise goals.
+- **Scalable architectures**: Use cloud to support growing business demands.
 
 #### Technical Architecture
 
-- **AI automation**: Use Amazon Q Developer for code generation and debugging.
-- **Prototyping efficiency**: Leverage Kiro for rapid application development.
-- **AWS integration**: Combine AI tools with services like Lambda and S3 for scalability.
+- **Serverless adoption**: Leverage AWS Lambda for cost-efficient scaling.
+- **AI-driven solutions**: Use Amazon Bedrock for GenAI applications.
+- **Blockchain integration**: Combine AWS services with decentralized tech.
 
-#### Development Strategy
+#### Modernization Strategy
 
-- **Streamlined SDLC**: Automate repetitive tasks across development stages.
-- **Iterative improvement**: Use AI to refine code quality and performance.
-- **Secure workflows**: Ensure compliance and security with AI-driven monitoring.
+- **Phased migration**: Follow structured roadmaps for cloud transitions.
+- **Security focus**: Ensure compliance during modernization.
+- **Cost optimization**: Use AWS tools for efficient resource management.
 
 ### Applying to Work
 
-- **Integrate Amazon Q Developer**: Use in FCJ's Projects for automated coding and debugging.
-- **Pilot Kiro**: Experiment with rapid prototyping for faster MVP delivery.
-- **Automate workflows**: Apply AI tools to streamline testing and deployment in team projects.
-- **Enhance productivity**: Shift focus to creative tasks by reducing manual coding.
-- **Improve collaboration**: Use AI insights to align with business team requirements.
+- **Integrate GenAI**: Apply Amazon Bedrock to enhance FCJ's Projects with AI features.
+- **Adopt serverless**: Use AWS Lambda for scalable components in projects.
+- **Explore Blockchain**: Incorporate AWS Blockchain services into FCJ's Projects.
+- **Optimize migrations**: Apply phased approaches to team projects.
+- **Enhance collaboration**: Use insights to align tech and business teams.
 
 ### Event Experience
 
-Attending the **“AI-Driven Development Life Cycle: Reimagining Software Engineering”** workshop on October 3, 2025, at AWS Event Hall, L26 Bitexco Tower, Ho Chi Minh City, was an enriching experience as an attendee. Key experiences included:
+Attending **AWS Cloud Day 2025** was highly valuable, offering deep insights into AI, cloud, and emerging technologies. Key experiences included:
 
 #### Learning from highly skilled speakers
-- Toan Huynh’s demo of Amazon Q Developer showcased practical SDLC automation.
-- My Nguyen’s Kiro demonstration highlighted rapid prototyping capabilities.
+- AWS leaders and industry experts shared strategies for cloud adoption.
+- Real-world case studies from VTV Digital and Mobifone clarified practical applications.
 
 #### Hands-on technical exposure
-- Observed live demos of AI-driven coding and debugging with Amazon Q Developer.
-- Learned Kiro’s role in simplifying complex development workflows.
-- Understood how AI tools integrate with AWS services for seamless deployment.
+- Participated in Generative AI GameDay, practicing AI model deployment.
+- Explored demos on containerization and serverless architectures.
+- Learned migration techniques through customer success stories.
 
 #### Leveraging modern tools
-- Explored Amazon Q Developer for automating repetitive development tasks.
-- Gained insights into Kiro’s potential for building scalable applications.
-- Learned to use AI for secure and efficient application management.
+- Gained familiarity with Amazon Bedrock for AI-driven development.
+- Explored AWS tools for secure Blockchain integration.
+- Understood cost management via AWS Budgets and Pricing Calculator.
 
 #### Networking and discussions
-- Engaged with instructors and coordinators, exchanging ideas on AI-driven development.
-- Connected with peers, fostering collaboration for future AWS projects.
+- Engaged with peers and experts, enhancing cross-team communication skills.
+- Exchanged ideas in the Startup Loft, sparking inspiration for FCJ's Projects.
 
 #### Lessons learned
-- AI tools significantly boost productivity by automating routine tasks.
-- Integrating AI into SDLC improves code quality and delivery speed.
-- Collaboration between developers and AI tools enhances project outcomes.
+- AI and cloud adoption require a business-first mindset for success.
+- Phased modernization ensures secure and scalable transitions.
+- Blockchain and Web3 offer innovative opportunities when paired with AWS.
 
 #### Some event photos
-![Event photo](/AWS-FCJ-Workshop-2025/images/photo2.jpg)
-![Event photo](/AWS-FCJ-Workshop-2025/images/photo3.jpg)
-![Event photo](/AWS-FCJ-Workshop-2025/images/photo4.jpg)
+![Event photo](/AWS-FCJ-Workshop-2025/images/photo1.jpg)
+![Event photo](/AWS-FCJ-Workshop-2025/images/photo5.jpg)
+![Event photo](/AWS-FCJ-Workshop-2025/images/photo6.jpg)
 
-> Overall, the workshop provided practical knowledge on AI-driven development, equipping me with skills to integrate tools like Amazon Q Developer and Kiro into my internship projects, enhancing productivity and collaboration.
+> Overall, AWS Cloud Day 2025 enriched my technical knowledge and reshaped my approach to cloud engineering, equipping me with practical skills and inspiration for my internship projects and team contributions.
