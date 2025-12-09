@@ -1,178 +1,193 @@
 ---
-
 title: "Proposal"
-date: "2024-01-01"
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
---------------------
-
-# APT Magic
-
-## A Serverless AI Platform for Image Generation and Social Interaction
-
 ---
 
-### 1. Executive Summary
+# APT Magic  
+## A Serverless AI Platform for Personalized Image Generation and Social Interaction
 
-**APT Magic** is a serverless AI-powered web application designed to enable users to generate, personalize, and share artistic content such as AI-generated images. The platform integrates with AI foundation models via **Amazon Bedrock** (Claude Haiku 3 and Stability AI) and provides a seamless web experience using **Next.js (SSR)** hosted on **AWS Amplify**.
+### 1. Executive Summary
+**APT Magic** is a serverless AI-powered web application designed to enable users to generate, personalize, and share artistic content such as AI-generated images. The platform integrates with AI foundation models via **Amazon Bedrock** and provides a seamless web experience using **Next.js (SSR)** hosted on **AWS Amplify**.  
 
 The MVP version focuses on real-time image generation and sharing, while the **Future Design** aims to scale with **SageMaker Inference**, **Step Functions**, and **AWS MLOps pipelines** for advanced model orchestration and automation.
 
-APT Magic is developed as a modern, cost-efficient, and secure AWS-native architecture for small to medium user bases, with planned expansion into enterprise-grade AI orchestration.
+APT Magic is currently developed as a modern, cost-efficient, and secure AWS-native architecture for small to medium user bases, with planned expansion into enterprise-grade AI orchestration.
 
 ---
 
 ### 2. Problem Statement
-
 #### What’s the Problem?
-
-Most AI image generation platforms are costly, rely on opaque third-party APIs, and offer limited personalization.
+Most AI image generation platforms are costly, rely on opaque third-party APIs, and offer limited personalization.  
 Developers and creators often face high latency, lack of transparent model management, and limited control over user data security.
 
 #### The Solution
-
 APT Magic leverages **AWS serverless architecture** to deliver:
+- Real-time AI image generation through **Amazon Bedrock Stability AI** models.  
+- Secure user authentication and content management using **Amazon Cognito** and **DynamoDB**.  
+- Scalable API handling via **AWS Lambda** and **API Gateway**.  
+- Low-latency global delivery with **CloudFront CDN** and **WAF protection**.  
 
-* Real-time AI image generation through **Amazon Bedrock Claude Haiku 3** and **Stability AI**.
-* Secure user authentication and content management using **Amazon Cognito** and **DynamoDB**.
-* Scalable API handling via **AWS Lambda** and **API Gateway**.
-* Low-latency global delivery with **CloudFront CDN** and **WAF protection**.
-
-Future upgrades will include **Step Functions orchestration**, **SQS/SNS decoupling**, **SageMaker Inference pipelines**, and cost-efficient CI/CD via **CodeBuild**, **CodePipeline**, and **CloudFormation** — transforming APT Magic into a fully automated MLOps platform.
+Future upgrades will include **Step Functions orchestration**, **SQS/SNS decoupling**, **SageMaker Inference pipelines**, and cost-efficient CI/CD via **CodeBuild**, **CodePipeline**, and **CloudFormation**. transforming APT Magic into a fully automated MLOps platform.
 
 ---
 
 ### 3. Solution Architecture
 
 #### **MVP Architecture**
-
 The MVP is a **fully serverless architecture**, focusing on scalability, maintainability, and cost-effectiveness.
 
 **Core AWS Services:**
-
-* **Route53 + CloudFront + WAF** — Secure global access and caching.
-* **Amplify (Next.js SSR)** — Hosts the frontend and server-side rendering layer.
-* **API Gateway + Lambda Functions** — Manage backend logic:
-
-  * Social Post API
-  * Completion Handling
-  * Image Processing API
-  * Subscription API
-* **Amazon Cognito** — User authentication and access control.
-* **Amazon S3 + DynamoDB** — Data persistence and image storage.
-* **Amazon Bedrock (Claude Haiku 3 & Stability AI)** — Foundation model integration for LLM and image generation.
-* **Secrets Manager, CloudWatch, CloudTrail** — Security, logging, and monitoring.
+- **Route53 + CloudFront + WAF** — Secure global access and caching.
+- **Amplify (Next.js SSR)** — Hosts the frontend and server-side rendering layer.
+- **API Gateway + Lambda Functions** — Manage backend logic (image processing, subscription, post APIs).
+- **Amazon Cognito** — User authentication and access control.
+- **Amazon S3 + DynamoDB** — Data persistence and image storage.
+- **Amazon Bedrock** — Integrates foundation model (Stability AI) for image generation.
+- **Secrets Manager, CloudWatch, CloudTrail** — Security, logging, and monitoring.
 
 **Security**
+- **PrivateLink** for secure communication between Lambda and backend services.  
+- **WAF + IAM policies** for traffic filtering and role-based access control.  
 
-* **WAF + IAM policies** for traffic filtering and role-based access control.
-
-![APT Magic MVP Architecture](/AWS-FCJ-Workshop-2025/images/aptMagic_mvp.png)
+![APT Magic MVP Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/aptMagic_mvp.jpg)
 
 ---
 
 #### **Future Design (Enhanced Architecture)**
-
-APT Magic will evolve into an **AI orchestration platform**, introducing new layers for automation, resilience, and model lifecycle management.
+In the next phase, APT Magic will evolve into an **AI orchestration platform**, introducing new layers for automation, resilience, and model lifecycle management.
 
 **New Services to be Added:**
+- **AWS Step Functions** — To orchestrate asynchronous workflows such as:
+  - Multi-step AI image generation (prompt validation → inference → result upload).
+  - Payment confirmation → model processing → notification.
+- **Amazon SQS** — For reliable message queuing between async Lambda tasks.
+- **Amazon SNS** — For real-time event notifications to users or administrators.
+- **Amazon ElastiCache (Redis)** — For rate limiting and caching of frequent inference requests.
+- **Amazon SageMaker Inference** — For hosting custom fine-tuned models and managing model endpoints.
+- **AWS CodePipeline + SageMaker Pipelines** — To automate MLOps: model training, evaluation, and deployment.
+- **AWS PrivateLink + VPC Endpoints** — For secure data flow between Lambda, S3, and SageMaker.
+- **AWS WAF & Shield Advanced** — For DDoS protection and advanced security filtering.
 
-* **AWS Step Functions** — To orchestrate asynchronous workflows such as:
+- **CI/CD + MLOps**
+  - **CodePipeline + CodeBuild + CloudFormation** for infrastructure deployment and automation.  
 
-  * Multi-step AI image generation (prompt validation → inference → result upload).
-  * Payment confirmation → model processing → notification.
-* **Amazon SQS** — For reliable message queuing between async Lambda tasks.
-* **Amazon SNS** — For real-time event notifications to users or administrators.
-* **Amazon ElastiCache (Redis)** — For rate limiting and caching of frequent inference requests.
-* **Amazon SageMaker Inference** — For hosting custom fine-tuned models and managing model endpoints.
-* **AWS CodePipeline + SageMaker Pipelines** — To automate MLOps: model training, evaluation, and deployment.
-* **AWS WAF & Shield Advanced** — For DDoS protection and advanced security filtering.
-
-**CI/CD + MLOps**
-
-* **CodePipeline + CodeBuild + CloudFormation** for infrastructure deployment and automation.
+![APT Magic Future Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/diagram_architecture.jpg)
 
 ---
 
 ### 4. Technical Implementation
 
 #### **Implementation Phases**
+**Phase 1 – MVP Deployment (Completed / Current)**
+- Implement Amplify (Next.js SSR) + API Gateway + Lambda.
+- Integrate Bedrock Stability AI API.
+- Deploy CI/CD via CodePipeline + CloudFormation.
+- Enable user authentication (Cognito) and storage (S3 + DynamoDB).
 
-| **Phase**                            | **Duration** | **Key Deliverables**                                                                                                                                                                                                                  |
-| ------------------------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Phase 1 – MVP Deployment**         | Month 1      | Amplify (Next.js SSR), API Gateway + Lambda (4 functions), Bedrock integration (Claude Haiku 3 + Stability AI), CI/CD setup (GitLab Runner + CodePipeline + CloudFormation), Cognito + S3 + DynamoDB, WAF|
-| **Phase 2 – Expansion & Automation** | Month 2–3    | Add Step Functions, SQS/SNS orchestration, ElastiCache caching, integrate SageMaker Inference, enhanced CI/CD via CodeBuild, integrate payment processing                                                                             |
-| **Phase 3 – Scaling & Optimization** | Month 4+     | Implement SageMaker Pipelines, Shield Advanced, performance optimization and auto-scaling policies                                                                                                  |
+**Phase 2 – Future Design Expansion**
+- Introduce Step Functions + SQS/SNS to manage async AI workflows.
+- Add ElastiCache for request throttling and caching.
+- Integrate SageMaker Inference for fine-tuned model hosting.
+- Implement SageMaker Pipelines for automated training and deployment.
+- Extend security with Shield Advanced + GuardDuty + PrivateLink.
+- Connect GitLab Runner with CodeBuild for unified CI/CD.
 
 ---
 
 ### 5. Timeline & Milestones
 
-| **Milestone**              | **Phase** | **Estimated Completion** | **Outcome**                                       |
-| -------------------------- | --------- | ------------------------ | ------------------------------------------------- |
-| MVP Launch                 | Phase 1   | Month 1                  | Live platform with AI image gen & sharing         |
-| Async Workflow Integration | Phase 2   | Month 2                  | Step Functions + SQS + SNS pipeline               |
-| MLOps Integration          | Phase 2   | Month 3                  | SageMaker Inference & CI/CD Automation            |
-| Scaling Optimization       | Phase 3   | Month 4                  | Secure, optimized infrastructure ready for growth |
+| Phase | Description | Estimated Duration | Deployment Milestone |
+|-------|-------------|--------------------|-----------------------|
+| **Month 1: Setup & Core API** | Deploy infrastructure (IaC), Cognito, API Gateway, DynamoDB, and foundational Lambda functions. | 4 Weeks | Core Backend operational, Auth/User Management completed. |
+| **Month 2: AI & Payment Integration** | Integrate Claude Haiku 3 LLM on Amazon Bedrock (Stability AI), Replicate API, complete *Image Processing* functions, and integrate third-party payment gateway. | 4 Weeks | Successful end-to-end AI image processing demo. |
+| **Month 3: Front-end & CI/CD** | Develop UI/UX (Amplify/Next.js), finalize CI/CD pipelines, and configure Monitoring/Security (CloudWatch/WAF). | 4 Weeks | Full platform ready for user testing. |
+| **Month 4: Optimization & Go-Live** | Perform performance testing (Stress Test), cost optimization, and Production deployment. | 4 Weeks | **Go-Live** (Official product launch). |
+
 
 ---
 
-### 6. Budget Estimation (AWS Pricing Estimate)
+### 6. Cost Estimate (AWS Pricing Estimate)
 
-#### **MVP Estimated Cost (~$20/month)**
+#### Total Cost
+- **Monthly:** $9.80  
+- **Upfront:** $0.00  
+- **12 Months:** $117.60  
 
-| Service                                        | Est. Monthly Cost  | Notes                               |
-| ---------------------------------------------- | ------------------ | ----------------------------------- |
-| AWS Amplify (Next.js SSR)                      | $0.40              | Hosting + build minutes             |
-| API Gateway                                    | $0.09              | 25,000 requests/month               |
-| AWS Lambda (4 functions)                       | $0.21              | 25,000 invocations × 512MB × 1s     |
-| Amazon Bedrock (Claude Haiku 3 + Stability AI) | $3.00              | 5,000 image generations             |
-| DynamoDB                                       | $0.30              | 1M reads, 100K writes, 1GB storage  |
-| S3                                             | $0.46              | 10GB storage + 10GB transfer        |
-| Cognito                                        | $5.50              | 1,000 MAU                           |
-| CloudFront                                     | $1.70              | 20GB data transfer                  |
-| WAF (Basic)                                    | $6.00              | 1 WebACL + 5 rules                  |
-| CloudWatch + Secrets Manager + CloudTrail      | $2.30              | Logs, monitoring, secret management |
-| **Total (MVP)**                                | **≈ $20.00/month** | Small-scale deployment              |
+---
 
-#### **Future Design (Scalable MLOps – $45–60/month)**
+#### Service Overview
 
-| Service                     | Est. Monthly Cost  | Notes                  |
-| --------------------------- | ------------------ | ---------------------- |
-| Step Functions + SQS + SNS  | $0.60              | Async orchestration    |
-| ElastiCache (Redis)         | $1.00              | Rate limiting / cache  |
-| SageMaker Inference         | $5.00              | Managed endpoint cost  |
-| CodePipeline + CodeBuild    | $2.00              | CI/CD automation       |
-| Shield Advanced             | $10–15             | Advanced protection    |
-| **Total (Future)**          | **≈ $45–60/month** | Based on scaling level |
+| Service | Region | Monthly Cost | Upfront | 12-Month Cost | Notes |
+|--------|---------|--------------|---------|---------------|-------|
+| Amazon Route 53 | Asia Pacific (Singapore) | $0.50 | $0.00 | $6.00 | 1 Hosted Zone, 1 domain, 1 linked VPC |
+| Amazon CloudFront | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | No specific configuration |
+| AWS WAF | Asia Pacific (Singapore) | $6.00 | $0.00 | $72.00 | 1 Web ACL; 1 rule per ACL |
+| AWS Amplify | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Build instance: Standard (8GB/4vCPU); request duration 500ms |
+| AWS CloudFormation | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | No extensions; no operations |
+| Amazon API Gateway | Asia Pacific (Singapore) | $0.13 | $0.00 | $1.59 | 10k requests/month; WebSocket message 1KB; request size 30KB |
+| AWS Lambda | Asia Pacific (Singapore) | $1.67 | $0.00 | $20.04 | 1 million invokes; x86; 512MB ephemeral storage |
+| Amazon CloudWatch | Asia Pacific (Singapore) | $0.85 | $0.00 | $10.22 | 1 metric; 0.5GB logs in; 0.5GB logs to S3 |
+| S3 Standard | Asia Pacific (Singapore) | $0.23 | $0.00 | $2.76 | 10GB storage; 20k PUT; 40k GET |
+| DynamoDB On-Demand | Asia Pacific (Singapore) | $0.42 | $0.00 | $5.04 | 1GB storage; 1KB item; on-demand mode |
+| **Total (Estimate)** | — | **$9.80** | **$0.00** | **$117.60** | Based on AWS Pricing Calculator |
+
+---
+
+#### Metadata
+- **Currency:** USD  
+- **Locale:** en_US  
+- **Created On:** 12/9/2025  
+- **Share URL:** [AWS Calculator Link](https://calculator.aws/#/estimate?id=f8f785603d5dea16be2d60ad39e4733fc352a108)  
+- **Legal Disclaimer:** AWS Pricing Calculator provides estimates only; actual costs may vary based on usage.
+
+---
+
+#### AI Model Pricing
+
+| Model | Resolution / Token Usage | Quality | Price per Request (USD) | Notes |
+|-------|-------------------------|---------|------------------------|-------|
+| Titan Image Generator v2 | < 512×512 | Standard | 0.008 | Fixed price per 1 image |
+| Titan Image Generator v2 | < 512×512 | Premium | 0.01 | Fixed price per 1 image |
+| Titan Image Generator v2 | > 1024×1024 | Standard | 0.01 | Fixed price per 1 image |
+| Titan Image Generator v2 | > 1024×1024 | Premium | 0.012 | Fixed price per 1 image |
+| Stable Diffusion 3.5 Large | Any | N/A | 0.08 | Fixed price per 1 image |
+| Claude (text + image) | 40 input tokens + 1 image | N/A | 0.00195 | Price for 1 request including text and 1 image 1024×1024 |
+
+#### Additional Options
+
+| Mode | Augmentation | Price (USD) |
+|------|-------------|-------------|
+| text→img | no augment | 0.08 |
+| text→img | with augment | 0.08195 |
+| img→img | no augment | 0.012 |
+| img→img | with augment | 0.094 |
 
 ---
 
 ### 7. Risk Assessment
-
-| Risk                           | Impact | Probability | Mitigation                                          |
-| ------------------------------ | ------ | ----------- | --------------------------------------------------- |
-| AI model inference latency     | Medium | High        | Use ElastiCache + Step Functions for async handling |
-| Cost increase from model calls | High   | Medium      | Bedrock usage control, SageMaker autoscaling        |
-| CI/CD misconfigurations        | Medium | Low         | CloudFormation rollback policies                    |
-| Security vulnerabilities       | High   | Medium      | WAF, GuardDuty, PrivateLink, IAM least privilege    |
-| Third-party API dependency     | Medium | Medium      | Bedrock fallback to S3-stored inference results     |
+| Risk | Impact | Probability | Mitigation |
+|------|---------|-------------|-------------|
+| AI model inference latency | Medium | High | Use ElastiCache + Step Functions for async handling |
+| Cost increase from model calls | High | Medium | Bedrock usage control, SageMaker autoscaling |
+| CI/CD misconfigurations | Medium | Low | CloudFormation rollback policies |
+| Security vulnerabilities | High | Medium | WAF, GuardDuty, PrivateLink, IAM least privilege |
+| Third-party API dependency | Medium | Medium | Bedrock fallback to S3-stored inference results |
 
 ---
 
 ### 8. Expected Outcomes
+#### Technical Outcomes:
+- Complete serverless AI image generation workflow with secure CI/CD.
+- Modular orchestration enabling rapid MLOps integration.
+- Improved latency and reliability via caching and async workflows.
 
-#### **Technical Outcomes**
-
-* Complete serverless AI image generation workflow with secure CI/CD.
-* Modular orchestration enabling rapid MLOps integration.
-* Improved latency and reliability via caching and async workflows.
-
-#### **Long-Term Value**
-
-* A foundation for **AI as a Service (AIaaS)** platform expansion.
-* Ready-to-scale **MLOps framework** with automated retraining.
-* Reusable, cost-optimized AWS infrastructure for future AI products.
+#### Long-Term Value:
+- A foundation for **AI as a Service (AIaaS)** platform expansion.  
+- Ready-to-scale **MLOps framework** with automated retraining.  
+- Reusable cloud infrastructure for future AI products.
 
 ---
+
+

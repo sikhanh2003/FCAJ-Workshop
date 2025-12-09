@@ -1,108 +1,196 @@
 ---
-title: "Bản đề xuất"
-date: "2024-01-01"
+title: "Proposal"
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# APT Magic  
+## Nền tảng AI Serverless cho tạo ảnh cá nhân hóa và tương tác xã hội
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+### 1. Tóm tắt điều hành
+**APT Magic** là một ứng dụng web serverless sử dụng AI, cho phép người dùng tạo, tùy chỉnh và chia sẻ nội dung nghệ thuật như hình ảnh được tạo bởi mô hình AI. Nền tảng tích hợp trực tiếp với các foundation models thông qua **Amazon Bedrock**, đồng thời cung cấp trải nghiệm web mượt mà nhờ **Next.js (SSR)** được triển khai bằng **AWS Amplify**.
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+Phiên bản MVP tập trung vào việc tạo ảnh theo thời gian thực và chia sẻ nội dung, trong khi **Thiết kế Tương Lai** hướng đến khả năng mở rộng với **SageMaker Inference**, **Step Functions**, và quy trình **AWS MLOps** để tự động hóa quản lý mô hình và điều phối toàn hệ thống.
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+APT Magic hiện được phát triển với kiến trúc AWS-native hiện đại, tiết kiệm chi phí và an toàn, phù hợp cho lượng người dùng nhỏ đến trung bình; sau đó sẽ mở rộng thành nền tảng AI quy mô doanh nghiệp.
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+---
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+### 2. Vấn đề đặt ra
+#### Thách thức là gì?
+Hầu hết các nền tảng tạo ảnh AI đều tốn kém, phụ thuộc vào API của bên thứ ba và thiếu khả năng tùy chỉnh sâu.  
+Nhà phát triển và người sáng tạo thường gặp vấn đề về độ trễ, thiếu minh bạch trong quản lý mô hình, và ít quyền kiểm soát dữ liệu người dùng.
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+#### Giải pháp
+APT Magic sử dụng **kiến trúc serverless của AWS** để cung cấp:
 
-![IoT Weather Station Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/edge_architecture.jpeg)
+- Tạo ảnh AI thời gian thực với mô hình **Amazon Bedrock – Stability AI**.  
+- Xác thực người dùng và quản lý nội dung bảo mật với **Amazon Cognito** và **DynamoDB**.  
+- Điều phối API linh hoạt bằng **AWS Lambda** và **API Gateway**.  
+- Phân phối nội dung tốc độ cao với **CloudFront CDN** kết hợp **WAF** để bảo vệ.  
 
-![IoT Weather Platform Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/platform_architecture.jpeg)
+Các nâng cấp tương lai sẽ bao gồm **Step Functions**, **SQS/SNS**, **SageMaker Inference**, và CI/CD tiết kiệm chi phí với **CodeBuild**, **CodePipeline**, **CloudFormation** — biến APT Magic thành một nền tảng MLOps tự động hóa toàn diện.
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+---
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+### 3. Kiến trúc giải pháp
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+#### **Kiến trúc MVP**
+MVP được xây dựng theo hướng **hoàn toàn serverless**, tập trung vào khả năng mở rộng, dễ bảo trì và tối ưu chi phí.
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+**Các dịch vụ AWS chủ chốt:**
+- **Route53 + CloudFront + WAF** — đảm bảo truy cập toàn cầu an toàn và cache hiệu quả.
+- **Amplify (Next.js SSR)** — triển khai giao diện và tầng server-side rendering.
+- **API Gateway + Lambda Functions** — xử lý backend (image processing, subscription, post APIs).
+- **Amazon Cognito** — Xác thực và phân quyền người dùng.
+- **Amazon S3 + DynamoDB** — Lưu trữ dữ liệu và hình ảnh.
+- **Amazon Bedrock** — Tích hợp mô hình tạo ảnh (Stability AI).
+- **Secrets Manager, CloudWatch, CloudTrail** — Bảo mật, giám sát và ghi log.
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+**Bảo mật**
+- **PrivateLink** cho kết nối an toàn giữa Lambda và backend services.  
+- **WAF + IAM** để lọc truy cập và kiểm soát quyền chi tiết.  
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+![APT Magic MVP Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/aptMagic_mvp.jpg)
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+---
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+#### **Thiết kế tương lai (Kiến trúc nâng cao)**
+Ở giai đoạn tiếp theo, APT Magic sẽ phát triển thành **nền tảng điều phối AI**, bổ sung các lớp tự động hóa, độ bền hệ thống và quản lý vòng đời mô hình.
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+**Các dịch vụ sẽ được bổ sung:**
+- **AWS Step Functions** — điều phối workflow bất đồng bộ như:
+  - Tạo ảnh nhiều bước (kiểm tra prompt → inference → upload kết quả).
+  - Xác nhận thanh toán → xử lý mô hình → gửi thông báo.
+- **Amazon SQS** — truyền tải thông điệp giữa các Lambda async.
+- **Amazon SNS** — gửi thông báo thời gian thực cho người dùng hoặc admin.
+- **Amazon ElastiCache (Redis)** — caching và hạn chế tốc độ request.
+- **Amazon SageMaker Inference** — triển khai các mô hình tùy chỉnh, fine-tuned.
+- **AWS CodePipeline + SageMaker Pipelines** — tự động hóa toàn bộ MLOps.
+- **AWS PrivateLink + VPC Endpoints** — đảm bảo dữ liệu đi trong mạng riêng.
+- **AWS WAF & Shield Advanced** — bảo vệ khỏi DDoS và nâng cao an ninh.
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+- **CI/CD + MLOps**
+  - **CodePipeline + CodeBuild + CloudFormation** để triển khai hạ tầng tự động.  
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+![APT Magic Future Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/digram_architecture.jpg)
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+---
+
+### 4. Triển khai kỹ thuật
+
+#### **Các giai đoạn triển khai**
+**Giai đoạn 1 – MVP (Hiện tại / Đã hoàn thành)**
+- Triển khai Amplify (Next.js SSR) + API Gateway + Lambda.
+- Tích hợp API Stability AI qua Bedrock.
+- Thiết lập CI/CD bằng CodePipeline + CloudFormation.
+- Kích hoạt Cognito cho user auth và S3 + DynamoDB để lưu trữ.
+
+**Giai đoạn 2 – Mở rộng theo thiết kế tương lai**
+- Thêm Step Functions + SQS/SNS để quản lý workflow AI bất đồng bộ.
+- Tích hợp ElastiCache để caching và rate limiting.
+- Kết nối SageMaker Inference cho các mô hình tùy chỉnh.
+- Dùng SageMaker Pipelines để tự động training và deploy.
+- Tăng cường bảo mật với Shield Advanced + GuardDuty + PrivateLink.
+- Kết nối GitLab Runner với CodeBuild để hợp nhất CI/CD.
+
+---
+
+### 5. Timeline & Milestones
+
+| Giai đoạn | Mô tả | Thời gian ước tính | Mốc triển khai (Milestone) |
+|-----------|-------|--------------------|-----------------------------|
+| **Tháng 1: Thiết lập & Core API** | Triển khai hạ tầng IaC, Cognito, API Gateway, DynamoDB, và các hàm Lambda cơ bản. | 4 Tuần | Core Backend hoạt động, Auth/User Management hoàn thành. |
+| **Tháng 2: AI & Payment Integration** | Tích hợp LLM Claude Haiku 3 Amazon Bedrock (Stability AI), Replicate API hoàn thiện hàm *Image Processing* và tích hợp cổng thanh toán bên thứ ba. | 4 Tuần | Demo xử lý ảnh AI đầu cuối (end-to-end) thành công. |
+| **Tháng 3: Front-end & CI/CD** | Phát triển UI/UX (Amplify/Next.js), hoàn thiện pipeline CI/CD, và cấu hình Giám sát/Bảo mật (CloudWatch/WAF). | 4 Tuần | Nền tảng hoàn chỉnh, sẵn sàng cho kiểm thử người dùng. |
+| **Tháng 4: Tối ưu & Go-Live** | Kiểm thử hiệu năng (Stress Test), tối ưu chi phí, và triển khai Production. | 4 Tuần | **Go-Live** (Sản phẩm chính thức ra mắt). |
+
+
+---
+
+### 6. Ước tính chi phí (AWS Pricing Estimate)
+
+#### Tổng Chi Phí
+- **Hàng tháng:** $9.80  
+- **Trả trước:** $0.00  
+- **12 tháng:** $117.60  
+
+---
+
+#### Tổng quan dịch vụ
+
+| Dịch vụ | Khu vực | Chi phí tháng | Trả trước | Chi phí 12 tháng | Ghi chú |
+|--------|---------|---------------|-----------|-------------------|---------|
+| Amazon Route 53 | Asia Pacific (Singapore) | $0.50 | $0.00 | $6.00 | 1 Hosted Zone, 1 domain, 1 VPC liên kết |
+| Amazon CloudFront | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Không có cấu hình cụ thể |
+| AWS WAF | Asia Pacific (Singapore) | $6.00 | $0.00 | $72.00 | 1 Web ACL; 1 rule mỗi ACL |
+| AWS Amplify | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Build instance: Standard (8GB/4vCPU); thời lượng request 500ms |
+| AWS CloudFormation | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Không có extension; không có thao tác |
+| Amazon API Gateway | Asia Pacific (Singapore) | $0.13 | $0.00 | $1.59 | 10k requests/tháng; message WebSocket 1KB; request size 30KB |
+| AWS Lambda | Asia Pacific (Singapore) | $1.67 | $0.00 | $20.04 | 1 triệu invokes; x86; 512MB ephemeral storage |
+| Amazon CloudWatch | Asia Pacific (Singapore) | $0.85 | $0.00 | $10.22 | 1 metric; 0.5GB logs in; 0.5GB logs tới S3 |
+| S3 Standard | Asia Pacific (Singapore) | $0.23 | $0.00 | $2.76 | 10GB storage; 20k PUT; 40k GET |
+| DynamoDB On-Demand | Asia Pacific (Singapore) | $0.42 | $0.00 | $5.04 | 1GB storage; item 1KB; chế độ on-demand |
+| **Tổng (Ước tính)** | — | **$9.80** | **$0.00** | **$117.60** | Theo AWS Pricing Calculator |
+
+---
+
+#### Metadata
+- **Tiền tệ:** USD  
+- **Locale:** en_US  
+- **Ngày tạo:** 12/9/2025  
+- **Share URL:** [AWS Calculator Link](https://calculator.aws/#/estimate?id=f8f785603d5dea16be2d60ad39e4733fc352a108) 
+- **Lưu ý pháp lý:** AWS Pricing Calculator chỉ cung cấp ước tính; chi phí thực tế có thể thay đổi theo mức sử dụng.
+
+---
+
+#### Bảng Giá Mô Hình AI
+
+| Mô hình | Độ phân giải / Sử dụng Token | Chất lượng | Giá cho mỗi yêu cầu (USD) | Ghi chú |
+|---------|-----------------------------|------------|---------------------------|---------|
+| Titan Image Generator v2 | < 512×512 | Tiêu chuẩn | 0.008 | Giá cố định cho 1 ảnh |
+| Titan Image Generator v2 | < 512×512 | Cao cấp | 0.01 | Giá cố định cho 1 ảnh |
+| Titan Image Generator v2 | > 1024×1024 | Tiêu chuẩn | 0.01 | Giá cố định cho 1 ảnh |
+| Titan Image Generator v2 | > 1024×1024 | Cao cấp | 0.012 | Giá cố định cho 1 ảnh |
+| Stable Diffusion 3.5 Large | Bất kỳ | N/A | 0.08 | Giá cố định cho 1 ảnh |
+| Claude (text + image) | 40 token đầu vào + 1 ảnh | N/A | 0.00195 | Giá cho 1 yêu cầu gồm văn bản và 1 ảnh 1024×1024 |
+
+#### Tùy chọn bổ sung
+
+| Chế độ | Tăng cường | Giá (USD) |
+|--------|------------|-----------|
+| text→img | không tăng cường | 0.08 |
+| text→img | có tăng cường | 0.08195 |
+| img→img | không tăng cường | 0.012 |
+| img→img | có tăng cường | 0.094 |
+
+ ---
+
+### 7. Đánh giá rủi ro
+
+| Rủi ro | Mức độ ảnh hưởng | Khả năng xảy ra | Giảm thiểu |
+|--------|------------------|------------------|-------------|
+| Độ trễ khi gọi mô hình AI | Trung bình | Cao | Dùng ElastiCache + Step Functions |
+| Chi phí tăng vì inference | Cao | Trung bình | Kiểm soát Bedrock usage, autoscaling SageMaker |
+| Lỗi cấu hình CI/CD | Trung bình | Thấp | Áp dụng rollback của CloudFormation |
+| Lỗ hổng bảo mật | Cao | Trung bình | WAF, GuardDuty, PrivateLink, IAM least privilege |
+| Phụ thuộc API bên thứ ba | Trung bình | Trung bình | Dùng fallback inference từ S3 |
+
+---
+
+### 8. Giá trị đạt được
+
+#### Lợi ích kỹ thuật:
+- Hoàn thiện pipeline serverless cho tạo ảnh AI.
+- Nền tảng điều phối dễ mở rộng, phù hợp tích hợp MLOps.
+- Cải thiện độ trễ và tính ổn định nhờ caching và workflows async.
+
+#### Giá trị dài hạn:
+- Nền tảng mở rộng lên mô hình **AI as a Service**.  
+- Khung MLOps sẵn sàng cho tự động hóa training/retraining.  
+- Hạ tầng tái sử dụng cho nhiều sản phẩm AI trong tương lai.
+
+---
+
+
