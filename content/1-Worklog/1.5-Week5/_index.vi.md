@@ -1,59 +1,53 @@
 ---
-title: "Worklog Tuần 5"
+title: "Nhật ký làm việc Tuần 5"
 date: "2024-01-01"
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+<!-- {{% notice warning %}} 
+⚠️ **Lưu ý:** Thông tin sau chỉ dùng để tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
+{{% /notice %}} -->
 
 
-### Mục tiêu tuần 5:
+### Mục tiêu Tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Xây dựng Kiến trúc AWS với Amazon Q Developer CLI và MCP
+* Tiến triển Project 1 bằng cách xây dựng UI và tích hợp dịch vụ.
+* Học quản lý tài nguyên, scaling và các phương pháp phát triển.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+### Các nhiệm vụ cần thực hiện trong tuần:
+| Ngày | Nhiệm vụ                                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 2   | - Đọc tài liệu về MCP <br> - Đọc tài liệu về Amazon Q Developer CLI <br> - Khám phá về "Build AWS Architecture with Amazon Q Developer CLI and MCP" <br> - **Project 1**: Xây dựng UI cho Project 1                                                    | 06/10/2025 | 06/10/2025      | <https://000038.awsstudygroup.com/> |
+| 3   | - Học về Auto Scaling với EC2  <br> - Xây dựng Kiến trúc AWS với Amazon Q Developer CLI và MCP <br> - **Project 1**: Xây dựng UI cho Project 1                                           | 07/10/2025 | 07/10/2025      | <https://000006.awsstudygroup.com/> |
+| 4   | - Quản lý Tài nguyên Sử dụng Tags và Resource Groups <br> - Học về AI-DLC và các phương pháp phát triển dựa trên Spec   <br> - **Thực hành:** <br>&emsp; + Áp dụng Tags cho tài nguyên <br>&emsp; + Tạo Resource Group <br>&emsp; + **Project 1**: Áp dụng AI-DLC cho Project 1 | 08/10/2025 | 08/10/2025      | <https://000027.awsstudygroup.com/> |
+| 5   | - **Project 1**:**Project 1**: Áp dụng AWS Cognito cho Project 1 để Xác thực <br> - **Project 1**: Kết nối Project 1 với một S3 Bucket                      | 09/10/2025 | 09/10/2025      |  |
+| 6   | - Khám phá về DynamoDB <br> - Thực hành với DynamoDB <br> - **Project 1**: Thử áp dụng DynamoDB vào Project 1                                                                                 | 10/10/2025 | 10/10/2025      | <https://aws.amazon.com/vi/dynamodb> |
 
 
+### Thành tựu Tuần 5:
+
+* Có hiểu biết về Amazon Q Developer CLI & MCP.
+
+* Xây dựng các thành phần UI cho Project 1.
+
+* Hiểu về EC2 Auto Scaling để điều chỉnh tài nguyên động.
+
+* Học quản lý tài nguyên sử dụng tags và groups.
+
+* Khám phá AI-DLC và các phương pháp phát triển dựa trên spec.
+
+* Thực hành áp dụng tags cho tài nguyên.
+
+* Tạo resource groups để tổ chức.
+
+* Áp dụng AI-DLC vào phát triển Project 1.
+
+* Tích hợp AWS Cognito để xác thực trong Project 1.
+
+* Kết nối Project 1 với một bucket S3 để lưu trữ.
+
+* Ôn tập và làm sâu kiến thức về Cloud9 và CDK.
+
+* Nâng cao kỹ năng trong tích hợp dự án và sử dụng công cụ AWS.

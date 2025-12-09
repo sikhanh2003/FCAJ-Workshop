@@ -56,4 +56,8 @@ By the end of the workshop, you will have:
 
 ---
 
-**Get Started**: [5.1. Workshop Overview](5.1-workshop-overview/)
+- [5.1. Introduction](5.1-workshop-overview/)
+- [5.2. Preparation Steps](5.2-Prerequiste/)
+- [5.3. RAG Architecture Deployed on AWS AgentCore](5.3-Architecture/)
+- [5.4. Run AgentCore](5.4-Agent-core-run/)
+- [5.5. Clean Up](5.5-Clean-up/)

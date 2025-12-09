@@ -1,59 +1,58 @@
 ---
-title: "Worklog Tuần 2"
+title: "Nhật ký làm việc Tuần 2"
 date: "2024-01-01"
 weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+<!-- {{% notice warning %}} 
+⚠️ **Lưu ý:** Thông tin sau chỉ dùng để tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
+{{% /notice %}} -->
 
 
-### Mục tiêu tuần 2:
+### Mục tiêu Tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Kết nối và làm quen với các thành viên của First Cloud Journey.
+* Hiểu về các dịch vụ AWS cơ bản, cách sử dụng console & CLI.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 2:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+### Các nhiệm vụ cần thực hiện trong tuần:
+| Ngày | Nhiệm vụ                                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 2   |  - Khám phá Amazon Bedrock cơ bản: <br>&emsp; + API Keys <br>&emsp; + Test <br>&emsp; + Model Access <br> - Tổng quan về Cloudfront <br> - Khám phá các dự án ví dụ kết hợp các dịch vụ AWS   <br>                                                             | 15/09/2025 | 15/09/2025      | <https://aws.amazon.com/bedrock/> |
+| 3  | - Học về AWS VPC <br> - Kết nối SSH đến EC2<br> - **Thực hành:** <br>&emsp; + Triển khai các instance EC2 <br> &emsp; + Thiết lập kết nối VPN Site-to-site trong AWS                                                                                                   | 16/09/2025 | 16/09/2025      | <https://000003.awsstudygroup.com/> | 
+| 4   | - Học về IAM <br>&emsp; + IAM User <br>&emsp; + IAM Group <br>&emsp; + IAM Role <br>&emsp; + Switch Role <br> - **Thực hành:**<br> &emsp; + Tạo IAM User/Group/Role <br>&emsp; + Switch Role                                             | 17/09/2025 | 17/09/2025      | <https://000002.awsstudygroup.com/> |
+| 5   | - Học về AWS Budget (Billing & Cost Management) <br> - Học cách sử dụng AWS Pricing Calculator <br> - **Thực hành:** <br>&emsp; + Tạo Budgets với Alerts <br>&emsp; + Tạo Dashboard <br> &emsp; + Tạo ước tính workload | 18/09/2025 | 18/09/2025      | <https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html> |
+| 6   | - **AWS Cloud day 2025**<br> - Viết báo cáo AWS Cloud day 2025                                                        | 19/09/2025 | 19/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
+### Thành tựu Tuần 2:
+
+* Có hiểu biết về AWS VPC để cô lập mạng ảo.
+
+* Khám phá cách giám sát truy cập SSH an toàn đến các instance EC2.
+
+* Thiết lập kết nối VPN Site-to-Site an toàn giữa các mạng.
+
+* Hiểu về IAM để kiểm soát truy cập:
+  * IAM Users
+  * IAM Groups
+  * IAM Roles
+  * Role Switching
+
+* Có khả năng tạo và quản lý các thực thể IAM.
+
+* Có kiến thức về AWS Budgets để giám sát chi phí.
+
+* Làm quen với AWS Pricing Calculator để ước tính chính xác.
+
+* Triển khai budgets với alerts để quản lý chi phí chủ động.
+
+* Tạo dashboards để trực quan hóa dữ liệu thanh toán.
+
+* Tạo ước tính workload để dự đoán chi phí.
+
+* Có được những hiểu biết từ việc tham gia AWS Cloud Day 2025.
+
+* Ghi chép các điểm chính trong báo cáo sự kiện toàn diện (GenAI, Blockchains, Tầm nhìn AWS...).
+
+* Nâng cao chuyên môn về mạng AWS, bảo mật, tối ưu hóa chi phí và lưu trữ.

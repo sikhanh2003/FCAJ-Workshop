@@ -1,58 +1,47 @@
 ---
-title: "Worklog Tuần 12"
+title: "Nhật ký công việc Tuần 13"
 date: "2024-01-01"
-weight: 12
+weight: 13
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.13. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu Tuần 13:
 
-### Mục tiêu tuần 12:
+* Cấu hình các IAM permissions an toàn và deploy Project 1 lên AWS production.
+* Tích hợp các dịch vụ edge như Route53, CloudFront, và WAF để tăng cường bảo mật và hiệu năng.
+* Triển khai monitoring với CloudWatch và chuẩn bị tài liệu, slides, video demo cuối cùng.
+* Tham dự sự kiện BUILDING AGENTIC AI và thực hành với CloudThinker để tối ưu hóa tài nguyên AWS.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các nhiệm vụ thực hiện trong tuần này:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 2 | - **Project 1**: Cấu hình IAM với các permissions chặt chẽ hơn | 01/12/2025 | 01/12/2025 | |
+| 3 | - **Project 1**: Deploy lên AWS <br> - **Project 1**: Tài liệu Slide và Proposal | 02/12/2025 | 02/12/2025 | |
+| 4 | - **Project 1**: Áp dụng Route53, CloudFront, WAF cho production <br> - **Project 1**: Tài liệu Slide và Proposal | 03/12/2025 | 03/12/2025 | |
+| 5 | - **Project 1**: Áp dụng CloudWatch cho production <br> - **Project 1**: Tài liệu Slide và Proposal <br> - **Project 1**: Video Demo | 04/12/2025 | 04/12/2025 | |
+| 6 | - Sự kiện: **BUILDING AGENTIC AI - Context Optimization with Amazon Bedrock** <br> - Thực hành với CloudThinker <br> - Tìm hiểu cách sử dụng CloudThinker agents để phân tích và tối ưu hóa AWS Resources (Cost & Security) | 05/12/2025 | 05/12/2025 | |
 
 
-### Kết quả đạt được tuần 12:
+### Thành tựu Tuần 13:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Đã cấu hình IAM với các permissions chặt chẽ hơn cho Project 1.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Đã deploy Project 1 lên môi trường AWS production.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Đã chuẩn bị bản thảo slides và tài liệu proposal cho Project 1.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Đã áp dụng Route53, CloudFront, và WAF vào Project 1 production để bảo mật lớp biên (edge security).
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Đã cập nhật slides và tài liệu proposal.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Đã triển khai giám sát (monitoring) bằng CloudWatch cho Project 1 production. 
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Đã tạo video demo trình bày các tính năng của Project 1.
 
+* Đã tham dự sự kiện BUILDING AGENTIC AI về tối ưu hóa ngữ cảnh với Amazon Bedrock.
 
+* Đã thực hành với các CloudThinker agents.
+
+* Đã tìm hiểu việc sử dụng CloudThinker để phân tích và tối ưu hóa tài nguyên AWS về chi phí và bảo mật.
+
+* Đã hoàn tất sự sẵn sàng cho Project 1 và đạt được kỹ năng tối ưu hóa AI agentic.

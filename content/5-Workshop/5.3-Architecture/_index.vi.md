@@ -10,6 +10,6 @@ pre : " <b> 5.3. </b> "
 Trong phần này, chúng ta sẽ tìm hiểu cách tích hợp Groq để gọi model OpenAI-compatible và cách chunking dữ liệu cho RAG.
 
 ###  Nội dung
-5.3.1. [Gọi Groq API](5.3-architecture/5.3.1-goi-groq-api/)
-5.3.2. [Chunking & Embedding](5.3-architecture/5.3.2-chunking-embedding/)
-5.3.3. [Code Handler AgentCore](5.3-architecture/5.3.3-code-handler-agentcore/)
+1. [Gọi Groq API](5.3-architecture/5.3.1-goi-groq-api/)
+2. [Chunking & Embedding](5.3-architecture/5.3.2-chunking-embedding/)
+3. [Code Handler AgentCore](5.3-architecture/5.3.3-code-handler-agentcore/)

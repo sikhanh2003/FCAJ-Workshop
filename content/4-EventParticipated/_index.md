@@ -6,39 +6,6 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-<!-- {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
-{{% /notice %}} -->
-
-<!-- > In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-> * A brief description of the event’s content and main activities
-> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event. -->
-
-<!-- #### Contents
-
-1. [Event 1](4.1-Event1/) — Kick-off AWS FCJ Workforce (OJT Fall 2025): program introduction, roadmap and career guidance.
-2. [Event 2](4.2-Event2/) — AWS Cloud Day 2025: AI & cloud adoption, migration patterns, GenAI and enterprise use cases.
-3. [Event 3](4.3-Event3/) — AI-Driven Development Life Cycle: demos of Amazon Q Developer and Kiro for SDLC automation.
-4. [Event 4](4.4-Event4/) — DX Talk #7: DevSecOps with AWS Generative AI and enterprise modernization practices.
-5. [Event 5](4.5-Event5/) — VPBank Technology Hackathon Kick-off: hackathon orientation, AWS fundamentals and ML/AI prep.
-6. [Event 6](4.6-Event6/) — AWS Cloud Mastery Series #1: AI/ML/GenAI on AWS — Bedrock, RAG, and prompt engineering.
-7. [Event 7](4.7-Event7/) — AWS Cloud Mastery Series #2: DevOps on AWS — IaC, pipelines, and observability.
-8. [Event 8](4.8-Event8/) — AWS Perimeter Protection Workshop: CloudFront, WAF, Shield, and origin protection.
-9. [Event 9](4.9-Event9/) — AWS GenAI GameDay: agentic workflows, Bedrock + OpenSearch, and GenAI observability.
-10. [Event 10](4.10-Event10/) — Cloud Mastery Series #3: The Security Pillar — identity-centric security and IR automation.
-11. [Event 11](4.11-Event11/) — Building Agentic AI: AgentCore, context optimization, and CloudThinker hands-on.
-
---- -->
-
-
-
 During my internship, I participated in multiple events. Below each event is presented in the requested format with key details and outcomes.
 
 ### [Event 1](4.1-Event1/)

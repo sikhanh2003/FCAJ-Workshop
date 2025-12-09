@@ -1,58 +1,52 @@
 ---
-title: "Worklog Tuần 6"
+title: "Nhật ký làm việc Tuần 6"
 date: "2024-01-01"
 weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+<!-- {{% notice warning %}} 
+⚠️ **Lưu ý:** Thông tin sau chỉ dùng để tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
+{{% /notice %}} -->
 
 
-### Mục tiêu tuần 6:
+### Mục tiêu Tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Học về công nghệ Blockchain và tích hợp của chúng với AWS.
+* Tiến triển Project 1 bằng cách tinh chỉnh mã và hoàn thành đề xuất.
+* Khám phá smart contracts và tạo một hội thảo sử dụng các dịch vụ Blockchain AWS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+ 
+### Các nhiệm vụ cần thực hiện trong tuần:
+| Ngày | Nhiệm vụ                                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 2   | - Học về Blockchain <br> - Học về Web3/ Web2 to Web3 <br> - Học về dApps <br> - Nghiên cứu về các sản phẩm dựa trên Blockchain và được xây dựng trên/ sử dụng Dịch vụ AWS                                                                                                   | 13/10/2025 | 13/10/2025      | <https://www.hackquest.io/quest> |
+| 3   | - **Project 1**: Sử dụng Axios để thay thế Fetch trong Project 1 <br> - Học về Move (Ngôn ngữ Web3) <br> - **Project 1**: Tiếp tục hoàn thành Đề xuất cho Project 1                                                    | 14/10/2025 | 14/10/2025      |  |
+| 4   | - Khám phá & nghiên cứu các thách thức của VPBank Hackathon <br> - Học về Move (Ngôn ngữ Web3) <br> - Học về smart contract <br> - **Project 1**: Tiếp tục hoàn thành Đề xuất cho Project 1 <br>| 15/10/2025 | 15/10/2025      | https://www.vpbank.com.vn/tin-tuc/thong-cao-bao-chi/2025/khoi-dong-vpbank-technology-hackathon-2025-senior-track-co-hoi-gia-nhap-doi-ngu-cong-nghe-vpbank |
+| 5   | - Sự kiện: **DX<inAction> Talk #7: Reinventing DevSecOps with AWS Generative AI** <br> - Viết Tóm tắt Sự kiện <br> - Khám phá & nghiên cứu các thách thức của VPBank Hackathon <br> - Học về Move (Ngôn ngữ Web3) <br> - Học về smart contract <br> - **Project 1**: Tiếp tục hoàn thành Đề xuất cho Project 1 <br>                       | 16/10/2025 | 16/10/2025      |  |
+| 6   | - Khám phá & nghiên cứu các thách thức của VPBank Hackathon <br> - Học về Move (Ngôn ngữ Web3) <br> - Học về smart contract <br> - **Project 1**: Tiếp tục hoàn thành Đề xuất cho Project 1                       | 17/10/2025 | 17/10/2025      |  |
+| 7   | - Sự kiện: **KICK - OFF VPBANK TECHNOLOGY HACKATHON 2025** | 18/10/2025 | 19/10/2025| |
 
+### Thành tựu Tuần 6:
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Có hiểu biết cơ bản về công nghệ Blockchain.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Học về Web3 và sự chuyển đổi từ Web2 sang Web3.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Khám phá các khái niệm cơ bản của ứng dụng phân tán (dApps).
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Nghiên cứu các sản phẩm tận dụng Blockchain trên các dịch vụ AWS.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Thay thế Fetch bằng Axios trong Project 1 để xử lý HTTP tốt hơn.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Học về Move như một ngôn ngữ lập trình Web3.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hiểu về khái niệm và phát triển smart contract.
 
+* Khám phá và nghiên cứu các thách thức từ VPBank Hackathon.
 
+* Hoàn thành đề xuất cho Project 1, phác thảo phạm vi và kế hoạch.
+
+* Hoàn thành Biểu đồ Kiến trúc AWS cho Project 1.
+
+* Nâng cao kỹ năng tích hợp Blockchain với các dịch vụ đám mây cho các ứng dụng thực tế.

@@ -1,59 +1,47 @@
 ---
-title: "Worklog Tuần 9"
+title: "Nhật ký công việc Tuần 9"
 date: "2024-01-01"
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu Tuần 9:
+
+* Tìm hiểu các kiến thức cơ bản về GitLab, CI/CD pipelines và tích hợp với AWS Amplify.
+* Triển khai kiến trúc Monorepo và di chuyển (migrate) mã nguồn Project 1.
+* Thiết lập CI/CD YAML cho Project 1 trên GitLab và áp dụng các branching strategies.
+* Nghiên cứu các công cụ phát triển local cho các dịch vụ AWS serverless.
+
+### Các nhiệm vụ thực hiện trong tuần này:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 2 | - Tìm hiểu về Gitlab (Getting Started) với các khái niệm và tính năng cơ bản trên Gitlab <br> - Gitlab CI/CD <br> - Gitlab CI/CD với AWS Amplify | 3/11/2025 | 3/11/2025 | https://docs.gitlab.com/ |
+| 3 | - Tìm hiểu về Monolithic Repository <br> - **Project 1**: Áp dụng kiến trúc Mono Repo vào Project 1 <br> - **Project 1**: Di chuyển Source Code của Project 1 (Từ Fullstack NextJS Webapp sang chỉ Frontend trên NextJs, tách biệt khỏi môi trường backend) | 4/11/2025 | 4/11/2025 | |
+| 4 | - Di chuyển Source Code Repo từ Github sang Gitlab <br> - **Project 1**: Áp dụng CI/CD yaml cho repo Project 1 (Mono repo trên Gitlab) | 5/11/2025 | 5/11/2025 | https://docs.gitlab.com/ci/yaml/ |
+| 5 | - **Project 1**: Tìm hiểu về Branching Strategy (Git feature branch workflow) để áp dụng vào Project 1 | 6/11/2025 | 6/11/2025 | https://docs.gitlab.com/user/project/repository/branches/strategies/|
+| 6 | - Tìm hiểu các công cụ hoặc dịch vụ cung cấp khả năng chạy demo các AWS Services (Serverless) trên môi trường local <br> - Tìm hiểu về AWS Sam, Serverless Framework và Local Stack (Quyết định chọn Serverless Framework cho Project 1) | 7/11/2025 | 7/11/2025 | |
 
 
-### Mục tiêu tuần 9:
+### Thành tựu Tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Đã hiểu rõ những kiến thức cơ bản về GitLab, bao gồm các khái niệm và tính năng cốt lõi.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Đã khám phá GitLab CI/CD pipelines và sự tích hợp của chúng với AWS Amplify.
 
+* Đã học về kiến trúc Monorepo.
 
-### Kết quả đạt được tuần 9:
+* Đã áp dụng kiến trúc Monorepo vào Project 1.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Đã di chuyển (migrated) mã nguồn Project 1 từ full-stack Next.js sang thiết lập frontend-only, tách biệt backend.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Đã di chuyển repository Project 1 từ GitHub sang GitLab.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Đã triển khai cấu hình CI/CD YAML cho Monorepo Project 1 trên GitLab.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Đã học về Git feature branch workflow và áp dụng branching strategy vào Project 1.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Đã tìm hiểu các công cụ phát triển local cho dịch vụ AWS serverless: AWS SAM, Serverless Framework và LocalStack.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Đã lựa chọn và quyết định dùng Serverless Framework cho các bản demo local của Project 1.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nâng cao kỹ năng quản lý repository, tự động hóa CI/CD và quy trình phát triển serverless.
