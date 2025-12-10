@@ -1,138 +1,127 @@
 ---
-title: "Proposal"
+title: "Đề xuất"
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 
 # APT Magic  
-## Nền tảng AI Serverless cho tạo ảnh cá nhân hóa và tương tác xã hội
+## Nền tảng AI serverless cho tạo ảnh cá nhân hoá và tương tác xã hội
 
 ### 1. Tóm tắt điều hành
-**APT Magic** là một ứng dụng web serverless sử dụng AI, cho phép người dùng tạo, tùy chỉnh và chia sẻ nội dung nghệ thuật như hình ảnh được tạo bởi mô hình AI. Nền tảng tích hợp trực tiếp với các foundation models thông qua **Amazon Bedrock**, đồng thời cung cấp trải nghiệm web mượt mà nhờ **Next.js (SSR)** được triển khai bằng **AWS Amplify**.
+**APT Magic** là một ứng dụng web serverless được trang bị AI, cho phép người dùng tạo, cá nhân hoá và chia sẻ nội dung nghệ thuật (ví dụ ảnh do AI tạo). Nền tảng tích hợp với các mô hình nền tảng qua **Amazon Bedrock** và cung cấp trải nghiệm web mượt mà bằng **Next.js (SSR)** được host trên **AWS Amplify**.
 
-Phiên bản MVP tập trung vào việc tạo ảnh theo thời gian thực và chia sẻ nội dung, trong khi **Thiết kế Tương Lai** hướng đến khả năng mở rộng với **SageMaker Inference**, **Step Functions**, và quy trình **AWS MLOps** để tự động hóa quản lý mô hình và điều phối toàn hệ thống.
+Phiên bản MVP tập trung vào tạo ảnh thời gian thực và chia sẻ, trong khi **Thiết kế tương lai** dự kiến mở rộng với **Bedrock AgentCore / SageMaker Inference**, **SQS/SNS**, **Secrets Manager & CloudTrail** và các pipeline **AWS MLOps** để điều phối mô hình và tự động hoá nâng cao.
 
-APT Magic hiện được phát triển với kiến trúc AWS-native hiện đại, tiết kiệm chi phí và an toàn, phù hợp cho lượng người dùng nhỏ đến trung bình; sau đó sẽ mở rộng thành nền tảng AI quy mô doanh nghiệp.
+APT Magic được phát triển theo kiến trúc AWS-native hiện đại, tối ưu chi phí và bảo mật cho nhóm người dùng nhỏ đến trung bình, với kế hoạch mở rộng lên điều phối AI cấp doanh nghiệp.
 
 ---
 
-### 2. Vấn đề đặt ra
-#### Thách thức là gì?
-Hầu hết các nền tảng tạo ảnh AI đều tốn kém, phụ thuộc vào API của bên thứ ba và thiếu khả năng tùy chỉnh sâu.  
-Nhà phát triển và người sáng tạo thường gặp vấn đề về độ trễ, thiếu minh bạch trong quản lý mô hình, và ít quyền kiểm soát dữ liệu người dùng.
+### 2. Vấn đề cần giải quyết
+#### Vấn đề là gì?
+Hầu hết nền tảng tạo ảnh AI hiện nay tốn kém, dựa vào API của bên thứ ba thiếu minh bạch và hạn chế khả năng cá nhân hoá. Nhà phát triển và creator thường gặp độ trễ cao, thiếu quản lý mô hình minh bạch và ít kiểm soát về bảo mật dữ liệu người dùng.
 
 #### Giải pháp
-APT Magic sử dụng **kiến trúc serverless của AWS** để cung cấp:
+APT Magic tận dụng **kiến trúc serverless trên AWS** để mang lại:
+- Tạo ảnh AI thời gian thực thông qua các mô hình **Amazon Bedrock (Stability AI)**.  
+- Xác thực người dùng và quản lý nội dung an toàn với **Amazon Cognito** và **DynamoDB**.  
+- Xử lý API có thể mở rộng bằng **AWS Lambda** và **API Gateway**.  
+- Phân phối toàn cầu với độ trễ thấp qua **CloudFront CDN** và bảo vệ bằng **WAF**.  
 
-- Tạo ảnh AI thời gian thực với mô hình **Amazon Bedrock – Stability AI**.  
-- Xác thực người dùng và quản lý nội dung bảo mật với **Amazon Cognito** và **DynamoDB**.  
-- Điều phối API linh hoạt bằng **AWS Lambda** và **API Gateway**.  
-- Phân phối nội dung tốc độ cao với **CloudFront CDN** kết hợp **WAF** để bảo vệ.  
-
-Các nâng cấp tương lai sẽ bao gồm **Step Functions**, **SQS/SNS**, **SageMaker Inference**, và CI/CD tiết kiệm chi phí với **CodeBuild**, **CodePipeline**, **CloudFormation** — biến APT Magic thành một nền tảng MLOps tự động hóa toàn diện.
+Các nâng cấp tương lai sẽ bổ sung **SQS/SNS** để để điều phối, **Bedrock AgentCore / SageMaker Inference** cho pipelines mô hình, và CI/CD hiệu quả chi phí thông qua **CloudFormation**, biến APT Magic thành nền tảng MLOps tự động hoàn toàn.
 
 ---
 
 ### 3. Kiến trúc giải pháp
 
 #### **Kiến trúc MVP**
-MVP được xây dựng theo hướng **hoàn toàn serverless**, tập trung vào khả năng mở rộng, dễ bảo trì và tối ưu chi phí.
+MVP là một **kiến trúc hoàn toàn serverless**, chú trọng khả năng mở rộng, dễ bảo trì và tối ưu chi phí.
 
-**Các dịch vụ AWS chủ chốt:**
-- **Route53 + CloudFront + WAF** — đảm bảo truy cập toàn cầu an toàn và cache hiệu quả.
-- **Amplify (Next.js SSR)** — triển khai giao diện và tầng server-side rendering.
-- **API Gateway + Lambda Functions** — xử lý backend (image processing, subscription, post APIs).
-- **Amazon Cognito** — Xác thực và phân quyền người dùng.
-- **Amazon S3 + DynamoDB** — Lưu trữ dữ liệu và hình ảnh.
-- **Amazon Bedrock** — Tích hợp mô hình tạo ảnh (Stability AI).
-- **Secrets Manager, CloudWatch, CloudTrail** — Bảo mật, giám sát và ghi log.
+**Dịch vụ AWS cốt lõi:**
+- **Route53 + CloudFront + WAF** — Truy cập an toàn toàn cầu và caching.
+- **Amplify (Next.js SSR)** — Host frontend và lớp server-side rendering.
+- **API Gateway + Lambda Functions** — Quản lý logic backend (xử lý ảnh, subscription, API bài đăng).
+- **Amazon Cognito** — Xác thực người dùng và quản lý quyền truy cập.
+- **Amazon S3 + DynamoDB** — Lưu trữ ảnh và dữ liệu.
+- **Amazon Bedrock** — Tích hợp mô hình nền tảng (Stability AI) cho tạo ảnh.
+- **CloudWatch** — Ghi log và giám sát.
 
 **Bảo mật**
-- **PrivateLink** cho kết nối an toàn giữa Lambda và backend services.  
-- **WAF + IAM** để lọc truy cập và kiểm soát quyền chi tiết.  
+- **WAF + IAM policies** để lọc lưu lượng và kiểm soát truy cập theo vai trò.
 
 ![APT Magic MVP Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/aptMagic_mvp.jpg)
 
 ---
 
-#### **Thiết kế tương lai (Kiến trúc nâng cao)**
-Ở giai đoạn tiếp theo, APT Magic sẽ phát triển thành **nền tảng điều phối AI**, bổ sung các lớp tự động hóa, độ bền hệ thống và quản lý vòng đời mô hình.
+#### **Thiết kế tương lai (Kiến trúc mở rộng)**
+Trong giai đoạn tiếp theo, APT Magic sẽ phát triển thành một **nền tảng điều phối AI**, bổ sung các lớp tự động hoá, khả năng chịu lỗi và quản lý vòng đời mô hình.
 
-**Các dịch vụ sẽ được bổ sung:**
-- **AWS Step Functions** — điều phối workflow bất đồng bộ như:
-  - Tạo ảnh nhiều bước (kiểm tra prompt → inference → upload kết quả).
-  - Xác nhận thanh toán → xử lý mô hình → gửi thông báo.
-- **Amazon SQS** — truyền tải thông điệp giữa các Lambda async.
-- **Amazon SNS** — gửi thông báo thời gian thực cho người dùng hoặc admin.
-- **Amazon ElastiCache (Redis)** — caching và hạn chế tốc độ request.
-- **Amazon SageMaker Inference** — triển khai các mô hình tùy chỉnh, fine-tuned.
-- **AWS CodePipeline + SageMaker Pipelines** — tự động hóa toàn bộ MLOps.
-- **AWS PrivateLink + VPC Endpoints** — đảm bảo dữ liệu đi trong mạng riêng.
-- **AWS WAF & Shield Advanced** — bảo vệ khỏi DDoS và nâng cao an ninh.
+**Dịch vụ mới sẽ thêm vào:**
+- **Amazon SQS** — Hàng đợi tin nhắn tin cậy giữa các task Lambda bất đồng bộ.
+- **Amazon SNS** — Thông báo sự kiện theo thời gian thực đến người dùng hoặc admin.
+- **Amazon ElastiCache (Redis)** — Rate limiting và cache cho các yêu cầu inference thường xuyên.
+- **Amazon Bedrock AgentCore** — Host các mô hình tùy chỉnh đã fine-tune và quản lý endpoint mô hình.
 
-- **CI/CD + MLOps**
-  - **CodePipeline + CodeBuild + CloudFormation** để triển khai hạ tầng tự động.  
+- **CI/CD**
+  - **CloudFormation** cho triển khai hạ tầng tự động hoá.
 
-![APT Magic Future Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/digram_architecture.jpg)
+![APT Magic Future Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/diagram_architecture.jpg)
 
 ---
 
 ### 4. Triển khai kỹ thuật
 
 #### **Các giai đoạn triển khai**
-**Giai đoạn 1 – MVP (Hiện tại / Đã hoàn thành)**
+**Giai đoạn 1 – Triển khai MVP (Đã hoàn thành / Hiện tại)**
 - Triển khai Amplify (Next.js SSR) + API Gateway + Lambda.
-- Tích hợp API Stability AI qua Bedrock.
-- Thiết lập CI/CD bằng CodePipeline + CloudFormation.
-- Kích hoạt Cognito cho user auth và S3 + DynamoDB để lưu trữ.
+- Tích hợp Bedrock Stability AI API.
+- Thiết lập CI/CD qua GitLab CI/CD.
+- Kích hoạt xác thực người dùng (Cognito) và lưu trữ (S3 + DynamoDB).
+- Ghi log và giám sát qua CloudWatch.
 
-**Giai đoạn 2 – Mở rộng theo thiết kế tương lai**
-- Thêm Step Functions + SQS/SNS để quản lý workflow AI bất đồng bộ.
-- Tích hợp ElastiCache để caching và rate limiting.
-- Kết nối SageMaker Inference cho các mô hình tùy chỉnh.
-- Dùng SageMaker Pipelines để tự động training và deploy.
-- Tăng cường bảo mật với Shield Advanced + GuardDuty + PrivateLink.
-- Kết nối GitLab Runner với CodeBuild để hợp nhất CI/CD.
-
----
-
-### 5. Timeline & Milestones
-
-| Giai đoạn | Mô tả | Thời gian ước tính | Mốc triển khai (Milestone) |
-|-----------|-------|--------------------|-----------------------------|
-| **Tháng 1: Thiết lập & Core API** | Triển khai hạ tầng IaC, Cognito, API Gateway, DynamoDB, và các hàm Lambda cơ bản. | 4 Tuần | Core Backend hoạt động, Auth/User Management hoàn thành. |
-| **Tháng 2: AI & Payment Integration** | Tích hợp LLM Claude Haiku 3 Amazon Bedrock (Stability AI), Replicate API hoàn thiện hàm *Image Processing* và tích hợp cổng thanh toán bên thứ ba. | 4 Tuần | Demo xử lý ảnh AI đầu cuối (end-to-end) thành công. |
-| **Tháng 3: Front-end & CI/CD** | Phát triển UI/UX (Amplify/Next.js), hoàn thiện pipeline CI/CD, và cấu hình Giám sát/Bảo mật (CloudWatch/WAF). | 4 Tuần | Nền tảng hoàn chỉnh, sẵn sàng cho kiểm thử người dùng. |
-| **Tháng 4: Tối ưu & Go-Live** | Kiểm thử hiệu năng (Stress Test), tối ưu chi phí, và triển khai Production. | 4 Tuần | **Go-Live** (Sản phẩm chính thức ra mắt). |
-
+**Giai đoạn 2 – Mở rộng Thiết kế Tương lai**
+- Thêm SQS/SNS.
+- Bổ sung ElastiCache cho throttling và caching.
+- Tích hợp Bedrock Agent để nâng cao pipeline AI.
+- Kết nối GitLab Runner với CodeBuild cho CI/CD thống nhất.
 
 ---
 
-### 6. Ước tính chi phí (AWS Pricing Estimate)
+### 5. Timeline & Mốc quan trọng
 
-#### Tổng Chi Phí
+| Giai đoạn | Mô tả | Thời gian ước tính | Mốc triển khai |
+|-------|-------------|--------------------|-----------------------|
+| **Tháng 1: Thiết lập & API cốt lõi** | Triển khai hạ tầng (IaC), Cognito, API Gateway, DynamoDB, và các Lambda cơ bản. | 4 Tuần | Backend cốt lõi hoạt động, Auth/Quản lý người dùng hoàn thành. |
+| **Tháng 2: Tích hợp AI** | Tích hợp LLM trên Amazon Bedrock (Stability AI), Replicate API, hoàn thiện các chức năng xử lý ảnh. | 4 Tuần | Demo xử lý ảnh AI end-to-end thành công. |
+| **Tháng 3: Front-end & CI/CD** | Phát triển UI/UX (Amplify/Next.js), hoàn thiện pipeline CI/CD, cấu hình Giám sát/Bảo mật (CloudWatch/WAF). | 4 Tuần | Nền tảng sẵn sàng cho thử nghiệm người dùng. |
+| **Tháng 4: Tối ưu & Go-Live** | Thực hiện test hiệu năng (Stress Test), tối ưu chi phí, và triển khai Production. | 4 Tuần | **Go-Live** (Khởi chạy chính thức). |
+
+---
+
+### 6. Ước tính chi phí (Dự toán AWS)
+
+#### Tổng chi phí
 - **Hàng tháng:** $9.80  
 - **Trả trước:** $0.00  
-- **12 tháng:** $117.60  
+- **12 Tháng:** $117.60  
 
 ---
 
 #### Tổng quan dịch vụ
 
-| Dịch vụ | Khu vực | Chi phí tháng | Trả trước | Chi phí 12 tháng | Ghi chú |
-|--------|---------|---------------|-----------|-------------------|---------|
-| Amazon Route 53 | Asia Pacific (Singapore) | $0.50 | $0.00 | $6.00 | 1 Hosted Zone, 1 domain, 1 VPC liên kết |
-| Amazon CloudFront | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Không có cấu hình cụ thể |
-| AWS WAF | Asia Pacific (Singapore) | $6.00 | $0.00 | $72.00 | 1 Web ACL; 1 rule mỗi ACL |
-| AWS Amplify | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Build instance: Standard (8GB/4vCPU); thời lượng request 500ms |
-| AWS CloudFormation | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Không có extension; không có thao tác |
-| Amazon API Gateway | Asia Pacific (Singapore) | $0.13 | $0.00 | $1.59 | 10k requests/tháng; message WebSocket 1KB; request size 30KB |
-| AWS Lambda | Asia Pacific (Singapore) | $1.67 | $0.00 | $20.04 | 1 triệu invokes; x86; 512MB ephemeral storage |
-| Amazon CloudWatch | Asia Pacific (Singapore) | $0.85 | $0.00 | $10.22 | 1 metric; 0.5GB logs in; 0.5GB logs tới S3 |
+| Dịch vụ | Vùng | Chi phí/tháng | Trả trước | Chi phí 12 tháng | Ghi chú |
+|--------|---------|--------------|---------|---------------|-------|
+| Amazon Route 53 | Asia Pacific (Singapore) | $0.50 | $0.00 | $6.00 | 1 Hosted Zone, 1 domain, 1 linked VPC |
+| Amazon CloudFront | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Không cấu hình đặc biệt |
+| AWS WAF | Asia Pacific (Singapore) | $6.00 | $0.00 | $72.00 | 1 Web ACL; 1 rule per ACL |
+| AWS Amplify | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Build instance: Standard (8GB/4vCPU); request duration 500ms |
+| AWS CloudFormation | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Không mở rộng; không thao tác |
+| Amazon API Gateway | Asia Pacific (Singapore) | $0.13 | $0.00 | $1.59 | 10k requests/month; WebSocket message 1KB; request size 30KB |
+| AWS Lambda | Asia Pacific (Singapore) | $1.67 | $0.00 | $20.04 | 1 million invokes; x86; 512MB ephemeral storage |
+| Amazon CloudWatch | Asia Pacific (Singapore) | $0.85 | $0.00 | $10.22 | 1 metric; 0.5GB logs in; 0.5GB logs to S3 |
 | S3 Standard | Asia Pacific (Singapore) | $0.23 | $0.00 | $2.76 | 10GB storage; 20k PUT; 40k GET |
-| DynamoDB On-Demand | Asia Pacific (Singapore) | $0.42 | $0.00 | $5.04 | 1GB storage; item 1KB; chế độ on-demand |
-| **Tổng (Ước tính)** | — | **$9.80** | **$0.00** | **$117.60** | Theo AWS Pricing Calculator |
+| DynamoDB On-Demand | Asia Pacific (Singapore) | $0.42 | $0.00 | $5.04 | 1GB storage; 1KB item; on-demand mode |
+| **Tổng (Ước tính)** | — | **$9.80** | **$0.00** | **$117.60** | Dựa trên AWS Pricing Calculator |
 
 ---
 
@@ -140,57 +129,53 @@ MVP được xây dựng theo hướng **hoàn toàn serverless**, tập trung v
 - **Tiền tệ:** USD  
 - **Locale:** en_US  
 - **Ngày tạo:** 12/9/2025  
-- **Share URL:** [AWS Calculator Link](https://calculator.aws/#/estimate?id=f8f785603d5dea16be2d60ad39e4733fc352a108) 
-- **Lưu ý pháp lý:** AWS Pricing Calculator chỉ cung cấp ước tính; chi phí thực tế có thể thay đổi theo mức sử dụng.
+- **Share URL:** [AWS Calculator Link](https://calculator.aws/#/estimate?id=f8f785603d5dea16be2d60ad39e4733fc352a108)  
+- **Miễn trừ trách nhiệm:** Bảng ước tính chi phí chỉ mang tính tham khảo; chi phí thực tế có thể thay đổi theo mức sử dụng.
 
 ---
 
-#### Bảng Giá Mô Hình AI
+#### Giá mô hình AI
 
-| Mô hình | Độ phân giải / Sử dụng Token | Chất lượng | Giá cho mỗi yêu cầu (USD) | Ghi chú |
-|---------|-----------------------------|------------|---------------------------|---------|
-| Titan Image Generator v2 | < 512×512 | Tiêu chuẩn | 0.008 | Giá cố định cho 1 ảnh |
-| Titan Image Generator v2 | < 512×512 | Cao cấp | 0.01 | Giá cố định cho 1 ảnh |
-| Titan Image Generator v2 | > 1024×1024 | Tiêu chuẩn | 0.01 | Giá cố định cho 1 ảnh |
-| Titan Image Generator v2 | > 1024×1024 | Cao cấp | 0.012 | Giá cố định cho 1 ảnh |
-| Stable Diffusion 3.5 Large | Bất kỳ | N/A | 0.08 | Giá cố định cho 1 ảnh |
-| Claude (text + image) | 40 token đầu vào + 1 ảnh | N/A | 0.00195 | Giá cho 1 yêu cầu gồm văn bản và 1 ảnh 1024×1024 |
+| Mô hình | Độ phân giải / Token | Chất lượng | Giá/Yêu cầu (USD) | Ghi chú |
+|-------|-------------------------|---------|------------------------|-------|
+| Titan Image Generator v2 | < 512×512 | Standard | 0.008 | Giá cố định cho 1 ảnh |
+| Titan Image Generator v2 | < 512×512 | Premium | 0.01 | Giá cố định cho 1 ảnh |
+| Titan Image Generator v2 | > 1024×1024 | Standard | 0.01 | Giá cố định cho 1 ảnh |
+| Titan Image Generator v2 | > 1024×1024 | Premium | 0.012 | Giá cố định cho 1 ảnh |
+| Stable Diffusion 3.5 Large | Any | N/A | 0.08 | Giá cố định cho 1 ảnh |
+| Claude (text + image) | 40 input tokens + 1 image | N/A | 0.00195 | Giá cho 1 request bao gồm text và 1 ảnh 1024×1024 |
 
-#### Tùy chọn bổ sung
+#### Tuỳ chọn bổ sung
 
-| Chế độ | Tăng cường | Giá (USD) |
-|--------|------------|-----------|
-| text→img | không tăng cường | 0.08 |
-| text→img | có tăng cường | 0.08195 |
-| img→img | không tăng cường | 0.012 |
-| img→img | có tăng cường | 0.094 |
+| Chế độ | Augmentation | Giá (USD) |
+|------|-------------|-------------|
+| text→img | no augment | 0.08 |
+| text→img | with augment | 0.08195 |
+| img→img | no augment | 0.012 |
+| img→img | with augment | 0.094 |
 
- ---
+---
 
 ### 7. Đánh giá rủi ro
-
-| Rủi ro | Mức độ ảnh hưởng | Khả năng xảy ra | Giảm thiểu |
-|--------|------------------|------------------|-------------|
-| Độ trễ khi gọi mô hình AI | Trung bình | Cao | Dùng ElastiCache + Step Functions |
-| Chi phí tăng vì inference | Cao | Trung bình | Kiểm soát Bedrock usage, autoscaling SageMaker |
-| Lỗi cấu hình CI/CD | Trung bình | Thấp | Áp dụng rollback của CloudFormation |
+| Rủi ro | Tác động | Xác suất | Biện pháp giảm thiểu |
+|------|---------|-------------|-------------|
+| Độ trễ inference mô hình AI | Trung bình | Cao | Dùng ElastiCache + SQS/SNS để xử lý bất đồng bộ |
+| Tăng chi phí do gọi mô hình | Cao | Trung bình | Kiểm soát sử dụng Bedrock, autoscaling SageMaker |
+| Lỗi cấu hình CI/CD | Trung bình | Thấp | Chính sách rollback CloudFormation |
 | Lỗ hổng bảo mật | Cao | Trung bình | WAF, GuardDuty, PrivateLink, IAM least privilege |
-| Phụ thuộc API bên thứ ba | Trung bình | Trung bình | Dùng fallback inference từ S3 |
+| Phụ thuộc API bên thứ ba | Trung bình | Trung bình | Dự phòng: lưu kết quả inference vào S3 |
 
 ---
 
-### 8. Giá trị đạt được
-
-#### Lợi ích kỹ thuật:
-- Hoàn thiện pipeline serverless cho tạo ảnh AI.
-- Nền tảng điều phối dễ mở rộng, phù hợp tích hợp MLOps.
-- Cải thiện độ trễ và tính ổn định nhờ caching và workflows async.
+### 8. Kết quả kỳ vọng
+#### Kết quả kỹ thuật:
+- Hoàn thiện workflow tạo ảnh AI serverless với CI/CD bảo mật.
+- Kiến trúc mô-đun cho phép tích hợp MLOps nhanh chóng.
+- Cải thiện độ trễ và độ tin cậy bằng caching và workflow bất đồng bộ.
 
 #### Giá trị dài hạn:
-- Nền tảng mở rộng lên mô hình **AI as a Service**.  
-- Khung MLOps sẵn sàng cho tự động hóa training/retraining.  
-- Hạ tầng tái sử dụng cho nhiều sản phẩm AI trong tương lai.
+- Nền tảng cho mở rộng **AI as a Service (AIaaS)**.  
+- Khung **MLOps** sẵn sàng mở rộng với tự động huấn luyện lại.  
+- Hạ tầng đám mây có thể tái sử dụng cho sản phẩm AI trong tương lai.
 
 ---
-
-

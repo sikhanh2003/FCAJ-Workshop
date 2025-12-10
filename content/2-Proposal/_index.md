@@ -11,7 +11,7 @@ pre: " <b> 2. </b> "
 ### 1. Executive Summary
 **APT Magic** is a serverless AI-powered web application designed to enable users to generate, personalize, and share artistic content such as AI-generated images. The platform integrates with AI foundation models via **Amazon Bedrock** and provides a seamless web experience using **Next.js (SSR)** hosted on **AWS Amplify**.  
 
-The MVP version focuses on real-time image generation and sharing, while the **Future Design** aims to scale with **SageMaker Inference**, **Step Functions**, and **AWS MLOps pipelines** for advanced model orchestration and automation.
+The MVP version focuses on real-time image generation and sharing, while the **Future Design** aims to scale with **Bedrock agentCore/SageMaker Inference**, **SQS/SNS**, **Secret Manager & CloudTrail** and **AWS MLOps pipelines** for advanced model orchestration and automation.
 
 APT Magic is currently developed as a modern, cost-efficient, and secure AWS-native architecture for small to medium user bases, with planned expansion into enterprise-grade AI orchestration.
 
@@ -29,7 +29,7 @@ APT Magic leverages **AWS serverless architecture** to deliver:
 - Scalable API handling via **AWS Lambda** and **API Gateway**.  
 - Low-latency global delivery with **CloudFront CDN** and **WAF protection**.  
 
-Future upgrades will include **Step Functions orchestration**, **SQS/SNS decoupling**, **SageMaker Inference pipelines**, and cost-efficient CI/CD via **CodeBuild**, **CodePipeline**, and **CloudFormation**. transforming APT Magic into a fully automated MLOps platform.
+Future upgrades will include **SQS/SNS decoupling**, **Bedrock AgentCore/SageMaker Inference pipelines**, and cost-efficient CI/CD via **CloudFormation**. transforming APT Magic into a fully automated MLOps platform.
 
 ---
 
@@ -45,10 +45,9 @@ The MVP is a **fully serverless architecture**, focusing on scalability, maintai
 - **Amazon Cognito** — User authentication and access control.
 - **Amazon S3 + DynamoDB** — Data persistence and image storage.
 - **Amazon Bedrock** — Integrates foundation model (Stability AI) for image generation.
-- **Secrets Manager, CloudWatch, CloudTrail** — Security, logging, and monitoring.
+- **CloudWatch** — Logging, and monitoring.
 
 **Security**
-- **PrivateLink** for secure communication between Lambda and backend services.  
 - **WAF + IAM policies** for traffic filtering and role-based access control.  
 
 ![APT Magic MVP Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/aptMagic_mvp.jpg)
@@ -59,19 +58,13 @@ The MVP is a **fully serverless architecture**, focusing on scalability, maintai
 In the next phase, APT Magic will evolve into an **AI orchestration platform**, introducing new layers for automation, resilience, and model lifecycle management.
 
 **New Services to be Added:**
-- **AWS Step Functions** — To orchestrate asynchronous workflows such as:
-  - Multi-step AI image generation (prompt validation → inference → result upload).
-  - Payment confirmation → model processing → notification.
 - **Amazon SQS** — For reliable message queuing between async Lambda tasks.
 - **Amazon SNS** — For real-time event notifications to users or administrators.
 - **Amazon ElastiCache (Redis)** — For rate limiting and caching of frequent inference requests.
-- **Amazon SageMaker Inference** — For hosting custom fine-tuned models and managing model endpoints.
-- **AWS CodePipeline + SageMaker Pipelines** — To automate MLOps: model training, evaluation, and deployment.
-- **AWS PrivateLink + VPC Endpoints** — For secure data flow between Lambda, S3, and SageMaker.
-- **AWS WAF & Shield Advanced** — For DDoS protection and advanced security filtering.
+- **Amazon Bedrock AgentCore** — For hosting custom fine-tuned models and managing model endpoints.
 
-- **CI/CD + MLOps**
-  - **CodePipeline + CodeBuild + CloudFormation** for infrastructure deployment and automation.  
+- **CI/CD**
+  - **CloudFormation** for infrastructure deployment and automation.  
 
 ![APT Magic Future Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/diagram_architecture.jpg)
 
@@ -83,15 +76,14 @@ In the next phase, APT Magic will evolve into an **AI orchestration platform**, 
 **Phase 1 – MVP Deployment (Completed / Current)**
 - Implement Amplify (Next.js SSR) + API Gateway + Lambda.
 - Integrate Bedrock Stability AI API.
-- Deploy CI/CD via CodePipeline + CloudFormation.
+- Deploy CI/CD via Gitlab CI/CD.
 - Enable user authentication (Cognito) and storage (S3 + DynamoDB).
+- Log and Monitor via Cloudwatch
 
 **Phase 2 – Future Design Expansion**
-- Introduce Step Functions + SQS/SNS to manage async AI workflows.
+- Introduce SQS/SNS to decouple.
 - Add ElastiCache for request throttling and caching.
-- Integrate SageMaker Inference for fine-tuned model hosting.
-- Implement SageMaker Pipelines for automated training and deployment.
-- Extend security with Shield Advanced + GuardDuty + PrivateLink.
+- Integrate Bedrock Agent to enhance AI Pipelines
 - Connect GitLab Runner with CodeBuild for unified CI/CD.
 
 ---
@@ -101,10 +93,9 @@ In the next phase, APT Magic will evolve into an **AI orchestration platform**, 
 | Phase | Description | Estimated Duration | Deployment Milestone |
 |-------|-------------|--------------------|-----------------------|
 | **Month 1: Setup & Core API** | Deploy infrastructure (IaC), Cognito, API Gateway, DynamoDB, and foundational Lambda functions. | 4 Weeks | Core Backend operational, Auth/User Management completed. |
-| **Month 2: AI & Payment Integration** | Integrate Claude Haiku 3 LLM on Amazon Bedrock (Stability AI), Replicate API, complete *Image Processing* functions, and integrate third-party payment gateway. | 4 Weeks | Successful end-to-end AI image processing demo. |
+| **Month 2: AI Integration** | Integrate Claude Haiku 3 LLM on Amazon Bedrock (Stability AI), Replicate API, complete *Image Processing* functions. | 4 Weeks | Successful end-to-end AI image processing demo. |
 | **Month 3: Front-end & CI/CD** | Develop UI/UX (Amplify/Next.js), finalize CI/CD pipelines, and configure Monitoring/Security (CloudWatch/WAF). | 4 Weeks | Full platform ready for user testing. |
 | **Month 4: Optimization & Go-Live** | Perform performance testing (Stress Test), cost optimization, and Production deployment. | 4 Weeks | **Go-Live** (Official product launch). |
-
 
 ---
 
@@ -169,7 +160,7 @@ In the next phase, APT Magic will evolve into an **AI orchestration platform**, 
 ### 7. Risk Assessment
 | Risk | Impact | Probability | Mitigation |
 |------|---------|-------------|-------------|
-| AI model inference latency | Medium | High | Use ElastiCache + Step Functions for async handling |
+| AI model inference latency | Medium | High | Use ElastiCache + SQS/SNS for async handling |
 | Cost increase from model calls | High | Medium | Bedrock usage control, SageMaker autoscaling |
 | CI/CD misconfigurations | Medium | Low | CloudFormation rollback policies |
 | Security vulnerabilities | High | Medium | WAF, GuardDuty, PrivateLink, IAM least privilege |
