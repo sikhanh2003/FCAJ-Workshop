@@ -6,122 +6,83 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# AWS hợp tác với Liên minh Đổi mới Nashville nhằm chuyển đổi lực lượng lao động AI và Cloud tại Tennessee
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+*của Tekla Moquin vào ngày 01 THÁNG 10 NĂM 2025 trong Thông báo, Trí tuệ Nhân tạo, Giáo dục, Giáo dục Đại học, Khu vực Công* | [Liên kết cố định](https://www.google.com/search?q=%23) | [Chia sẻ](https://www.google.com/search?q=%23)
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+-----
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+Amazon Web Services (AWS) đang mở rộng **Liên minh Kỹ năng sang Việc làm (Skills to Jobs Tech Alliance)** của mình đến Tennessee, trở thành tiểu bang thứ sáu tham gia liên minh. Thông qua sự hợp tác chiến lược với **Liên minh Đổi mới Nashville (Nashville Innovation Alliance)**, mối quan hệ đối tác này nhằm giải quyết nhu cầu nhân tài công nghệ ngày càng tăng của miền trung Tennessee, đặc biệt tập trung vào các kỹ năng **trí tuệ nhân tạo (AI) và điện toán đám mây**.
 
----
+Khu vực này đang trải qua nhu cầu lớn, với số lượng tin tuyển dụng công nghệ tăng **35 phần trăm** từ năm 2020 đến 2023, và ước tính có **8.000 vị trí công nghệ đang trống** trên toàn khu vực.
 
-## Hướng dẫn kiến trúc
+> “AWS Skills to Jobs được thiết kế để tạo ra các lộ trình dễ tiếp cận đến các sự nghiệp được hỗ trợ bởi cloud và AI, và cộng đồng công nghệ năng động của Nashville khiến nơi đây trở thành địa điểm lý tưởng để mở rộng,” **Valerie Singer, tổng giám đốc bộ phận Giáo dục Toàn cầu tại AWS** cho biết. “Bằng cách hợp tác với Liên minh Đổi mới Nashville, chúng tôi đang tận dụng các kết nối sâu sắc trong cộng đồng của họ để xây dựng một nguồn cung cấp nhân tài công nghệ bền vững.”
 
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
+> **Thị trưởng Freddie O’Connell** phát biểu: “Bằng cách cung cấp cho người dân Nashville các kỹ năng và chuyên môn cần thiết để tiếp cận các công việc công nghệ hàng đầu, chúng tôi sẽ chuẩn bị tốt hơn cho lực lượng lao động địa phương cho nền kinh tế của tương lai, điều này sẽ giúp lan tỏa sự thịnh vượng kinh tế khắp thành phố của chúng ta... Tương lai tươi sáng cho Nashville, và các chương trình đổi mới như thế này sẽ cho phép chúng ta đạt được toàn bộ tiềm năng của mình.”
 
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
+-----
 
-**Kiến trúc giải pháp bây giờ như sau:**
+## Các Đối tác Chủ chốt trong Liên minh Đổi mới Nashville
 
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+Liên minh Đổi mới Nashville đã tập hợp các bên liên quan chính từ giáo dục, chính phủ và công nghiệp, bao gồm:
 
----
+  * **Các Tổ chức Giáo dục Đại học:**
+      * Đại học Vanderbilt
+      * Cao đẳng Cộng đồng Bang Nashville
+      * Đại học Belmont
+      * Đại học Bang Tennessee
+      * Đại học Fisk
+  * **Chính phủ & Cộng đồng:**
+      * Văn phòng Thị trưởng Freddie O’Connell
+      * Hội đồng Công nghệ Greater Nashville
+      * Phòng Thương mại Khu vực Nashville
+  * **Các Nhà Tuyển dụng Lớn:**
+      * AllianceBernstein
+      * Barge Design Solutions
+      * Brooksource
+      * Dell Technologies
+      * Schneider Electric
+      * Đại học Vanderbilt
+      * Chính quyền Thủ phủ Nashville & Hạt Davidson
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+-----
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+##Mục tiêu của AWS Skills to Jobs
 
----
+AWS Skills to Jobs sẽ làm việc với các bên liên quan để:
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
+1.  **Hiện đại hóa các chương trình học** tại các tổ chức giáo dục đại học tham gia, đảm bảo chúng phù hợp với nhu cầu của ngành công nghiệp về kỹ năng AI và cloud.
+2.  **Kết nối người học** từ các chương trình đó với các nhà tuyển dụng tiềm năng và các cơ hội học tập trải nghiệm cho phép người học thể hiện và trau dồi các kỹ năng AI và cloud đã học trên lớp.
 
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+> **Sally Parker, giám đốc điều hành tạm thời của Liên minh Đổi mới Nashville** cho biết: “Liên minh Đổi mới Nashville được thành lập để tập hợp các đối tác nhằm giải quyết những thách thức thực tế. Sáng kiến này với AWS là một ví dụ mạnh mẽ, và là một mô hình cho những nỗ lực trong tương lai, về cách ngành công nghiệp, cộng đồng và giáo dục có thể hợp lực để phát triển nguồn cung nhân tài công nghệ của Nashville và đảm bảo khu vực của chúng ta vẫn là một trung tâm cho các cơ hội toàn diện, sẵn sàng cho tương lai.”
 
----
+-----
 
-## The pub/sub hub
+## Tác động và Triển vọng Tương lai
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+Chương trình này rất quan trọng đối với lĩnh vực công nghệ ở miền trung Tennessee, nơi hiện có lực lượng lao động vượt quá **40.000 chuyên gia** và mức lương công nghệ trung bình vượt quá **$80.000**. Một nguồn cung nhân tài mạnh mẽ là điều cần thiết để duy trì quỹ đạo tăng trưởng này.
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+**Triển vọng tương lai:**
 
----
+  * Sáng kiến đặt mục tiêu phục vụ **hơn 1.000 người dân Tennessee vào năm 2027**.
+  * Kế hoạch mở rộng sang các khu vực khác của bang được lên lịch vào **năm 2026**.
+  * Điều này phù hợp với các mục tiêu phát triển lực lượng lao động rộng lớn hơn của tiểu bang và hỗ trợ danh tiếng ngày càng tăng của Nashville như một trung tâm công nghệ ở miền đông nam Hoa Kỳ.
 
-## Core microservice
+## Bối cảnh Toàn cầu: Liên minh Kỹ năng sang Việc làm của AWS
 
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
+  * **Khởi động:** Tháng 6 năm 2023 tại Hội nghị thượng đỉnh AWS Washington, DC.
+  * **Mục đích:** Tập hợp một liên minh toàn cầu gồm các tổ chức giáo dục đại học, nhà tuyển dụng, chính phủ và các tổ chức cộng tác để giải quyết khoảng cách kỹ năng công nghệ.
+  * **Phạm vi Hiện tại:** Liên minh Công nghệ hiện có mặt tại **12 quốc gia** (Mỹ, Tây Ban Nha, Singapore, Ý, Đức, Ấn Độ, Colombia, Brazil, Malaysia, Pháp, Vương quốc Anh và Thái Lan).
+  * **Mở rộng tại Mỹ:** Tennessee là **tiểu bang thứ sáu của Mỹ** tham gia như một khu vực trọng tâm, cùng với:
+      * New York
+      * Illinois
+      * Washington
+      * West Virginia
+      * Texas
+  * **Số liệu Kể từ khi Khởi động:** Liên minh Công nghệ đã kết nối hơn **62.000 người học** từ hơn **990 tổ chức giáo dục đại học** với hơn **780 nhà tuyển dụng**.
 
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+Để tìm hiểu thêm hoặc tham gia, vui lòng truy cập [trang chủ của Liên minh Kỹ năng sang Việc làm của AWS](https://www.google.com/search?q=%23).
 
----
+-----
 
-## Front door microservice
-
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
-
----
-
-## Staging ER7 microservice
-
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
-
----
-
-## Tính năng mới trong giải pháp
-
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+**TAGS:** thông báo, Trí tuệ Nhân tạo, Khu vực Công AWS, giáo dục, kỹ năng, phát triển kỹ năng, phát triển lực lượng lao động
