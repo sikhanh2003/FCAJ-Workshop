@@ -14,23 +14,24 @@ chapter: false
 
 ### Student Information:
 &emsp; **Full Name:** Ho Si Khanh
-&emsp; **Phone Number:** 0762684794
 
-&emsp; **Email:** dinhviethieu2910@gmail.com
+&emsp; **Phone Number:** 0822017378
 
-&emsp; **University:** FPT University - Ho Chi Minh City
+&emsp; **Email:** sikhanh2003@gmail.com
+
+&emsp; **University:** Ho Chi Minh City University of Technology
 
 &emsp; **Major:** Information Technology
 
-&emsp; **Class:** AWS082025
+&emsp; **Class:** 22DTHJA1
 
 &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 12/09/2025 to 12/12/2025
+&emsp; **Internship Duration:** From 17/04/2026 to 10/07/2026
 
-![Your profile picture](/AWS-FCJ-Workshop-2025/images/avatar.png)
+![Your profile picture](/AWS-FCJ-Workshop-2025/images/avt.jpg)
 
 ### Report Content
 
