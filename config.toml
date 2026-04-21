@@ -48,3 +48,6 @@ weight = 20
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+      [params]
+  # Thêm dòng này nếu theme Learn yêu cầu
+  disableAssetsBusting = true
