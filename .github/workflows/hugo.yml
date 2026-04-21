@@ -16,21 +16,21 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive # Lấy đầy đủ theme và các thành phần con
+          fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.134.3"
+          hugo-version: "0.125.0" # Sử dụng bản ổn định nhất cho theme Learn
           extended: true
 
       - name: Build website
-        run: hugo --minify --baseURL "https://sikhanh2003.github.io/FCAJ-Workshop/"
+        run: hugo --minify
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages
-          force_orphan: true
+          publish_branch: gh-pages # Đẩy dữ liệu đã build vào nhánh này
