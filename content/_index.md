@@ -13,7 +13,7 @@ chapter: false
 {{% /notice %}} -->
 
 ### Student Information:
-&emsp; **Full Name:** Dinh Viet Hieu
+&emsp; **Full Name:** Ho Si Khanh
 &emsp; **Phone Number:** 0762684794
 
 &emsp; **Email:** dinhviethieu2910@gmail.com
