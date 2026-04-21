@@ -1,6 +1,6 @@
 ---
 title: "Week 1 Worklog"
-date: "2024-01-01"
+date: "2026-04-17"
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -18,11 +18,11 @@ pre: " <b> 1.1. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/09/2025 | 08/09/2025      |
-| 3   | - Learn about Cloud Computing <br> - Learn about DevOps Engineering <br> - Read docs about CI/CD <br>                                              | 09/09/2025 | 09/09/2025      |  |
-| 4   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Authentication <br>&emsp; + Server <br>&emsp; + ... <br>                                              | 10/09/2025 | 10/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - Complete 5 tasks to claim 200 AWS Free tier credits<br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 11/09/2025 | 11/09/2025      | <https://000001.awsstudygroup.com/> |
-| 6   | - Explore basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + Key pair <br>&emsp; + Security Group <br> - AWS Infrastructure overview <br> - Learn about Elastic IP   <br>                            | 12/09/2025 | 12/09/2025      | <https://aws.amazon.com/ec2/> |
+| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 17/04/2026 | 17/04/2026      |
+| 3   | - Learn about Cloud Computing <br> - Learn about DevOps Engineering <br> - Read docs about CI/CD <br>                                              | 18/04/2026 | 18/04/2026      |  |
+| 4   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Authentication <br>&emsp; + Server <br>&emsp; + ... <br>                                              | 19/04/2026 | 19/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - Complete 5 tasks to claim 200 AWS Free tier credits<br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 20/04/2026 | 20/04/2026      | <https://000001.awsstudygroup.com/> |
+| 6   | - Explore basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + Key pair <br>&emsp; + Security Group <br> - AWS Infrastructure overview <br> - Learn about Elastic IP   <br>                            | 21/04/2026 | 21/04/2026      | <https://aws.amazon.com/ec2/> |
 
 
 ### Week 1 Achievements:

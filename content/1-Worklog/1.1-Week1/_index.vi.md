@@ -5,11 +5,6 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-<!-- {{% notice warning %}} 
-⚠️ **Lưu ý:** Thông tin sau chỉ dùng để tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
-{{% /notice %}} -->
-
-
 ### Mục tiêu Tuần 1:
 
 * Kết nối và làm quen với các thành viên của First Cloud Journey.
@@ -18,11 +13,11 @@ pre: " <b> 1.1. </b> "
 ### Các nhiệm vụ cần thực hiện trong tuần:
 | Ngày | Nhiệm vụ                                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và ghi chú quy định và quy tắc của đơn vị thực tập                                                                                                   | 08/09/2025 | 08/09/2025      |
-| 3   | - Học về Cloud Computing <br> - Học về DevOps Engineering <br> - Đọc tài liệu về CI/CD <br>                                              | 09/09/2025 | 09/09/2025      |  |
-| 4   | - Học về AWS và các loại dịch vụ của nó <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Authentication <br>&emsp; + Server <br>&emsp; + ... <br>                                              | 10/09/2025 | 10/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tạo tài khoản AWS Free Tier <br> - Học về AWS Console & AWS CLI <br> - Hoàn thành 5 nhiệm vụ để nhận 200 AWS Free Tier credits<br> - **Thực hành:** <br>&emsp; + Tạo tài khoản AWS <br>&emsp; + Cài đặt & cấu hình AWS CLI <br> &emsp; + Cách sử dụng AWS CLI | 11/09/2025 | 11/09/2025      | <https://000001.awsstudygroup.com/> |
-| 6   | - Khám phá EC2 cơ bản: <br>&emsp; + Loại instance <br>&emsp; + AMI <br>&emsp; + Key pair <br>&emsp; + Security Group <br> - Tổng quan về hạ tầng AWS <br> - Học về Elastic IP   <br>                            | 12/09/2025 | 12/09/2025      | <https://aws.amazon.com/ec2/> |
+| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và ghi chú quy định và quy tắc của đơn vị thực tập                                                                                                   | 17/04/2026 | 17/04/2026      |
+| 3   | - Học về Cloud Computing <br> - Học về DevOps Engineering <br> - Đọc tài liệu về CI/CD <br>                                              | 18/04/2026 | 18/04/2026      |  |
+| 4   | - Học về AWS và các loại dịch vụ của nó <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Authentication <br>&emsp; + Server <br>&emsp; + ... <br>                                              | 19/04/2026 | 19/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Tạo tài khoản AWS Free Tier <br> - Học về AWS Console & AWS CLI <br> - Hoàn thành 5 nhiệm vụ để nhận 200 AWS Free Tier credits<br> - **Thực hành:** <br>&emsp; + Tạo tài khoản AWS <br>&emsp; + Cài đặt & cấu hình AWS CLI <br> &emsp; + Cách sử dụng AWS CLI | 20/04/2026 | 20/04/2026      | <https://000001.awsstudygroup.com/> |
+| 6   | - Khám phá EC2 cơ bản: <br>&emsp; + Loại instance <br>&emsp; + AMI <br>&emsp; + Key pair <br>&emsp; + Security Group <br> - Tổng quan về hạ tầng AWS <br> - Học về Elastic IP   <br>                            | 21/04/2026 | 21/04/2026      | <https://aws.amazon.com/ec2/> |
 
 
 ### Thành tựu Tuần 1:
