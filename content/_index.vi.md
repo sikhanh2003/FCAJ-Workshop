@@ -13,24 +13,24 @@ chapter: false
 {{% /notice %}} -->
 
 ### Thông Tin Sinh Viên:
-&emsp; **Họ Và Tên:** Dinh Viet Hieu
-&emsp; **Số Điện Thoại:** 0762684794
+&emsp; **Họ Và Tên:** Ho Si Khanh
+&emsp; **Số Điện Thoại:** 0822017378
 
-&emsp; **Email:** dinhviethieu2910@gmail.com
+&emsp; **Email:** sikhanh2003@gmail.com
 
-&emsp; **Trường Đại Học:** Đại Học FPT - Thành Phố Hồ Chí Minh
+&emsp; **Trường Đại Học:** Đại Học Công Nghệ Thành Phố Hồ Chí Minh - HUTECH
 
 &emsp; **Chuyên Ngành:** Công Nghệ Thông Tin
 
-&emsp; **Lớp:** AWS082025
+&emsp; **Lớp:** 22DTHJA1
 
 &emsp; **Công Ty Thực Tập:** Amazon Web Services Vietnam Co., Ltd.
 
 &emsp; **Vị Trí Thực Tập:** Thực Tập Sinh Đám Mây FCJ
 
-&emsp; **Thời Gian Thực Tập:** Từ 12/09/2025 đến 12/12/2025
+&emsp; **Thời Gian Thực Tập:** Từ 17/04/2026 đến 10/07/2026
 
-![Ảnh đại diện của bạn](/AWS-FCJ-Workshop-2025/images/avatar.png)
+![Ảnh đại diện của bạn](/images/avt.jpg)
 
 ### Nội Dung Báo Cáo
 
