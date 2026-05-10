@@ -30,12 +30,4 @@ pre: " <b> 1. </b> "
 
 **Week 10:** [Participated in GameDay workshops — hands-on exercises that improved practical debugging skills.](1.10-week10/)
 
-**Week 11:** [Experimented with GenAI (Bedrock) and integrated prototype AI flows into the project.](1.11-week11/)
-
-**Week 12:** [Implemented backend functions and serverless WebSocket for real-time features; end-to-end tests.](1.12-week12/)
-
-**Week 13:** [Deployed to production with CloudFront, WAF, and Route53; performed smoke tests and optimizations.](1.13-week13/)
-
-**Week 14:** [Finalized demos, polished documentation, and presented results to mentors and stakeholders.](1.14-week14/)
-
 
