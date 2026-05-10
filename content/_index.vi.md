@@ -30,7 +30,7 @@ chapter: false
 
 &emsp; **Thời Gian Thực Tập:** Từ 17/04/2026 đến 10/07/2026
 
-![Ảnh đại diện của bạn](/images/avt.jpg)
+![Ảnh đại diện của bạn](/static/images/avt.jpg)
 
 ### Nội Dung Báo Cáo
 
