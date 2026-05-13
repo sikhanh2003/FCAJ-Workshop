@@ -1,1 +1,125 @@
+---
+title: "Week 12 Worklog"
+date: "2024-01-01"
+weight: 12
+chapter: false
+pre: " <b> 1.12. </b> "
+---
+<!-- {{% notice warning %}} 
+⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+{{% /notice %}} -->
 
+
+### Week 12 Objectives:
+
+* Advance Project 1 development by building backend functions, fixing bugs, and testing integrations.
+* Explore WebSocket technologies and implement serverless WebSocket using API Gateway and Lambda.
+* Prepare project documentation, slides, proposal, and integrate API Bedrock for AI features.
+* Attend AWS Cloud Mastery Series #3 on the Security Pillar of Well-Architected Framework.
+
+### Tasks to be carried out this week:
+| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 2   |  - **Project 1**: Continue build backend functions  <br> - **Project 1**: Fix bugs and improve Frontend <br> - **Project 1**: Test backend functions by Interacting with frontend                                                                                                  | 24/11/2025 | 24/11/2025      | |
+| 3   |  - **Project 1**: Continue to Improve Project 1 (development lifecycle)  <br> - Explore about WebSocket <br> - Explore about the ability to host a WebSocket server by EC2 <br> - Explore about implement and serverless WebSocket on API Gateway and Lambda <br> - **Practice:** <br> &emsp; + Implement and Serverless WebSocket on API  Gateway Websocket and Lambda                                                  | 25/11/2025 | 25/11/2025      |  |
+| 4   |  - **Project 1**: Implement a serverless WebSocket on dev stage (local enviroment) into Project 1 with Serverless Framework                                                                                       | 26/11/2025 | 26/11/2025      | |
+| 5   |  - **Project 1**: Slide and Proposal (Documentation) <br> - **Project 1**: Implement API Bedrock and Verify System Prompt                       | 27/11/2025 | 27/11/2025      | |
+| 6   |  - **Project 1**: Continue Edit Slide and Proposal (Documentation) <br> - **Project 1**: Local Demo full core flow of Project 1 <br> - **Project 1**: Fix bugs and Chore the Project                                                                               | 28/11/2025 | 28/11/2025      |  |
+| 7   | - Event: **AWS Cloud Mastery Series #3: Security Pillar – AWS Well-Architected** | 29/11/2025 | 29/11/2025 |  |
+
+
+### Week 12 Achievements:
+
+* Continued building backend functions for Project 1.
+
+* Fixed bugs and improved frontend components in Project 1.
+
+* Tested backend functions through frontend interactions.
+
+* Improved overall development lifecycle of Project 1.
+
+* Explored WebSocket fundamentals.
+
+* Investigated hosting WebSocket servers on EC2.
+
+* Explored serverless WebSocket implementation on API Gateway and Lambda.
+
+* Practiced implementing serverless WebSocket on API Gateway WebSocket and Lambda.
+
+* Integrated serverless WebSocket into Project 1's dev stage using Serverless Framework.
+
+* Prepared slides and proposal documentation for Project 1.
+
+* Implemented API Bedrock integration and verified system prompts.
+
+* Edited and refined slides and proposal documentation.
+
+* Conducted local demo of Project 1's full core flow.
+
+* Fixed bugs and performed chores on Project 1.
+
+* Attended AWS Cloud Mastery Series #3 on Security Pillar.
+
+* Enhanced Project 1 with real-time features and secure AI integrations.---
+title: "Week 12 Worklog"
+date: "2025-11-24"
+weight: 12
+chapter: false
+pre: " <b> 1.12. </b> "
+---
+<!-- {{% notice warning %}} 
+⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+{{% /notice %}} -->
+
+
+### Week 12 Objectives:
+
+* Advance Project 1 development by building backend functions, fixing bugs, and testing integrations.
+* Explore WebSocket technologies and implement serverless WebSocket using API Gateway and Lambda.
+* Prepare project documentation, slides, proposal, and integrate API Bedrock for AI features.
+* Attend AWS Cloud Mastery Series #3 on the Security Pillar of Well-Architected Framework.
+
+### Tasks to be carried out this week:
+| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 2   |  - **Project 1**: Continue build backend functions  <br> - **Project 1**: Fix bugs and improve Frontend <br> - **Project 1**: Test backend functions by Interacting with frontend                                                                                                  | 24/11/2025 | 24/11/2025      | |
+| 3   |  - **Project 1**: Continue to Improve Project 1 (development lifecycle)  <br> - Explore about WebSocket <br> - Explore about the ability to host a WebSocket server by EC2 <br> - Explore about implement and serverless WebSocket on API Gateway and Lambda <br> - **Practice:** <br> &emsp; + Implement and Serverless WebSocket on API  Gateway Websocket and Lambda                                                  | 25/11/2025 | 25/11/2025      |  |
+| 4   |  - **Project 1**: Implement a serverless WebSocket on dev stage (local enviroment) into Project 1 with Serverless Framework                                                                                       | 26/11/2025 | 26/11/2025      | |
+| 5   |  - **Project 1**: Slide and Proposal (Documentation) <br> - **Project 1**: Implement API Bedrock and Verify System Prompt                       | 27/11/2025 | 27/11/2025      | |
+| 6   |  - **Project 1**: Continue Edit Slide and Proposal (Documentation) <br> - **Project 1**: Local Demo full core flow of Project 1 <br> - **Project 1**: Fix bugs and Chore the Project                                                                               | 28/11/2025 | 28/11/2025      |  |
+| 7   | - Event: **AWS Cloud Mastery Series #3: Security Pillar – AWS Well-Architected** | 29/11/2025 | 29/11/2025 |  |
+
+
+### Week 12 Achievements:
+
+* Continued building backend functions for Project 1.
+
+* Fixed bugs and improved frontend components in Project 1.
+
+* Tested backend functions through frontend interactions.
+
+* Improved overall development lifecycle of Project 1.
+
+* Explored WebSocket fundamentals.
+
+* Investigated hosting WebSocket servers on EC2.
+
+* Explored serverless WebSocket implementation on API Gateway and Lambda.
+
+* Practiced implementing serverless WebSocket on API Gateway WebSocket and Lambda.
+
+* Integrated serverless WebSocket into Project 1's dev stage using Serverless Framework.
+
+* Prepared slides and proposal documentation for Project 1.
+
+* Implemented API Bedrock integration and verified system prompts.
+
+* Edited and refined slides and proposal documentation.
+
+* Conducted local demo of Project 1's full core flow.
+
+* Fixed bugs and performed chores on Project 1.
+
+* Attended AWS Cloud Mastery Series #3 on Security Pillar.
+
+* Enhanced Project 1 with real-time features and secure AI integrations.
