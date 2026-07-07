@@ -14,10 +14,9 @@ pre: " <b> 1.10. </b> "
 ### Các nhiệm vụ thực hiện trong tuần này:
 | Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2 | - Áp dụng Serverless Framework <br>  | 10/11/2025 | 10/11/2025 | |
-| 3 | - Triển khai và Kết nối với Local S3 Bucket  | 11/11/2025 | 11/11/2025 | |
-| 5 | - Test các backend functions bằng cách tương tác với frontend <br> | 13/11/2025 | 13/10/2025 | |
-| 6 | - Thực hiện nghiên cứu về chi phí (cost)| 14/11/2025 | 14/11/2025 | |
+| 1 | - Triển khai backend functions <br>  | 10/11/2025 | 10/11/2025 | |
+| 2 | - Test các backend functions bằng cách tương tác với frontend <br> | 13/11/2025 | 13/10/2025 | |
+| 3 | - Thực hiện nghiên cứu về chi phí | 14/11/2025 | 14/11/2025 | |
 
 ### Thành tựu Tuần 10:
 
