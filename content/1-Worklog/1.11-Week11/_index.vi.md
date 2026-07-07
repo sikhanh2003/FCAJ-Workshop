@@ -7,7 +7,7 @@ pre: " <b> 1.11. </b> "
 ---
 ### Mục tiêu Tuần 11:
 
-* Tham gia và các sự kiện AWS
+* Tham gia các sự kiện AWS
 * Tìm hiểu về vai trò của CDN, bảo vệ chống DDoS, và các dịch vụ bảo mật AWS như CloudFront, WAF, và Shield.
 
 ### Các nhiệm vụ thực hiện trong tuần này:
