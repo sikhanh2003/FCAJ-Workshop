@@ -17,7 +17,7 @@ pre: " <b> 1.9. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   |  - Explore about Gitlab (Getting Started)                                                                                                  | 3/11/2025 | 3/11/2025      | https://docs.gitlab.com/ |
+| 1   |  - Explore about Gitlab                                                                                                   | 3/11/2025 | 3/11/2025      | https://docs.gitlab.com/ |
 | 2   |  - Explore about Monolithic Repository <br> | 4/11/2025 | 4/11/2025      |  |
 | 3   |  - Explore tools or services that supply the abilities to run AWS Services (Serverless) demo on local environment  <br> - Explore about AWS Sam, Serverless Framework and Local Stack           | 7/11/2025 | 7/11/2025      |  |
 
