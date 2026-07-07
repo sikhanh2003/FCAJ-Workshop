@@ -22,7 +22,6 @@ pre: " <b> 1.3. </b> "
 | 3   | - Khám phá Amazon Q Developer <br> - **Thực hành:** <br>&emsp; + Thiết lập phần mở rộng Amazon Q trong Visual Studio Code <br>&emsp; + Giám sát AI-DLC trong phát triển phần mềm <br>&emsp; + Hoàn thành một MVP cho một sản phẩm                                                                                                   | 23/09/2025 | 23/09/2025      |
 | 4   | - Khám phá AWS Amplify <br>&emsp; + Pricing <br>&emsp; + Hosting <br>&emsp; + Server-Side Render <br>&emsp; + Deploying <br> - Khám phá Amplify Storage<br> - Khám phá khả năng của Amplify trong việc kết nối với các dịch vụ khác <br> -  **Thực hành:** <br>&emsp; + Triển khai một MVP (Typescripts FullStack) trên AWS Amplify bằng cách nhập từ Github                                               | 24/12/2025 | 24/12/2025      | <https://docs.amplify.aws/> |
 | 5   | - Khám phá về AWS Cognito <br> - Học cách sử dụng khung Amplify để áp dụng Cognito vào môi trường sản xuất <br> - Đọc tài liệu về cách áp dụng xác thực bằng Social Login vào sản xuất qua Cognito <br> - **Thực hành:** <br>&emsp; + Tạo User pool & App <br>&emsp; + Áp dụng Cognito vào một MVP <br> &emsp; + Quản lý truy cập người dùng | 25/09/2025 | 25/09/2025      | <https://aws.amazon.com/vi/cognito/> |
-| 6   | - So sánh các dịch vụ AWS với các dịch vụ tương tự được cung cấp bởi người khác <br> - Thực hiện nghiên cứu để đưa ra ý tưởng cho Project 1 <br> - Khám phá AWS Migration & Modernizing                                                                                | 26/09/2025 | 26/09/2025      | |
 
 ### Thành tựu Tuần 3:
 
@@ -65,7 +64,3 @@ pre: " <b> 1.3. </b> "
 * Tạo user pools và apps để quản lý danh tính an toàn.
 
 * So sánh các dịch vụ AWS với đối thủ để xác định điểm mạnh.
-
-* Hiểu về chiến lược Di cư và Hiện đại hóa AWS.
-
-* Nâng cao kỹ năng trong phát triển AI, triển khai full-stack, xác thực và tự động hóa serverless.
