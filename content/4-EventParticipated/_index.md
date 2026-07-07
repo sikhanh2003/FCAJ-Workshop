@@ -37,13 +37,3 @@ During my internship, I participated in multiple events. Below each event is pre
 - **Outcomes / Value gained:** Learned automation techniques for coding and testing, ideas for using AI to speed up MVP delivery, and hands-on demos to improve developer productivity.
 
 ---
-
-### [Event 4](4.4-Event4/)
-- **Event Name:** DX Talk #7: Reinventing DevSecOps with AWS Generative AI
-- **Date & Time:** 2025-10-16
-- **Location:** N/A
-- **Role:** Attendee
-- **Description:** Technical talks on integrating Generative AI into DevSecOps practices, enterprise modernization, and infrastructure automation at scale.
-- **Outcomes / Value gained:** Practical DevSecOps patterns, IaC recommendations, and awareness of AI-augmented security and operational workflows.
-
----
