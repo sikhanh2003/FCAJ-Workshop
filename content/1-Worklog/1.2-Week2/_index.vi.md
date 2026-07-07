@@ -50,8 +50,6 @@ pre: " <b> 1.2. </b> "
 
 * Tạo ước tính workload để dự đoán chi phí.
 
-* Có được những hiểu biết từ việc tham gia AWS Cloud Day 2025.
-
 * Ghi chép các điểm chính trong báo cáo sự kiện toàn diện (GenAI, Blockchains, Tầm nhìn AWS...).
 
 * Nâng cao chuyên môn về mạng AWS, bảo mật, tối ưu hóa chi phí và lưu trữ.
