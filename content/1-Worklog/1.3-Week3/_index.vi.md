@@ -12,7 +12,6 @@ pre: " <b> 1.3. </b> "
 
 ### Mục tiêu Tuần 3:
 
-* Kết nối và làm quen với các thành viên của First Cloud Journey.
 * Hiểu về các dịch vụ AWS cơ bản, cách sử dụng console & CLI.
 
 ### Các nhiệm vụ cần thực hiện trong tuần:
