@@ -13,7 +13,6 @@ pre: " <b> 1.6. </b> "
 ### Week 6 Objectives:
 
 * Learn about Blockchain technologies and their integration with AWS.
-* Advance Project 1 by refining code and completing proposals.
 * Explore smart contracts and create a workshop using AWS Blockchain services.
 
  
