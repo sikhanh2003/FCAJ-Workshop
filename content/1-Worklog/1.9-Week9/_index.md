@@ -28,10 +28,4 @@ pre: " <b> 1.9. </b> "
 
 * Explored GitLab CI/CD pipelines and their integration with AWS Amplify.
 
-* Learned about Monorepo architecture.
-
-* Explored local development tools for AWS serverless services: AWS SAM, Serverless Framework, and LocalStack.
-
-* Selected and decided on Serverless Framework for Project 1 local demos.
-
-* Enhanced skills in repository management, CI/CD automation, and serverless development workflows.
+* Explored local development tools for AWS serverless
