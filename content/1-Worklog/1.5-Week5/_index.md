@@ -38,8 +38,6 @@ pre: " <b> 1.5. </b> "
 
 * Created resource groups for organization.
 
-* Connected Project 1 to an S3 bucket for storage.
-
 * Reviewed and deepened knowledge of Cloud9 and CDK.
 
 * Enhanced skills in project integration and AWS tool usage.
