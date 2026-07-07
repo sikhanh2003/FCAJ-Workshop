@@ -26,11 +26,7 @@ pre: " <b> 1.7. </b> "
 
 ### Week 7 Achievements:
 
-* Investigated AWS services for reducing latency, avoiding congestion, handling large loads, multi-threading, and auto-scaling in banking systems.
-
 * Explored functions of AWS Kinesis, Secret Manager, SQS, SNS, Step Functions, Aurora Serverless, and ElastiCache for digital banking applications.
-
-* Completed VPBank Hackathon 2025 proposal for "Digital Charity with Blockchain".
 
 * Learned AWS services for secure architectures.
 
