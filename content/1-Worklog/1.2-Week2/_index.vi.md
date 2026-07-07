@@ -22,7 +22,6 @@ pre: " <b> 1.2. </b> "
 | 3  | - Học về AWS VPC <br> - Kết nối SSH đến EC2<br> - **Thực hành:** <br>&emsp; + Triển khai các instance EC2 <br> &emsp; + Thiết lập kết nối VPN Site-to-site trong AWS                                                                                                   | 16/09/2025 | 16/09/2025      | <https://000003.awsstudygroup.com/> | 
 | 4   | - Học về IAM <br>&emsp; + IAM User <br>&emsp; + IAM Group <br>&emsp; + IAM Role <br>&emsp; + Switch Role <br> - **Thực hành:**<br> &emsp; + Tạo IAM User/Group/Role <br>&emsp; + Switch Role                                             | 17/09/2025 | 17/09/2025      | <https://000002.awsstudygroup.com/> |
 | 5   | - Học về AWS Budget (Billing & Cost Management) <br> - Học cách sử dụng AWS Pricing Calculator <br> - **Thực hành:** <br>&emsp; + Tạo Budgets với Alerts <br>&emsp; + Tạo Dashboard <br> &emsp; + Tạo ước tính workload | 18/09/2025 | 18/09/2025      | <https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html> |
-| 6   | - **AWS Cloud day 2025**<br> - Viết báo cáo AWS Cloud day 2025                                                        | 19/09/2025 | 19/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Thành tựu Tuần 2:
