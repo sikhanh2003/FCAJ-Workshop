@@ -12,10 +12,8 @@ pre: " <b> 1.4. </b> "
 
 ### Mục tiêu Tuần 4:
 
-* Nghiên cứu ý tưởng cho Project 1 và khám phá tính toán serverless với AWS Lambda.
 * Học các kiến thức cơ bản về cơ sở dữ liệu sử dụng Amazon RDS và thực hành triển khai.
 * Khám phá AWS Support và thiết lập môi trường phát triển với AWS Toolkit.
-* Điều tra khả năng AI với SageMaker và EC2 cho Project 1.
 * Khám phá các khung frontend và tích hợp các dịch vụ AWS cho các ứng dụng thực tế.
 
 ### Các nhiệm vụ cần thực hiện trong tuần:
