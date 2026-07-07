@@ -21,9 +21,9 @@ pre: " <b> 1.4. </b> "
 ### Các nhiệm vụ cần thực hiện trong tuần:
 | Ngày | Nhiệm vụ                                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Thực hiện nghiên cứu để đưa ra ý tưởng cho Project 1 <br> - Khám phá về AWS Lambda <br> - **Thực hành:** <br>&emsp; + Tạo hàm Start&Stop cho EC2<br>                                                                                  | 29/09/2025 | 29/09/2025      | <https://000022.awsstudygroup.com/5-createlambdafunction/> |
-| 3   | - Các kiến thức cơ bản về cơ sở dữ liệu với Amazon Relational Database Service (RDS) <br> - **Thực hành:** <br>&emsp; + Tạo instance EC2 <br>&emsp; + Tạo instance RDS <br>&emsp; + Triển khai ứng dụng                                   | 30/09/2025 | 30/09/2025      | <https://000005.awsstudygroup.com/> |
-| 4   | - Khám phá về NextJS/ UI Design <br> - Khám phá về AWS Support <br> - Môi trường phát triển với AWS Toolkit cho VS Code <br> - **Thực hành:** <br>&emsp; + Tạo trường hợp hỗ trợ <br>&emsp; + Thiết lập/Cấu hình VS Code DevEnv với AWS Toolkit | 01/10/2025 | 01/10/2025      | <https://000087.awsstudygroup.com/> |
+| 1   | - Khám phá về AWS Lambda <br> - **Thực hành:** <br>&emsp; + Tạo hàm Start&Stop cho EC2<br>                                                                                  | 29/09/2025 | 29/09/2025      | <https://000022.awsstudygroup.com/5-createlambdafunction/> |
+| 2   | - Các kiến thức cơ bản về cơ sở dữ liệu với Amazon Relational Database Service (RDS) <br> - **Thực hành:** <br>&emsp; + Tạo instance EC2 <br>&emsp; + Tạo instance RDS <br>&emsp; + Triển khai ứng dụng                                   | 30/09/2025 | 30/09/2025      | <https://000005.awsstudygroup.com/> |
+| 3   | - Khám phá về NextJS/ UI Design <br> - Khám phá về AWS Support <br> - Môi trường phát triển với AWS Toolkit cho VS Code <br> - **Thực hành:** <br>&emsp; + Tạo trường hợp hỗ trợ <br>&emsp; + Thiết lập/Cấu hình VS Code DevEnv với AWS Toolkit | 01/10/2025 | 01/10/2025      | <https://000087.awsstudygroup.com/> |
 
 
 
