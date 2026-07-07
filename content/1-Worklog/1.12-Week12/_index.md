@@ -14,7 +14,7 @@ pre: " <b> 1.12. </b> "
 
 * Building backend functions,testing.
 * Explore WebSocket technologies
-* 
+
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
