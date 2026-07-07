@@ -12,10 +12,8 @@ pre: " <b> 1.4. </b> "
 
 ### Week 4 Objectives:
 
-* Research ideas for Project 1 and explore serverless computing with AWS Lambda.
 * Learn database essentials using Amazon RDS and practice deployments.
 * Explore AWS Support and set up development environments with AWS Toolkit.
-* Investigate AI capabilities with SageMaker and EC2 for Project 1.
 * Explore frontend frameworks and integrate AWS services for practical applications.
 
 ### Tasks to be carried out this week:
