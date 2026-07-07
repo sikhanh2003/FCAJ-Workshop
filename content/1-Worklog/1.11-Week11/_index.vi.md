@@ -13,8 +13,8 @@ pre: " <b> 1.11. </b> "
 ### Các nhiệm vụ thực hiện trong tuần này:
 | Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 4 | - Tìm hiểu về vai trò của CDN trong Phát triển Phần mềm <br> - Tìm hiểu về DDos và dịch vụ bảo mật của AWS: CloudFront, WAF, Shield | 19/11/2025 | 19/11/2025 | |
-| 5 | - Khám phá khả năng áp dụng Route53, CloudFront, WAF (Edge Layer)  | 20/11/2025 | 20/11/2025 | |
+| 1 | - Tìm hiểu về vai trò của CDN trong Phát triển Phần mềm <br> - Tìm hiểu về DDos và dịch vụ bảo mật của AWS: CloudFront, WAF, Shield | 19/11/2025 | 19/11/2025 | |
+| 2 | - Khám phá khả năng áp dụng Route53, CloudFront, WAF (Edge Layer)  | 20/11/2025 | 20/11/2025 | |
 
 
 ### Thành tựu Tuần 11:
