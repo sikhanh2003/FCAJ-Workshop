@@ -37,13 +37,3 @@ Trong kỳ thực tập của mình, tôi đã tham gia nhiều sự kiện. Dư
 - **Kết quả / Giá trị nhận được:** Học được các kỹ thuật tự động hóa cho việc code và testing, ý tưởng sử dụng AI để tăng tốc độ bàn giao MVP, và xem các demo thực hành để cải thiện năng suất lập trình viên.
 
 ---
-
-### [Sự kiện 4](4.4-Event4/)
-- **Tên sự kiện:** DX Talk #7: Reinventing DevSecOps with AWS Generative AI
-- **Ngày & Giờ:** 2025-10-16
-- **Địa điểm:** N/A
-- **Vai trò:** Người tham dự (Attendee)
-- **Mô tả:** Các bài nói chuyện kỹ thuật về việc tích hợp Generative AI vào các thực hành DevSecOps, hiện đại hóa doanh nghiệp, và tự động hóa hạ tầng ở quy mô lớn.
-- **Kết quả / Giá trị nhận được:** Các mẫu (patterns) DevSecOps thực tế, các khuyến nghị về IaC, và nhận thức về bảo mật được tăng cường bởi AI và các quy trình vận hành.
-
----
