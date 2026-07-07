@@ -26,8 +26,6 @@ pre: " <b> 1.7. </b> "
 
 ### Thành tựu Tuần 7:
 
-* Nghiên cứu các ngân hàng Việt Nam sử dụng dịch vụ AWS.
-
 * Tìm hiểu các dịch vụ AWS để giảm độ trễ, tránh tắc nghẽn, xử lý tải lớn, đa luồng và tự động mở rộng trong hệ thống ngân hàng.
 
 * Khám phá chức năng của AWS Kinesis, Secret Manager, SQS, SNS, Step Functions, Aurora Serverless và ElastiCache cho các ứng dụng ngân hàng kỹ thuật số.
