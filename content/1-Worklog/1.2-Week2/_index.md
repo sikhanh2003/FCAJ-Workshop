@@ -50,8 +50,6 @@ pre: " <b> 1.2. </b> "
 
 * Generated workload estimates to predict expenses.
 
-* Acquired insights from attending AWS Cloud Day 2025.
-
 * Documented key takeaways in a comprehensive event report (GenAI, Blockchains, AWS Vision...).
 
 * Enhanced expertise in AWS networking, security, cost optimization, and storage.
