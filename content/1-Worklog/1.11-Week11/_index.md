@@ -30,6 +30,4 @@ pre: " <b> 1.11. </b> "
 
 * Explored DDoS protection and AWS services: CloudFront, WAF, and Shield.
 
-* Investigated applying Route53, CloudFront, and WAF to Project 1's edge layer architecture proposal.
-
 * Enhanced understanding of DevOps practices, security integrations, and hands-on GenAI applications.
