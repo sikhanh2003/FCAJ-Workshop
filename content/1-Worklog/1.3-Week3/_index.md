@@ -22,7 +22,6 @@ pre: " <b> 1.3. </b> "
 | 3   | - Explore Amazon Q Developer <br> - **Practice:** <br>&emsp; + Setup Amazon Q extesion in Visual Studio Code <br>&emsp; + Monitoring AI-DLC in software development <br>&emsp; + Complete a MVP for a product                                                                                                   | 23/09/2025 | 23/09/2025      |
 | 4   | - Explore AWS Amplify <br>&emsp; + Pricing <br>&emsp; + Hosting <br>&emsp; + Server-Side Render <br>&emsp; + Deploying <br> - Explore Amplify Storage<br> - Explore the ability of Amplify in conecting with other services <br> -  **Practice:** <br>&emsp; + Deploy a MVP(Typescripts FullStack) on AWS Amplify by importing from Github                                               | 24/12/2025 | 24/12/2025      | <https://docs.amplify.aws/> |
 | 5   | - Explore about AWS Cognito <br> - Learn how to use Amplify's framework to apply Cognito into a production <br> - Read docs of How to apply Authenticating using Social Login into prodution through Cognito <br> - **Practice:** <br>&emsp; + Create User pool & App <br>&emsp; + Apply Cognito in to a MVP <br> &emsp; + Manage user accessing | 25/09/2025 | 25/09/2025      | <https://aws.amazon.com/vi/cognito/> |
-| 6   | - Compare AWS services with similar services offered by others <br> - Conduct research to come up with ideas for Project 1 <br> - Explore AWS Migration & Mordenizing                                                                                | 26/09/2025 | 26/09/2025      | |
 
 ### Week 3 Achievements:
 
@@ -65,7 +64,3 @@ pre: " <b> 1.3. </b> "
 * Created user pools and apps for secure identity management.
 
 * Compared AWS services with competitors to identify strengths.
-
-* Understood AWS Migration and Modernization strategies.
-
-* Enhanced skills in AI development, full-stack deployment, authentication, and serverless automation.
