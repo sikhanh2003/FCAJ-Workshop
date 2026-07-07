@@ -13,7 +13,6 @@ pre: " <b> 1.6. </b> "
 ### Mục tiêu Tuần 6:
 
 * Học về công nghệ Blockchain và tích hợp của chúng với AWS.
-* Tiến triển Project 1 bằng cách tinh chỉnh mã và hoàn thành đề xuất.
 * Khám phá smart contracts và tạo một hội thảo sử dụng các dịch vụ Blockchain AWS.
 
  
@@ -21,9 +20,7 @@ pre: " <b> 1.6. </b> "
 | Ngày | Nhiệm vụ                                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
 | 1   | - Học về Blockchain <br> - Học về Web3/ Web2 to Web3 <br> - Học về dApps <br> - Nghiên cứu về các sản phẩm dựa trên Blockchain và được xây dựng trên/ sử dụng Dịch vụ AWS                                                                                                   | 13/10/2025 | 13/10/2025      | <https://www.hackquest.io/quest> |
-| 4   | - Khám phá & nghiên cứu các thách thức của VPBank Hackathon <br> - Học về Move (Ngôn ngữ Web3) <br>       | 16/10/2025 | 16/10/2025      |  |
-| 6   | - Khám phá & nghiên cứu các thách thức của VPBank Hackathon <br> - Học về Move (Ngôn ngữ Web3) <br> - Học về smart contract <br> - **Project 1**: Tiếp tục hoàn thành Đề xuất cho Project 1                       | 17/10/2025 | 17/10/2025      |  |
-
+| 2   | - Khám phá & nghiên cứu các thách thức của VPBank Hackathon <br> - Học về Move (Ngôn ngữ Web3) <br>       | 16/10/2025 | 16/10/2025      |  |
 ### Thành tựu Tuần 6:
 
 * Có hiểu biết cơ bản về công nghệ Blockchain.
