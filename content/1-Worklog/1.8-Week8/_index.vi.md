@@ -12,17 +12,13 @@ pre: " <b> 1.8. </b> "
 
 ### Mục tiêu Tuần 8:
 
-* Ôn tập AWS Well-Architected Framework cho Kỳ thi Giữa kỳ OJT
+* Ôn tập dịch vụ AWS
   
 ### Các nhiệm vụ cần thực hiện trong tuần:
 | Ngày | Nhiệm vụ                                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- | 
-| 2   |  -  Ôn tập AWS Well-Architected Framework cho Kỳ thi Giữa kỳ OJT <br> - Thực hành trên AWS CLF-C02 Practice Quiz | 27/10/2025 | 27/10/2025      | https://simuladoclf.s3.amazonaws.com/english.html |
-| 3   |  -  Ôn tập AWS Well-Architected Framework cho Kỳ thi Giữa kỳ OJT <br> - Thực hành trên AWS CLF-C02 Practice Quiz | 28/10/2025 | 28/10/2025      | https://simuladoclf.s3.amazonaws.com/english.html |
-| 4   |  -  Ôn tập AWS Well-Architected Framework cho Kỳ thi Giữa kỳ OJT <br> - Thực hành trên AWS CLF-C02 Practice Quiz | 29/10/2025 | 29/10/2025      | https://simuladoclf.s3.amazonaws.com/english.html |
-| 5   |  -  Ôn tập AWS Well-Architected Framework cho Kỳ thi Giữa kỳ OJT <br> - Thực hành trên AWS CLF-C02 Practice Quiz | 30/10/2025 | 30/10/2025      | https://simuladoclf.s3.amazonaws.com/english.html |
-| 6   |  -  Thi: **Kỳ thi Giữa kỳ OJT**                                                                                       | 31/10/2025 | 31/10/2025      |  |
+| 2   |  -  Ôn tập các dịch vụ AWS  | 27/10/2025 | 27/10/2025      | https://simuladoclf.s3.amazonaws.com/english.html |
 
 ### Thành tựu Tuần 8:
 
-- Xác định mức độ kiến thức của mình trong lĩnh vực AWS Well-Architected Framework
+- Ôn tập lại các kiến thức về AWS để làm project
