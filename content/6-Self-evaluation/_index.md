@@ -7,7 +7,7 @@ pre: " <b> 6. </b> "
 ---
 
 During my internship at **AWS First Cloud AI Journey** from **08/09/2025** to **09/12/2025**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **AIVanguard Team as the role of Fullstack Developer**, through which I improved my skills in **Frontend&Backend Programming (especially on NextJS and Typescript), AWS Well-Architecture Framework, Git, GitLab CI/CD, Serverless, Corporate Culture and Growth Mindset...**.  
+I participated in **AIVanguard Team as the role of Fullstack Developer**, through which I improved my skills in **Frontend&Backend Programming, AWS Well-Architecture Framework, Git, Serverless, Corporate Culture and Growth Mindset...**.  
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
 
