@@ -28,48 +28,43 @@ To objectively reflect on my internship period, I would like to evaluate myself 
 | 11  | **Contribution to project/team**    | Major contributor to Project 1 features and architecture                                         | ✅   | ☐    | ☐       |
 | 12  | **Overall**                         | Consistent progress from basics to production-ready deployment                                   | ✅   | ☐    | ☐       |
 
-### Needs Improvement
+Overview:
+During the internship period from April 19, 2026, to July 5, 2026, I focused on building a solid AWS infrastructure foundation and implementing practical projects. My work roadmap progressed from learning core services to designing architectures, deploying backends, and optimizing systems based on mentor feedback.
 
-* Strengthen discipline and strictly comply with the rules and regulations of the company or any organization  
-* Improve problem-solving thinking  
-* Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+Weeks 1–2: Mastered AWS foundations (EC2, IAM, RDS), account setup, and identity/access management.
 
-I primarily worked on **Project 1** (a cloud-native application integrating front-end, serverless back-end, real-time features, and GenAI components). Over 14 weeks I progressed from foundational AWS knowledge (Week 1) to designing and deploying the production system (Weeks 12–14). Worklog highlights include:
+Weeks 3–6: Deployed advanced infrastructure services including Networking (Route 53, Transit Gateway, VPC Peering), Storage (S3, FSx, Storage Gateway), and security/monitoring solutions (Security Hub, CloudWatch, KMS).
 
-- Weeks 1–3: AWS fundamentals (EC2, S3, IAM), AWS CLI, S3 static hosting, Amplify, Cognito, and initial MVP work.
-- Weeks 4–7: Serverless patterns (Lambda, API Gateway), RDS/DynamoDB basics, architecture design, and VPBank hackathon proposal (Digital Charity with Blockchain&AI).
-- Weeks 8–11: Well-Architected review, CI/CD & GitLab pipelines, GenAI and Bedrock topics, perimeter/security workshops, and GameDay participation.
-- Weeks 12–14: Implemented backend functions, serverless WebSocket, integrated API Bedrock, deployed Project 1 to production, added CloudFront/WAF/Route53, and finalized demos and documentation.
+Weeks 7–9: Transitioned from theoretical architecture to practical implementation. Designed system architecture diagrams, deployed the backend, performed database migrations, and managed systems via MobaXterm.
 
-Key measurable outcomes:
+Weeks 10–12: Finalized the project through mentor reviews, optimized workflows, and completed all reporting procedures (worklogs, events).
 
-- Delivered a working Project 1 with frontend + serverless backend and local/production Serverless Framework configuration.
-- Implemented real-time features (WebSocket) and integrated API Bedrock for AI functionality.
-- Deployed to AWS production with monitoring (CloudWatch), edge protection (CloudFront/WAF), and stricter IAM policies.
-- Authored event recaps and week-by-week worklog entries; attended 10+ AWS events and workshops.
+Key Achievements:
 
-Although the internship produced several measurable outcomes, I rated some core competencies as **Fair** (see table above):
+Gained proficiency in critical AWS services across Compute, Storage, Networking, Security, and Database domains.
 
-- **Professional knowledge & skills (No.1)** and **Ability to learn (No.2)** — I can implement many services and patterns, but I need deeper theoretical grounding and a more structured learning plan to increase reliability and speed when encountering unfamiliar problems.
-- **Communication (No.7)** — I can produce event recaps and documentation, yet some reports are still verbose or lack concise executive summaries; verbal presentation pacing needs work.
-- **Professional conduct (No.9)** — generally respectful and collaborative, but there were a few moments of inconsistency in following some team conventions; this should be tightened.
+Successfully established Auto Scaling and Hybrid DNS systems, and configured data security (Encryption at rest).
 
-Areas for improvement
+Completed the end-to-end project architecture and deployed a stable backend.
 
-- Deepen foundational knowledge and systematic learning: schedule deliberate study slots for core AWS concepts (Well-Architected, networking, security) and follow structured courses.
-- Improve learning velocity: adopt a note-taking + spaced-repetition routine and keep a learning journal to convert event learnings into actionable tasks.
-- Communication: produce concise, one-page technical summaries and executive bullets for each major deliverable; practice short demo presentations to improve pacing.
-- Professional conduct & discipline: adopt stricter timeboxing, early status updates, and a personal checklist for code review and documentation standards.
-- Advanced debugging & design patterns: schedule focused debugging sessions, use tracing and load-testing, and review postmortems for lessons learned.
+Documented all project materials, architecture diagrams, and weekly worklogs throughout the duration.
 
-Action plan (next 3 months)
+Competency Evaluation & Areas for Improvement:
 
-1. Maintain a weekly checklist and use GitLab issues to plan sprints and track progress (sprint-based timeboxing).
-2. Schedule focused debugging sessions: use tracing (X-Ray / CloudWatch traces) and load testing to find bottlenecks.
-3. Write two concise one-page technical summaries per month (architecture + decisions) and present to mentor for feedback.
-4. Complete at least one advanced AWS certification course module (Well-Architected or DevOps specialty) to strengthen theoretical foundations.
+Technical Knowledge & Learning Ability: Capable of practical implementation, but needs to delve deeper into "under-the-hood" system principles to solve complex problems.
 
-Closing remark
+Communication: Needs to improve skills in synthesizing information and transforming technical requirements into concise, visual reports for management.
 
-This internship moved me from foundational AWS concepts to designing, building, and deploying a production-capable project that integrates serverless architecture and GenAI features. While I made solid progress, the Fair ratings for Professional knowledge, Ability to learn, Communication, and Professional conduct highlight areas where I must focus next. I am committed to the action plan above and motivated to close these gaps over the coming months.
+Professional Behavior: Requires increased consistency in personal work processes to ensure strict adherence to the company's technical standards.
 
+Action Plan (Next 3 Months):
+
+Systematize Knowledge: Dedicate time for in-depth study of specific modules: Well-Architected Framework, Advanced Networking, and Cloud Security.
+
+Accelerate Problem Solving: Apply spaced-repetition note-taking and build a knowledge handbook based on attended events/workshops.
+
+Enhance Communication Skills: Create one-page architectural summaries and practice delivering concise, focused product demos.
+
+Work Discipline: Implement strict timeboxing and utilize personal checklists before conducting code or document reviews.
+
+In-depth Debugging: Schedule periodic sessions for error analysis, utilizing tracing and load-testing to optimize system performance.
