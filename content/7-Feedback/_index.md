@@ -10,9 +10,9 @@ pre: " <b> 7. </b> "
 
 **1. Working Environment**  
 
-- Professional, well-structured, and supportive; strong team spirit and high-quality learning materials.
+- Professional, supportive; strong team spirit and high-quality learning materials.
 
-**2. Support from Mentor / Team Admin**  
+**2. Support from Team Admin**  
 
 - Excellent mentorship availability and guidance; mentors and peers actively support mentees.
 
@@ -22,7 +22,7 @@ pre: " <b> 7. </b> "
 
 **4. Learning & Skill Development Opportunities**  
 
-- Very strong — workshops (GameDays) and practical exercises accelerated applied learning.
+- Very strong — workshops and practical exercises accelerated applied learning.
 
 **5. Company Culture & Team Spirit**  
 
@@ -30,7 +30,7 @@ pre: " <b> 7. </b> "
 
 **6. Internship Policies / Benefits**  
 
-- Adequate overall; recommend adding regular competency assessments and a mentor directory for better matching.
+- Adequate overall; recommend adding regular competency assessments.
 
 ---
 
@@ -40,35 +40,26 @@ This internship gave me a completely new perspective and a breakthrough growth m
 
 I value this community not only for the rich technical knowledge it provides, but also for how it fosters a growth mindset. Workshops, GameDays, and discussion sessions sparked countless new ideas, clarified my career direction, and expanded my professional network with senior practitioners who served as great sources of motivation.
 
-The professional working environment, high-quality learning materials, and hands-on exercises built my resilience and the determination to persist through challenges. To further improve the experience for future mentees, I suggest:
-
-- Introduce more regular competency assessment rounds so mentees receive continuous feedback and a clearer development path.
-- Publish a mentor directory that lists each mentor's focus areas and strengths, making it easier for mentees to choose the right mentor for specific technical questions.
-
-These small changes will improve mentor–mentee matching and increase the practical impact of the program for all participants.
-
 ---
 
 ### Additional Questions
 - What did you find **most satisfying** during your internship?  
 - What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
 
 ---
 
 ### Additional Questions (answers)
 
 - **Most satisfying:** Working with top-tier mentors and peers, gaining a growth mindset, and the hands-on workshops (GameDays) that sparked practical ideas.
-- **Should improve:** Add regular competency assessments and a mentor directory by specialization to help mentees choose appropriate support.
-- **Recommend to a friend?:** Yes. The program combines professional mentorship, practical materials, and strong team spirit — excellent for career direction and skill growth.
+- **Should improve:** Add regular competency assessments.
 
 ---
 
 ### Suggestions & Expectations
 
-- **Suggestions:** Run periodic evaluation rounds (quarterly or per sprint) and publish a mentor skills directory (areas of focus, strengths).
-- **Continue program?:** Yes — I would like to remain involved and recommend expanding mentor–mentee matching features.
-- **Other comments:** The community culture is a major strength; invest further in small group coaching and structured feedback loops.
+- **Suggestions:** Run periodic evaluation rounds.
+- **Continue program?:** Yes — I would like to remain involved.
+- **Other comments:** The community culture is a major strength.
 
 ---
 
