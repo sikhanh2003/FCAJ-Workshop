@@ -1,12 +1,12 @@
 ---
 title: "Self-Assessment"
-date: "2024-01-01"
+date: "2026-07-10"
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-During my internship at **AWS First Cloud AI Journey** from **08/09/2025** to **09/12/2025**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
+During my internship at **AWS First Cloud AI Journey** from **17/04/2026** to **12/07/2026**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
 I participated in **AIVanguard Team as the role of Fullstack Developer**, through which I improved my skills in **Frontend&Backend Programming, AWS Well-Architecture Framework, Git, Serverless, Corporate Culture and Growth Mindset...**.  
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
