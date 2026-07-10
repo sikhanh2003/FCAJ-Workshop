@@ -30,7 +30,7 @@ pre: " <b> 7. </b> "
 
 **6. Chính sách thực tập / phúc lợi**  
 
-- Tổng quan ổn; đề nghị thêm các vòng đánh giá năng lực định kỳ và danh mục mentor theo chuyên môn để cải thiện việc ghép đôi.
+- Tổng quan ổn; đề nghị thêm các vòng đánh giá năng lực định kỳ.
 
 ---
 
