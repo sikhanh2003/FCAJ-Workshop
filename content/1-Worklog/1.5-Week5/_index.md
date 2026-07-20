@@ -1,6 +1,6 @@
 ---
 title: "Week 5 Worklog"
-date: "2024-01-01"
+date: "2026-07-20"
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
@@ -18,10 +18,10 @@ pre: " <b> 1.5. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Read docs about MCP <br> - Read docs about Amazon Q Developer CLI <br> - Explore about "Build AWS Architecture with Amazon Q Developer CLI adnd MCP" <br>      | 06/10/2025 | 06/10/2025      | <https://000038.awsstudygroup.com/> |
-| 2   | - Learn about Auto Scaling with EC2  <br> - Build AWS Architecture with Amazon Q Developer CLI adnd MCP <br>               | 07/10/2025 | 07/10/2025      | <https://000006.awsstudygroup.com/> |
-| 3   | - Manage Resources Using Tags and Resource Groups <br> - Learn about AI-DLC and Spec-driven development methodologies   <br> | 08/10/2025 | 08/10/2025      | <https://000027.awsstudygroup.com/> |
-| 4   | - Explore about DynamoDB <br> - Practice with DynamoDB <br>                      | 10/10/2025 | 10/10/2025      | <https://aws.amazon.com/vi/dynamodb> |
+| 1   | - Read docs about MCP <br> - Read docs about Amazon Q Developer CLI <br> - Explore about "Build AWS Architecture with Amazon Q Developer CLI adnd MCP" <br>      | 15/05/2026 | 15/05/2026      | <https://000038.awsstudygroup.com/> |
+| 2   | - Learn about Auto Scaling with EC2  <br> - Build AWS Architecture with Amazon Q Developer CLI adnd MCP <br>               | 16/05/2026 | 16/05/2026      | <https://000006.awsstudygroup.com/> |
+| 3   | - Manage Resources Using Tags and Resource Groups <br> - Learn about AI-DLC and Spec-driven development methodologies   <br> | 17/05/2026 | 17/05/2026      | <https://000027.awsstudygroup.com/> |
+| 4   | - Explore about DynamoDB <br> - Practice with DynamoDB <br>                      | 18/05/2026 | 18/05/2026      | <https://aws.amazon.com/vi/dynamodb> |
 
 
 ### Week 5 Achievements:
