@@ -31,8 +31,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 17/04/2026 to 10/07/2026
 
-<img src="/FCAJ-Workshop/static/images/avt.jpg" width="160" height="160"
-style="border-radius:50%;object-fit:cover;border:4px solid #ff9900;">
+<img src="/FCAJ-Workshop/images/avt.jpg" alt="Your profile picture" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto; border: none;">
 
 ### Report Content
 
