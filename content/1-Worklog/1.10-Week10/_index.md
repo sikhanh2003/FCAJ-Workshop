@@ -19,9 +19,9 @@ pre: " <b> 1.10. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Create backend functions| 12/11/2025 | 12/11/2025      |  |
-| 2   | - Test backend functions by Interacting with frontend <br>                           | 13/11/2025 | 13/10/2025      | |
-| 3   | - Implement researching about cost                                                                                      | 14/11/2025 | 14/11/2025      |  |
+| 1   | - Create backend functions| 18/06/2026 | 18/06/2026      |  |
+| 2   | - Test backend functions by Interacting with frontend <br>                           | 19/06/2026 | 19/06/2026      | |
+| 3   | - Implement researching about cost                                                                                      | 20/06/2026 | 20/06/2026      |  |
 
 ### Week 10 Achievements:
 
