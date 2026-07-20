@@ -19,8 +19,8 @@ pre: " <b> 1.6. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Learn about Blockchain <br> - Learn about Web3/ Web2 to Web3 <br> - Learn about dApps <br> - Research about products based on Blockchain and built on/ using AWS Service                                                                                                   | 13/10/2025 | 13/10/2025      | <https://www.hackquest.io/quest> |
-| 2   | - Explore & research VPBank Hackathon's challenges <br> - Learn about Move (Web3 Language) <br> - Learn about smart contract <br>  |
+| 1   | - Learn about Blockchain <br> - Learn about Web3/ Web2 to Web3 <br> - Learn about dApps <br> - Research about products based on Blockchain and built on/ using AWS Service                                                                                                   | 22/05/2026 | 22/05/2026      | <https://www.hackquest.io/quest> |
+| 2   | - Explore & research VPBank Hackathon's challenges <br> - Learn about Move (Web3 Language) <br> - Learn about smart contract <br>  | 23/05/2026 | 23/05/2026      |
 
 ### Week 6 Achievements:
 
