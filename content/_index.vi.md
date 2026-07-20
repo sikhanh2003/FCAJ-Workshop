@@ -28,7 +28,7 @@ chapter: false
 
 &emsp; **Vị Trí Thực Tập:** Thực Tập Sinh Đám Mây FCJ
 
-&emsp; **Thời Gian Thực Tập:** Từ 17/04/2026 đến 10/07/2026
+&emsp; **Thời Gian Thực Tập:** Từ 17/04/2026 đến 12/07/2026
 
 ![Ảnh đại diện của bạn](/static/images/avt.jpg)
 
