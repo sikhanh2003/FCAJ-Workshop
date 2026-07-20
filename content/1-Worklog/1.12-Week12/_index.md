@@ -18,8 +18,8 @@ pre: " <b> 1.12. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   |  - Build backend functions                                                                                             | 24/11/2025 | 24/11/2025      | |
-| 3   |  - Explore about WebSocket <br> - Explore about the ability to host a WebSocket server by EC2 <br> - Explore about implement and serverless WebSocket on API Gateway and Lambda <br> - **Practice:** <br> &emsp; + Implement and Serverless WebSocket on API  Gateway Websocket and Lambda                                                  | 25/11/2025 | 25/11/2025      |  |
+| 2   |  - Build backend functions                                                                                             | 03/07/2026 | 03/07/2026      | |
+| 3   |  - Explore about WebSocket <br> - Explore about the ability to host a WebSocket server by EC2 <br> - Explore about implement and serverless WebSocket on API Gateway and Lambda <br> - **Practice:** <br> &emsp; + Implement and Serverless WebSocket on API  Gateway Websocket and Lambda                                                  | 04/07/2026 | 04/07/2026      |  |
 
 
 ### Week 12 Achievements:
