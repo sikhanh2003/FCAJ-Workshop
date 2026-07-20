@@ -20,8 +20,8 @@ pre: " <b> 1.7. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Get knownledge about AWS Services with topic Secure Architectures <br>                            | 23/10/2025 | 23/10/2025      | |
-| 2   | - Learn about AWS Services with topic Cost-Optimized Architectures                                                                                        | 24/10/2025 | 24/10/2025      |  |
+| 1   | - Get knownledge about AWS Services with topic Secure Architectures <br>                            | 29/05/2026 | 29/05/2026      | |
+| 2   | - Learn about AWS Services with topic Cost-Optimized Architectures                                                                                        | 30/05/2026 | 30/05/2026      |  |
 
 
 ### Week 7 Achievements:
