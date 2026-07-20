@@ -19,9 +19,9 @@ pre: " <b> 1.4. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Explore about AWS Lambda <br> - **Practice:** <br>&emsp; + Create Start&Stop Function for EC2<br>                                                                                  | 29/09/2025 | 29/09/2025      | <https://000022.awsstudygroup.com/5-createlambdafunction/> |
-| 2   | - Database Essentials with Amazon Relational Database Service (RDS) <br> - **Pratice:** <br>&emsp; + Create EC2 Instance <br>&emsp; + Create RDS Instance <br>&emsp; + Deploy application                                   | 30/09/2025 | 30/09/2025      | <https://000005.awsstudygroup.com/> |
-| 3   | - Explore about NextJS/ UI Design <br> - Explore about AWS Support <br> - Development Environment with AWS Toolkit for VS Code <br> - **Practice:** <br>&emsp; + Create Support Case <br>&emsp; + Setup/Configure VS Code DevEnv with AWS Toolkit | 01/10/2025 | 01/10/2025      | <https://000087.awsstudygroup.com/> |
+| 1   | - Explore about AWS Lambda <br> - **Practice:** <br>&emsp; + Create Start&Stop Function for EC2<br>                                                                                  | 08/05/2026 | 08/05/2026      | <https://000022.awsstudygroup.com/5-createlambdafunction/> |
+| 2   | - Database Essentials with Amazon Relational Database Service (RDS) <br> - **Pratice:** <br>&emsp; + Create EC2 Instance <br>&emsp; + Create RDS Instance <br>&emsp; + Deploy application                                   | 09/05/2026 | 09/05/2026      | <https://000005.awsstudygroup.com/> |
+| 3   | - Explore about NextJS/ UI Design <br> - Explore about AWS Support <br> - Development Environment with AWS Toolkit for VS Code <br> - **Practice:** <br>&emsp; + Create Support Case <br>&emsp; + Setup/Configure VS Code DevEnv with AWS Toolkit | 10/05/2026 | 10/05/2026      | <https://000087.awsstudygroup.com/> |
 
 
 ### Week 4 Achievements:
