@@ -9,14 +9,12 @@ theme = "hugo-theme-learn"
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  # Theme variant: "workshop" là bản chuẩn cho AWS
   themeVariant = "workshop"
-  author = "dinhviethieu2910@gmail.com"
+  author = "sikhanh2003@gmail.com"
   description = "Worklog Internship Report"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
-  # Quan trọng: giúp load CSS mượt hơn trên GitHub Pages
   disableAssetsBusting = true
 
 [languages]
