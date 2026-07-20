@@ -1,6 +1,6 @@
 ---
 title: "Worklog"
-date: "2024-01-01"
+date: "2026-07-20"
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
@@ -28,6 +28,10 @@ pre: " <b> 1. </b> "
 
 **Week 9:** [Built GitLab CI pipelines, automated deployments, and added basic monitoring (CloudWatch).](1.9-week9/)
 
-**Week 10:** [Participated in GameDay workshops — hands-on exercises that improved practical debugging skills.](1.10-week10/)
+**Week 10:** [Designed flexible environment for switching between dev (local) and production (AWS) stages.](1.10-week10/)
+
+**Week 11:** [Integrate all modules of the AWS Event Management Platform, optimize the serverless architecture, perform system testing, and complete the technical documentation.](1.11-week11/)
+
+**Week 12:** [Final system testing, project documentation, AWS architecture review, presentation preparation, and final project submission.](1.12-week12/)
 
 
