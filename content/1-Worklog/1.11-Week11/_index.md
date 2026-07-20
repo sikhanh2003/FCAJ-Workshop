@@ -18,8 +18,8 @@ pre: " <b> 1.11. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   |  - Learn about CDN roles in Software Development <br> - Explore about DDos and AWS's security service: ClouddFront, WAF, Shield | 19/11/2025 | 19/11/2025      |  |
-| 2   |  - Explore the abilities to apply Route53, CloudFront, WAF (Edge Layer) into Project1's Architecture (Proposal)                           | 20/11/2025 | 20/11/2025      | |
+| 1   |  - Learn about CDN roles in Software Development <br> - Explore about DDos and AWS's security service: ClouddFront, WAF, Shield | 27/06/2026 | 27/06/2026      |  |
+| 2   |  - Explore the abilities to apply Route53, CloudFront, WAF (Edge Layer) into Project1's Architecture (Proposal)                           | 28/06/2026 | 28/06/2026      | |
 
 
 ### Week 11 Achievements:
