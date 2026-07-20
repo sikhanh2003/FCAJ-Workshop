@@ -30,7 +30,7 @@ chapter: false
 
 &emsp; **Thời Gian Thực Tập:** Từ 17/04/2026 đến 12/07/2026
 
-![Ảnh đại diện của bạn](/static/images/avt.jpg)
+<img src="/images/avt.jpg" alt="Ảnh đại diện của bạn" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto; border: none;">
 
 ### Nội Dung Báo Cáo
 
