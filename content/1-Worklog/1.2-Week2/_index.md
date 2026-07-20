@@ -1,6 +1,6 @@
 ---
 title: "Week 2 Worklog"
-date: "2024-01-01"
+date: "2026-07-20"
 weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
@@ -18,10 +18,10 @@ pre: " <b> 1.2. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   |  - Explore basic Amazon Bedrock: <br>&emsp; + API Keys <br>&emsp; + Test <br>&emsp; + Model Access <br> - Cloudfront overview <br> - Explore example projects that combine AWS services   <br>                                                             | 15/09/2025 | 15/09/2025      | <https://aws.amazon.com/bedrock/> |
-| 3  | - Learn about AWS VPC <br> - SSH connection to EC2<br> - **Practice:** <br>&emsp; + Deploying EC2 Instances <br> &emsp; + Setup Site-to-site VPN Connection in AWS                                                                                                   | 16/09/2025 | 16/09/2025      | <https://000003.awsstudygroup.com/> | 
-| 4   | - Learn about IAM <br>&emsp; + IAM User <br>&emsp; + IAM Group <br>&emsp; + IAM Role <br>&emsp; + Swith Role <br> - **Practice:**<br> &emsp; + Create IAM User/Group/Role <br>&emsp; + Switch Role                                             | 17/09/2025 | 17/09/2025      | <https://000002.awsstudygroup.com/> |
-| 5   | - Learn about AWS Budget (Billing & Cost Management) <br> - Learn how to use AWS Pricing Calculator <br> - **Practice:** <br>&emsp; + Create Budgets with Alerts <br>&emsp; + Create Dashboard <br> &emsp; + Create workload estimate | 18/09/2025 | 18/09/2025      | <https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html> |
+| 2   |  - Explore basic Amazon Bedrock: <br>&emsp; + API Keys <br>&emsp; + Test <br>&emsp; + Model Access <br> - Cloudfront overview <br> - Explore example projects that combine AWS services   <br>                                                             | 25/04/2026 | 25/04/2026      | <https://aws.amazon.com/bedrock/> |
+| 3  | - Learn about AWS VPC <br> - SSH connection to EC2<br> - **Practice:** <br>&emsp; + Deploying EC2 Instances <br> &emsp; + Setup Site-to-site VPN Connection in AWS                                                                                                   | 26/04/2026 | 26/04/2026      | <https://000003.awsstudygroup.com/> | 
+| 4   | - Learn about IAM <br>&emsp; + IAM User <br>&emsp; + IAM Group <br>&emsp; + IAM Role <br>&emsp; + Swith Role <br> - **Practice:**<br> &emsp; + Create IAM User/Group/Role <br>&emsp; + Switch Role                                             | 27/04/2026 | 27/04/2026      | <https://000002.awsstudygroup.com/> |
+| 5   | - Learn about AWS Budget (Billing & Cost Management) <br> - Learn how to use AWS Pricing Calculator <br> - **Practice:** <br>&emsp; + Create Budgets with Alerts <br>&emsp; + Create Dashboard <br> &emsp; + Create workload estimate | 28/04/2026 | 28/04/2026      | <https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html> |
 
 
 ### Week 2 Achievements:
