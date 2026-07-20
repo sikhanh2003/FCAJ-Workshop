@@ -26,7 +26,7 @@ chapter: false
 
 &emsp; **Công Ty Thực Tập:** Amazon Web Services Vietnam Co., Ltd.
 
-&emsp; **Vị Trí Thực Tập:** Thực Tập Sinh Đám Mây FCJ
+&emsp; **Vị Trí Thực Tập:** Thực Tập Sinh Đám Mây FCAJ
 
 &emsp; **Thời Gian Thực Tập:** Từ 17/04/2026 đến 12/07/2026
 
