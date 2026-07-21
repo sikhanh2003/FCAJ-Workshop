@@ -52,71 +52,62 @@ Developer-Friendly Environment: Provides a clear project layout that supports se
 
 ### 3. Solution Architecture
 ### MVP Architecture
-The MVP is designed with a robust modular application model, supporting seamless local development and cloud readiness for SaaS applications, focusing on scalability, maintainability, and operational efficiency.
+The MVP is designed with a fully serverless, highly scalable cloud architecture tailored for SaaS applications, leveraging AWS managed services as illustrated in the system topology.
 
 Core AWS Services & Infrastructure:
 
-API Gateway + AWS Lambda — Manages backend logic, serverless routing, and HTTP API endpoints for processing attendance and user requests.
+Global Edge Services: Amazon Route 53 (DNS Resolution), Amazon CloudFront (Global CDN), AWS Shield (DDoS Protection), AWS WAF v2, and Amazon S3 (React SPA Hosting).
 
-Amazon Cognito — Handles user authentication, secure registration, and role-based access control.
+Authentication & API Layer: Amazon Cognito (User Auth, JWT Token, Tenant/Role Management), AWS Secrets Manager, and Amazon API Gateway (HTTP API v2, JWT Authorizer, Caching, Throttling).
 
-Amazon DynamoDB — High-performance NoSQL data persistence layer for tracking real-time user records and attendance data.
+Compute Layer (AWS Lambda & Step Functions): Lambda functions for Webhook, Check-in, Check-out, Attendance, Report, Admin, and Subscription processing, coupled with Amazon SQS (Queue + DLQ) and AWS Step Functions Workflow.
 
-Amazon S3 — Secure cloud storage used for managing application assets, reports, and generated documents.
+Data Layer: Amazon DynamoDB (Single-Table Design, Streams Enabled for Attendance, Users, Tenants), DynamoDB Streams, AWS KMS (Customer Keys for Data Encryption), and Amazon S3 (Report Storage for PDF, Excel, CSV).
 
-Route53 + CloudFront + WAF — Secures global access, traffic filtering, and content delivery caching.
+Event-Driven & Notification Layer: Amazon EventBridge (Event Bus), Amazon SNS (Email Queue + DLQ Buffer), Lambda Email Worker, and Amazon SES (Email Delivery for Reports, Alerts, Invoices).
 
-CloudWatch — Centralized logging, metrics collection, and system monitoring.
-
-### Security
-WAF, IAM policies, and CORS configurations for traffic filtering, threat protection, and strict role-based access control across client-server boundaries.
+Operations Layer (Monitoring, Tracing & CI/CD): CloudWatch, AWS X-Ray, CloudFormation, CodePipeline, CodeBuild, and AWS Security Hub / GuardDuty.
 
 ![Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/aptMagic_mvp.jpg)
 
 ---
 
-#### **Future Design (Enhanced Architecture)**
-In the next phase, APT Magic will evolve into an **AI orchestration platform**, introducing new layers for automation, resilience, and model lifecycle management.
-
-**New Services to be Added:**
-- **Amazon SQS** — For reliable message queuing between async Lambda tasks.
-- **Amazon SNS** — For real-time event notifications to users or administrators.
-- **Amazon ElastiCache (Redis)** — For rate limiting and caching of frequent inference requests.
-- **Amazon Bedrock AgentCore** — For hosting custom fine-tuned models and managing model endpoints.
-
-- **CI/CD**
-  - **CloudFormation** for infrastructure deployment and automation.  
-
-![APT Magic Future Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/diagram_architecture.jpg)
-
----
-
 ### 4. Technical Implementation
+### Implementation Phases
+Phase 1 – MVP Deployment (Completed / Current)
 
-#### **Implementation Phases**
-**Phase 1 – MVP Deployment (Completed / Current)**
-- Implement Amplify (Next.js SSR) + API Gateway + Lambda.
-- Integrate Bedrock Stability AI API.
-- Deploy CI/CD via Gitlab CI/CD.
-- Enable user authentication (Cognito) and storage (S3 + DynamoDB).
-- Log and Monitor via Cloudwatch
+Implement Global Edge Services (Route53, CloudFront, WAF, S3 SPA Hosting).
 
-**Phase 2 – Future Design Expansion**
-- Introduce SQS/SNS to decouple.
-- Add ElastiCache for request throttling and caching.
-- Integrate Bedrock Agent to enhance AI Pipelines
-- Connect GitLab Runner with CodeBuild for unified CI/CD.
+Configure Authentication & API Layer via Amazon Cognito and API Gateway.
+
+Deploy Compute Layer using AWS Lambda functions and Step Functions workflow.
+
+Establish Data Layer with Amazon DynamoDB Single-Table Design, S3 Report Storage, and KMS encryption.
+
+Enable Event-Driven notifications via EventBridge, SNS, and SES.
+
+Log and monitor via CloudWatch, X-Ray, and Security Hub.
+
+Phase 2 – Future Design Expansion
+
+Optimize asynchronous processing pipelines via SQS and SNS queues.
+
+Enhance automated CI/CD deployment routines using CodePipeline and CodeBuild.
+
+Scale automated security policies and threat detection via GuardDuty.
 
 ---
 
 ### 5. Timeline & Milestones
 
-| Phase | Description | Estimated Duration | Deployment Milestone |
-|-------|-------------|--------------------|-----------------------|
-| **Month 1: Setup & Core API** | Deploy infrastructure (IaC), Cognito, API Gateway, DynamoDB, and foundational Lambda functions. | 4 Weeks | Core Backend operational, Auth/User Management completed. |
-| **Month 2: AI Integration** | Integrate Claude Haiku 3 LLM on Amazon Bedrock (Stability AI), Replicate API, complete *Image Processing* functions. | 4 Weeks | Successful end-to-end AI image processing demo. |
-| **Month 3: Front-end & CI/CD** | Develop UI/UX (Amplify/Next.js), finalize CI/CD pipelines, and configure Monitoring/Security (CloudWatch/WAF). | 4 Weeks | Full platform ready for user testing. |
-| **Month 4: Optimization & Go-Live** | Perform performance testing (Stress Test), cost optimization, and Production deployment. | 4 Weeks | **Go-Live** (Official product launch). |
+| Phase | Description |
+|-------|-------------|
+| **Week 7: Project Initiation & Feasibility** | Comprehensive SaaS requirements specification, feasibility study on multi-tenant isolation, and definition of functional metrics for smart attendance workflow. |
+| **Week 8: Core Architecture & Flow Modeling** | High-availability serverless topology mapping, detailed sequence diagrams for check-in/check-out tracking, and secure tenant authentication flowcharts. |
+| **Week 9: Infrastructure Provisioning** | Infrastructure-as-Code scripts (template.yaml) provisioning DynamoDB single-tables, KMS encryption keys, and S3 secure storage buckets. |
+| **Week 10: Security & Gateway Implementation** | Configured Amazon Cognito user pools with JWT tokens, hardened API Gateway endpoints, and deployed AWS WAF v2 rules for rate-limiting and bot defense. |
+| **Week 11: Backend & Business Logic Engineering** | Functional Lambda microservices for attendance processing, automated SQS/SNS messaging buffers, Step Functions report workflows, and SES notification templates. |
+| **Week 12: Integration, Testing & Launch** | Performance stress tests across CloudFront edge locations, integrated CI/CD pipeline verification via CodePipeline, and complete operational handover documentation. |
 
 ---
 
