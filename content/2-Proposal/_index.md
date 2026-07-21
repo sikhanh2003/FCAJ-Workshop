@@ -172,25 +172,28 @@ Scale automated security policies and threat detection via GuardDuty.
 ### 7. Risk Assessment
 | Risk | Impact | Probability | Mitigation |
 |------|---------|-------------|-------------|
-| AI model inference latency | Medium | High | Use ElastiCache + SQS/SNS for async handling |
-| Cost increase from model calls | High | Medium | Bedrock usage control, SageMaker autoscaling |
-| CI/CD misconfigurations | Medium | Low | CloudFormation rollback policies |
-| Security vulnerabilities | High | Medium | WAF, GuardDuty, PrivateLink, IAM least privilege |
-| Third-party API dependency | Medium | Medium | Bedrock fallback to S3-stored inference results |
+| API request throttling or latency | Medium | High | Use API Gateway caching and Lambda optimization |
+| Cost increase from database traffic spikes | High | Medium | Utilize DynamoDB on-demand scaling with fine-grained partition keys |
+| Pipeline deployment failures | Medium | Low | Use CloudFormation rollback policies and CodePipeline stages |
+| Security vulnerabilities | High | Medium | Enforce WAF rules, IAM least privilege, KMS encryption, and Security Hub alerts |
+| Third-party API dependency | Medium | Medium | Implement robust error handling with SQS DLQ buffers |
 
 ---
 
 ### 8. Expected Outcomes
-#### Technical Outcomes:
-- Complete serverless AI image generation workflow with secure CI/CD.
-- Modular orchestration enabling rapid MLOps integration.
-- Improved latency and reliability via caching and async workflows.
+### Technical Outcomes:
+Complete serverless attendance tracking workflow backed by AWS managed services.
 
-#### Long-Term Value:
-- A foundation for **AI as a Service (AIaaS)** platform expansion.  
-- Ready-to-scale **MLOps framework** with automated retraining.  
-- Reusable cloud infrastructure for future AI products.
+Highly scalable event-driven architecture with secure CI/CD and monitoring pipelines.
 
+Improved reliability via isolated data layers and asynchronous SQS/Step Functions workflows.
+
+### Long-Term Value:
+A production-ready foundation for Enterprise SaaS Attendance & Management expansion.
+
+Fully automated cloud infrastructure utilizing Infrastructure as Code (CloudFormation).
+
+Robust, secure, and cost-optimized architecture ready for high-volume concurrent users.
 ---
 
 
