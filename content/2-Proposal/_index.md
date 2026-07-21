@@ -68,7 +68,7 @@ Event-Driven & Notification Layer: Amazon EventBridge (Event Bus), Amazon SNS (E
 
 Operations Layer (Monitoring, Tracing & CI/CD): CloudWatch, AWS X-Ray, CloudFormation, CodePipeline, CodeBuild, and AWS Security Hub / GuardDuty.
 
-![Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/aptMagic_mvp.jpg)
+<img src="/images/arc.jpg" alt="Architecture" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto; border: none;">
 
 ---
 
@@ -168,7 +168,6 @@ A production-ready foundation for Enterprise SaaS Attendance & Management expans
 
 Fully automated cloud infrastructure utilizing Infrastructure as Code (CloudFormation).
 
-Robust, secure, and cost-optimized architecture ready for high-volume concurrent users.
 ---
 
 
