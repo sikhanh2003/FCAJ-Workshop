@@ -114,9 +114,9 @@ Scale automated security policies and threat detection via GuardDuty.
 ### 6. Cost Estimate (AWS Pricing Estimate)
 
 #### Total Cost
-- **Monthly:** $9.80  
+- **Monthly:** $13.50  
 - **Upfront:** $0.00  
-- **12 Months:** $117.60  
+- **12 Months:** $162.00
 
 ---
 
@@ -124,48 +124,23 @@ Scale automated security policies and threat detection via GuardDuty.
 
 | Service | Region | Monthly Cost | Upfront | 12-Month Cost | Notes |
 |--------|---------|--------------|---------|---------------|-------|
-| Amazon Route 53 | Asia Pacific (Singapore) | $0.50 | $0.00 | $6.00 | 1 Hosted Zone, 1 domain, 1 linked VPC |
-| Amazon CloudFront | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | No specific configuration |
-| AWS WAF | Asia Pacific (Singapore) | $6.00 | $0.00 | $72.00 | 1 Web ACL; 1 rule per ACL |
-| AWS Amplify | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Build instance: Standard (8GB/4vCPU); request duration 500ms |
-| AWS CloudFormation | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | No extensions; no operations |
-| Amazon API Gateway | Asia Pacific (Singapore) | $0.13 | $0.00 | $1.59 | 10k requests/month; WebSocket message 1KB; request size 30KB |
-| AWS Lambda | Asia Pacific (Singapore) | $1.67 | $0.00 | $20.04 | 1 million invokes; x86; 512MB ephemeral storage |
-| Amazon CloudWatch | Asia Pacific (Singapore) | $0.85 | $0.00 | $10.22 | 1 metric; 0.5GB logs in; 0.5GB logs to S3 |
-| S3 Standard | Asia Pacific (Singapore) | $0.23 | $0.00 | $2.76 | 10GB storage; 20k PUT; 40k GET |
-| DynamoDB On-Demand | Asia Pacific (Singapore) | $0.42 | $0.00 | $5.04 | 1GB storage; 1KB item; on-demand mode |
-| **Total (Estimate)** | — | **$9.80** | **$0.00** | **$117.60** | Based on AWS Pricing Calculator |
-
----
-
-#### Metadata
-- **Currency:** USD  
-- **Locale:** en_US  
-- **Created On:** 12/9/2025  
-- **Share URL:** [AWS Calculator Link](https://calculator.aws/#/estimate?id=f8f785603d5dea16be2d60ad39e4733fc352a108)  
-- **Legal Disclaimer:** AWS Pricing Calculator provides estimates only; actual costs may vary based on usage.
-
----
-
-#### AI Model Pricing
-
-| Model | Resolution / Token Usage | Quality | Price per Request (USD) | Notes |
-|-------|-------------------------|---------|------------------------|-------|
-| Titan Image Generator v2 | < 512×512 | Standard | 0.008 | Fixed price per 1 image |
-| Titan Image Generator v2 | < 512×512 | Premium | 0.01 | Fixed price per 1 image |
-| Titan Image Generator v2 | > 1024×1024 | Standard | 0.01 | Fixed price per 1 image |
-| Titan Image Generator v2 | > 1024×1024 | Premium | 0.012 | Fixed price per 1 image |
-| Stable Diffusion 3.5 Large | Any | N/A | 0.08 | Fixed price per 1 image |
-| Claude (text + image) | 40 input tokens + 1 image | N/A | 0.00195 | Price for 1 request including text and 1 image 1024×1024 |
-
-#### Additional Options
-
-| Mode | Augmentation | Price (USD) |
-|------|-------------|-------------|
-| text→img | no augment | 0.08 |
-| text→img | with augment | 0.08195 |
-| img→img | no augment | 0.012 |
-| img→img | with augment | 0.094 |
+| Amazon Route 53 | Asia Pacific (Singapore) | $0.50 | $0.00 | $6.00 | 1 Hosted Zone & domain resolution setup |
+| Amazon CloudFront |	Asia Pacific (Singapore) |	$0.00 |	$0.00 |	$0.00 |	Global CDN distribution for React SPA |
+| AWS WAF v2 |	Asia Pacific (Singapore) |	$6.00 |	$0.00 |	$72.00 |	1 Web ACL; rate limiting, bot control, and geo rules |
+|Amazon S3 |	Asia Pacific (Singapore) |	$0.35 |	$0.00 |	$4.20 |	SPA hosting and intelligent-tiering report storage |
+|Amazon Cognito |	Asia Pacific (Singapore) |	$0.00 |	$0.00 |	$0.00 |	User pool authentication (Within monthly free tier) |
+|AWS Secrets Manager |	Asia Pacific (Singapore) |	$0.40 |	$0.00 |	$4.80 |	1 active secret with automatic credential rotation |
+|Amazon API Gateway |	Asia Pacific (Singapore) |	$0.20 |	$0.00 |	$2.40 |	HTTP API v2 with JWT authorizer, caching, and throttling |
+|AWS Lambda |	Asia Pacific (Singapore) |	$1.85 |	$0.00 |	$22.20 |	Compute layer for check-in/out, webhooks, and reporting |
+|AWS Step Functions |	Asia Pacific (Singapore) |	$0.10 |	$0.00 |	$1.20 |	Workflows for asynchronous report orchestration |
+|Amazon SQS |	Asia Pacific (Singapore) |	$0.00 |	$0.00 |	$0.00 |	Standard queues + DLQ buffers |
+|Amazon DynamoDB On-Demand |	Asia Pacific (Singapore) |	$0.60 |	$0.00 |	$7.20 |	Single-table design, streams enabled, on-demand mode |
+|AWS KMS |	Asia Pacific (Singapore) |	$1.00 |	$0.00 |	$12.00 |	1 Customer Managed Key (CMK) for data encryption |
+|Amazon EventBridge |	Asia Pacific (Singapore) |	$0.00 |	$0.00 |	$0.00 |	Custom event bus routing |
+|Amazon SNS |	Asia Pacific (Singapore) |	$0.00 |	$0.00 |	$0.00 |	Notification routing and email queue buffer |
+|Amazon SES |	Asia Pacific (Singapore) |	$0.10 |	$0.00 |	$1.20 |	Outbound transactional emails (Reports, alerts, invoices) |
+|CloudWatch, X-Ray & Security Hub |	Asia Pacific (Singapore) |	$2.40 |	$0.00 |	$28.80 |	Logs, metrics, distributed tracing, and security posture checks |
+|Total (Estimate) |	—	$13.50 |	$0.00 |	$162.00 |	Based on AWS Pricing Calculator |
 
 ---
 
