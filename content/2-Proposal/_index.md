@@ -140,7 +140,7 @@ Scale automated security policies and threat detection via GuardDuty.
 |Amazon SNS |	Asia Pacific (Singapore) |	$0.00 |	$0.00 |	$0.00 |	Notification routing and email queue buffer |
 |Amazon SES |	Asia Pacific (Singapore) |	$0.10 |	$0.00 |	$1.20 |	Outbound transactional emails (Reports, alerts, invoices) |
 |CloudWatch, X-Ray & Security Hub |	Asia Pacific (Singapore) |	$2.40 |	$0.00 |	$28.80 |	Logs, metrics, distributed tracing, and security posture checks |
-|Total (Estimate) |	—	$13.50 |	$0.00 |	$162.00 |	Based on AWS Pricing Calculator |
+|Total (Estimate) |	— |	$13.50 |	$0.00 |	$162.00 |	Based on AWS Pricing Calculator |
 
 ---
 
