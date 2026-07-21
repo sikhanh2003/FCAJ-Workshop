@@ -51,23 +51,27 @@ Developer-Friendly Environment: Provides a clear project layout that supports se
 ---
 
 ### 3. Solution Architecture
+### MVP Architecture
+The MVP is designed with a robust modular application model, supporting seamless local development and cloud readiness for SaaS applications, focusing on scalability, maintainability, and operational efficiency.
 
-#### **MVP Architecture**
-The MVP is a **fully serverless architecture**, focusing on scalability, maintainability, and cost-effectiveness.
+Core AWS Services & Infrastructure:
 
-**Core AWS Services:**
-- **Route53 + CloudFront + WAF** — Secure global access and caching.
-- **Amplify (Next.js SSR)** — Hosts the frontend and server-side rendering layer.
-- **API Gateway + Lambda Functions** — Manage backend logic (image processing, subscription, post APIs).
-- **Amazon Cognito** — User authentication and access control.
-- **Amazon S3 + DynamoDB** — Data persistence and image storage.
-- **Amazon Bedrock** — Integrates foundation model (Stability AI) for image generation.
-- **CloudWatch** — Logging, and monitoring.
+API Gateway + AWS Lambda — Manages backend logic, serverless routing, and HTTP API endpoints for processing attendance and user requests.
 
-**Security**
-- **WAF + IAM policies** for traffic filtering and role-based access control.  
+Amazon Cognito — Handles user authentication, secure registration, and role-based access control.
 
-![APT Magic MVP Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/aptMagic_mvp.jpg)
+Amazon DynamoDB — High-performance NoSQL data persistence layer for tracking real-time user records and attendance data.
+
+Amazon S3 — Secure cloud storage used for managing application assets, reports, and generated documents.
+
+Route53 + CloudFront + WAF — Secures global access, traffic filtering, and content delivery caching.
+
+CloudWatch — Centralized logging, metrics collection, and system monitoring.
+
+### Security
+WAF, IAM policies, and CORS configurations for traffic filtering, threat protection, and strict role-based access control across client-server boundaries.
+
+![Architecture](/AWS-FCJ-Workshop-2025/images/2-Proposal/aptMagic_mvp.jpg)
 
 ---
 
