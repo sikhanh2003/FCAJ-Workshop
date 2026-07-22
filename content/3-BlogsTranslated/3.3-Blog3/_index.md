@@ -5,82 +5,64 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-# AWS partners with Nashville Innovation Alliance to transform Tennessee’s AI and cloud workforce
-
-*by Tekla Moquin on 01 OCT 2025 in Announcements, Artificial Intelligence, Education, Higher education, Public Sector* | [Permalink](https://www.google.com/search?q=%23) | [Share](https://www.google.com/search?q=%23)
-
+# AWS COST OPTIMIZATION – Migrating Amazon EBS Volumes from gp2 to gp3
 -----
 
-Amazon Web Services (AWS) is expanding its **Skills to Jobs Tech Alliance** to Tennessee, which becomes the sixth state in the alliance. Through a strategic collaboration with the **Nashville Innovation Alliance**, this partnership aims to address middle Tennessee’s growing technology talent demand, with particular emphasis on **artificial intelligence (AI) and cloud computing skills**.
+### ARCHITECTURE AND PERFORMANCE COMPARISON: gp2 VS gp3
+The core difference between the two disk generations lies in their performance provisioning mechanism:
 
-The region is experiencing significant need, with tech job postings increasing by **35 percent** between 2020 and 2023, and an estimated **8,000 open technology positions** across the region.
+gp2 (Performance Tied to Capacity): Disk performance is strictly locked to storage capacity (3 IOPS/GB). If an application requires more IOPS, you are forced to increase the volume capacity (e.g., to get 3,000 IOPS, the disk must be at least 1,000 GB), which wastes money on unused space.
 
-> “AWS Skills to Jobs is designed to create accessible pathways to cloud and AI-enabled careers, and Nashville’s dynamic technology community makes it an ideal location for expansion,” said **Valerie Singer, general manager of Global Education at AWS.** “By collaborating with the Nashville Innovation Alliance, we’re leveraging their deep community connections to build a sustainable pipeline of tech talent.”
+gp3 (Capacity and Performance Decoupled): Designed with complete independence between Capacity, IOPS, and Throughput. A default gp3 volume provides 3,000 IOPS and 125 MB/s Throughput completely free, independent of disk size. When higher performance is needed, you can purchase additional IOPS or Throughput separately without expanding capacity.
+---
+### Quick Comparison:
 
-> “By giving Nashvillians the skills and expertise needed to access leading tech jobs, we will better prepare our local workforce for the economy of tomorrow which will help spread economic prosperity throughout our city... The future is bright for Nashville, and innovative programs like this will allow us to reach our full potential,” said **Mayor Freddie O’Connell.**
+Storage Unit Price: gp3 is up to 20% cheaper than gp2 across all regions.
 
------
+Default Baseline: gp2 delivers 3 IOPS/GB (up to 16,000 IOPS), while gp3 provides a fixed 3,000 IOPS (up to 16,000 IOPS).
 
-## Key Stakeholders in the Nashville Innovation Alliance
+Default Throughput: gp2 ranges from 128 MB/s to 250 MB/s (depending on capacity), whereas gp3 is fixed at 125 MB/s (can be actively increased up to 1,000 MB/s).
 
-The Nashville Innovation Alliance has brought together key partners from education, government, and industry, including:
+Scaling Mechanism: gp2 forces you to buy more GBs to scale performance, while gp3 lets you independently customize GBs, IOPS, and Throughput.
+---
+### CORE BENEFITS AND PRIORITY WORKLOADS
+Immediate FinOps Budget Optimization: The GB/month unit price of gp3 is roughly 20% lower than gp2. For systems operating hundreds or thousands of volumes, migration delivers massive monthly operational cost savings.
 
-  * **Higher Education Institutions:**
-      * Vanderbilt University
-      * Nashville State Community College
-      * Belmont University
-      * Tennessee State University
-      * Fisk University
-  * **Government & Community:**
-      * Office of Mayor Freddie O’Connell
-      * Greater Nashville Technology Council
-      * Nashville Area Chamber of Commerce
-  * **Major Employers:**
-      * AllianceBernstein
-      * Barge Design Solutions
-      * Brooksource
-      * Dell Technologies
-      * Schneider Electric
-      * Vanderbilt University
-      * Metropolitan Government of Nashville & Davidson County
+Zero-Downtime Migration: Thanks to Amazon EBS Elastic Volumes, moving from gp2 to gp3 happens directly on active volumes. EC2 instances continue running normally without requiring reboots, data restoration, or application disruptions.
 
------
+Priority Workloads for Migration:
 
-## Goals of AWS Skills to Jobs
+Web Applications & API Servers
 
-AWS Skills to Jobs will work with stakeholders to:
+Small and Medium Databases (MySQL, PostgreSQL, MongoDB, SQL Server)
 
-1.  **Modernize programs of study** at engaged higher education institutions, ensuring they align with industry demand for AI and cloud skills.
-2.  **Connect learners** from those programs with potential employers and experiential learning opportunities that allow learners to demonstrate and hone AI and cloud skills learned in the classroom.
+Bastion Hosts, Monitoring Servers (Prometheus, Zabbix)
 
-> “The Nashville Innovation Alliance was launched to bring partners together to solve real challenges,” said **Sally Parker, interim executive director of the Nashville Innovation Alliance.** “This initiative with AWS is a powerful example, and model for future efforts, of how industry, community, and education can align to grow Nashville’s tech talent pipeline and ensure our region remains a hub for inclusive, future-ready opportunity.”
+CI/CD Workers (Jenkins, GitLab Runner)
 
------
+File Servers & Storage Nodes
+---
+### AUDITING, AUTOMATION, AND MONITORING PROCESS FOR DEVOPS
+To execute bulk migrations safely and efficiently, DevOps teams can follow this technical workflow:
 
-## Impact and Future Outlook
+Step 1: Audit Existing gp2 Volumes: Use administrative tools like AWS Cost Optimization Hub, AWS Cost Explorer, or AWS CLI to identify volumes needing upgrades and estimate cost savings.
 
-The program is critical for middle Tennessee's technology sector, which currently has a workforce exceeding **40,000 professionals** and average technology salaries surpassing **$80,000**. A strong talent pipeline is essential to maintain this growth.
+Step 2: Automate the Migration Process (IaC & Automation): Instead of manually operating each volume on the AWS Management Console, use AWS Systems Manager (SSM) Automation or Lambda to call the ModifyVolume API for bulk upgrades. For Infrastructure as Code (Terraform / CloudFormation / AWS CDK), update the property volume_type = "gp3" in infrastructure management code to prevent IaC from overwriting old configurations during future deployments.
 
-**Looking ahead:**
+Step 3: Monitor CloudWatch Metrics Post-Migration: After upgrading, track key metrics on Amazon CloudWatch for 7–14 days:
 
-  * The initiative aims to serve **over 1,000 Tennesseans by 2027**.
-  * Planned expansion to other areas of the state is scheduled for **2026**.
-  * This supports Nashville’s growing reputation as a technology center in the southeastern US.
+VolumeReadOps and VolumeWriteOps: Calculate total actual IOPS consumed.
 
-## Global Context: The AWS Skills to Jobs Tech Alliance
+VolumeThroughputPercentage: Check bandwidth consumption.
 
-  * **Launch:** June 2023 at the AWS Summit Washington, DC.
-  * **Purpose:** To bring together a global coalition of higher education institutions, employers, government, and collaborating organizations to address the tech skills gap.
-  * **Current Reach:** The Tech Alliance is currently represented in **12 countries** (US, Spain, Singapore, Italy, Germany, India, Colombia, Brazil, Malaysia, France, United Kingdom, and Thailand).
-  * **US Expansion:** Tennessee is the **sixth US state** engaged as a focus region, joining:
-      * New York
-      * Illinois
-      * Washington
-      * West Virginia
-      * Texas
-  * **Metrics Since Launch:** The Tech Alliance has connected more than **62,000 learners** from **990-plus higher education institutions** with more than **780 employers**.
+VolumeConsumedReadWriteOps: Check if the system experiences throttling due to exceeding the default 3,000 IOPS threshold. If so, proactively configure higher IOPS for that volume.
+---
+### CONCLUSION
+Migrating from gp2 to gp3 is one of the highest cost-benefit ratio "Quick Wins" on AWS. Businesses instantly cut storage costs by 20% while gaining flexible, independent performance without accepting any system downtime. If your infrastructure still runs gp2 drives, now is the ideal time to automate this upgrade process.
 
-To learn more or get involved, please visit the [AWS Skills to Jobs Tech Alliance homepage](https://www.google.com/search?q=%23).
+Reference Source: https://aws.amazon.com/blogs/storage/migrate-your-amazon-ebs-volumes-from-gp2-to-gp3-and-save-up-to-20-on-costs/
+
+#AWS #AmazonEBS #AWSStorage #CostOptimization #FinOps #AmazonEC2 #CloudComputing #DevOps
 
 -----
 
