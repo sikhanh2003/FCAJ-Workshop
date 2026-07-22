@@ -1,41 +1,91 @@
 ---
-
-title: "Clean up"
-date: "2024-01-01"
-weight: 5
+title: "Testing & Resource Cleanup"
+date: 2024-01-01
+weight: 7
 chapter: false
-pre: " <b> 5.5 </b> "
------
+pre: " <b> 5.7 </b> "
+---
 
-#### Overview
+# End-to-End Testing & Resource Cleanup
 
-In this section, we will remove everything that was created during this workshop.
+Congratulations on building and deploying the complete **Smart Attendance SaaS Platform**! In this final module, you will perform end-to-end operational testing across 5 realistic scenarios and properly teardown deployed cloud resources to prevent ongoing AWS billing.
 
+---
 
+### 1. End-to-End Testing Scenarios
 
-### Deleting an Agent in AgentCore Runtime
+Follow these 5 test scenarios on your live application:
 
-1. Go to **Amazon Bedrock AgentCore** in the AWS Console.
-2. In the left-hand menu, select **Build → Runtime**.
-3. In the **Runtime resources** list, you will see the agents you have created, for example: `agent_demo_2` or `agent_with_memory`.
-4. Select the agent you want to delete by ticking the radio button in the **Name** column.
-5. Click the **Delete** button at the top right.
-6. Confirm the deletion when AWS prompts you. The agent will be permanently removed from the Runtime resources list.
+#### Scenario 1: Tenant Registration & Authentication (Multi-Tenant Auth)
 
+1. Navigate to your CloudFront distribution URL.
+2. Select **Register Tenant**. Enter Company A credentials (`tenantId`: `tenant-company-a`), Admin Email, and Password.
+3. Complete email OTP verification.
+4. Sign in as Admin. Verify the dashboard loads scoped under `tenant-company-a`.
 
-![Deleting an agent in Amazon Bedrock AgentCore](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.5-Clean/clean.png)
+#### Scenario 2: Employee Clock-In & Clock-Out
 
+1. Create an Employee user (`user-employee-1`) associated with `tenant-company-a`.
+2. Sign in as the employee on a mobile device or browser simulator.
+3. Click **Clock-In** -> The app sends a JWT-authenticated request to API Gateway -> The `CheckInFunction` Lambda commits the entry in sub-200ms.
+4. Click **Clock-Out** -> The system updates the clock-out timestamp in DynamoDB.
 
+#### Scenario 3: Query Attendance History (DynamoDB Single-Table Query)
 
-### Deleting a Memory in AgentCore
+1. Open **Attendance History**.
+2. The frontend queries DynamoDB using `TENANT#tenant-company-a` partition key, returning real-time attendance logs in sub-50ms.
 
-After deleting an agent in Runtime, you can manage or delete the **Memory** that the agent used:
+#### Scenario 4: Export Monthly Attendance Reports (Step Functions & SES)
 
-1. In the left-hand menu, select **Build → Memory**.
-2. In the Memory resources list, select the memory you want to delete.
-3. Click the **Delete** button at the top right.
-4. Confirm the deletion when AWS prompts you. The memory will be removed from the system.
+1. From the Admin Dashboard, click **Export Monthly Report**.
+2. The UI displays an asynchronous confirmation status immediately ("Request Processing").
+3. Inspect the AWS Step Functions Console to monitor the Express State Machine executing the report file generation.
+4. Check your inbox for the automated email delivered via **Amazon SES** containing the secure download link from Amazon S3.
 
+#### Scenario 5: B2B Subscription Payment Webhook
 
+1. As Admin, select the Pro Tier plan and proceed to Checkout.
+2. Simulate a payment gateway webhook callback to `/billing/webhook`.
+3. The `WebhookFunction` validates the signature via **AWS Secrets Manager** and updates tenant status to `ACTIVE` in DynamoDB.
 
-![Deleting Memory in Amazon Bedrock AgentCore](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.5-Clean/clean_memory.png)
+---
+
+### 2. AWS Resource Cleanup & Teardown
+
+To avoid unnecessary cloud costs after finishing the workshop, tear down all deployed resources following these steps:
+
+#### Step 1: Empty S3 Bucket Contents
+
+CloudFormation cannot delete non-empty S3 buckets. Empty bucket contents using the AWS CLI:
+
+```bash
+# 1. Purge S3 Report Bucket objects
+aws s3 rm s3://saas-attendance-reports-<AWS_ACCOUNT_ID>-<REGION> --recursive
+
+# 2. Purge S3 SPA Hosting Bucket objects
+aws s3 rm s3://smart-attendance-spa-hosting-<AWS_ACCOUNT_ID> --recursive
+```
+
+#### Step 2: Delete CloudFormation Stack via SAM CLI
+
+Change directory into `backend/` and execute the SAM delete command:
+
+```bash
+cd backend
+sam delete
+```
+
+Confirm stack deletion prompts:
+
+```text
+Are you sure you want to delete the stack smart-attendance-backend in region us-east-1? [y/N]: y
+Are you sure you want to delete the folder smart-attendance-backend in S3? [y/N]: y
+```
+
+CloudFormation takes approximately 3–5 minutes to destroy all resources (Cognito, API Gateway, Lambda, DynamoDB, Step Functions, SQS, SES, KMS Keys).
+
+---
+
+### Summary & Conclusion
+
+Congratulations on completing the **Smart Attendance SaaS Platform Workshop**! You have mastered key **AWS Serverless** design patterns and gained practical experience engineering scalable multi-tenant SaaS platforms on AWS.
