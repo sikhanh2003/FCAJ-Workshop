@@ -14,6 +14,7 @@ The core difference between the two disk generations lies in their performance p
 gp2 (Performance Tied to Capacity): Disk performance is strictly locked to storage capacity (3 IOPS/GB). If an application requires more IOPS, you are forced to increase the volume capacity (e.g., to get 3,000 IOPS, the disk must be at least 1,000 GB), which wastes money on unused space.
 
 gp3 (Capacity and Performance Decoupled): Designed with complete independence between Capacity, IOPS, and Throughput. A default gp3 volume provides 3,000 IOPS and 125 MB/s Throughput completely free, independent of disk size. When higher performance is needed, you can purchase additional IOPS or Throughput separately without expanding capacity.
+
 ---
 ### Quick Comparison:
 
@@ -24,6 +25,7 @@ Default Baseline: gp2 delivers 3 IOPS/GB (up to 16,000 IOPS), while gp3 provides
 Default Throughput: gp2 ranges from 128 MB/s to 250 MB/s (depending on capacity), whereas gp3 is fixed at 125 MB/s (can be actively increased up to 1,000 MB/s).
 
 Scaling Mechanism: gp2 forces you to buy more GBs to scale performance, while gp3 lets you independently customize GBs, IOPS, and Throughput.
+
 ---
 ### CORE BENEFITS AND PRIORITY WORKLOADS
 Immediate FinOps Budget Optimization: The GB/month unit price of gp3 is roughly 20% lower than gp2. For systems operating hundreds or thousands of volumes, migration delivers massive monthly operational cost savings.
@@ -41,6 +43,7 @@ Bastion Hosts, Monitoring Servers (Prometheus, Zabbix)
 CI/CD Workers (Jenkins, GitLab Runner)
 
 File Servers & Storage Nodes
+
 ---
 ### AUDITING, AUTOMATION, AND MONITORING PROCESS FOR DEVOPS
 To execute bulk migrations safely and efficiently, DevOps teams can follow this technical workflow:
@@ -56,6 +59,7 @@ VolumeReadOps and VolumeWriteOps: Calculate total actual IOPS consumed.
 VolumeThroughputPercentage: Check bandwidth consumption.
 
 VolumeConsumedReadWriteOps: Check if the system experiences throttling due to exceeding the default 3,000 IOPS threshold. If so, proactively configure higher IOPS for that volume.
+
 ---
 ### CONCLUSION
 Migrating from gp2 to gp3 is one of the highest cost-benefit ratio "Quick Wins" on AWS. Businesses instantly cut storage costs by 20% while gaining flexible, independent performance without accepting any system downtime. If your infrastructure still runs gp2 drives, now is the ideal time to automate this upgrade process.
