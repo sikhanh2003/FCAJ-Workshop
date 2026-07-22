@@ -1,11 +1,10 @@
 ---
-
-title: "RAG Architecture Deployed on AWS AgentCore"
-date: "2024-01-01"
+title: "Deploy Serverless Backend"
+date: 2024-01-01
 weight: 3
 chapter: false
-pre: " <b> 5.3. </b> "
-----
+pre: " <b> 5.3 </b> "
+---
 
 # Deploy Serverless Backend Infrastructure with AWS SAM & Cognito
 
