@@ -1,10 +1,9 @@
 ---
-
-title: "Introduction"
-date: "2024-01-01"
+title: "Workshop Overview"
+date: 2024-01-01
 weight: 1
 chapter: false
-pre: " <b> 5.1. </b> "
+pre: " <b> 5.1 </b> "
 ---
 
 # Overview of the Smart Attendance SaaS Platform Workshop
@@ -33,4 +32,3 @@ After completing this workshop, you will gain hands-on expertise in:
 
 * **Estimated Time:** 60 - 90 minutes.
 * **Level:** Intermediate to Advanced.
-
