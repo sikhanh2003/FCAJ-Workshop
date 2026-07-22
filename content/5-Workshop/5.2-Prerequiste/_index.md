@@ -6,114 +6,115 @@ chapter: false
 pre: " <b> 5.2. </b> "
 ---
 
-#### IAM Permissions
+# Environment Prerequisites & Setup
 
-## Required Permissions
+Before starting the hands-on deployment of the **Smart Attendance SaaS Platform**, ensure your local development environment or AWS Cloud9 workspace is configured with the necessary tools and credentials.
 
-- AdministratorAccess
-- AmazonBedrockFullAccess
-- AWSCodeBuildAdminAccess
-- AWSCodeBuildDeveloperAccess
-- BedrockAgentCoreFullAccess
+---
 
-## Create a User and Assign Permissions
+### 1. Required Tooling Setup
 
-1. Go to **IAM** → **Users** → select **Create user**.
-2. Add the permissions listed above.
-3. Complete the user creation and save the Access Key if you need it for the SDK.
+Verify that the following CLI tools are installed on your workstation:
 
-![iam](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.2-Prerequisite/iam.png)
+* **AWS CLI (v2.x):** Command-line interface for communicating with AWS services.
+  ```bash
+  aws --version
+  ```
+* **AWS SAM CLI:** Tool for building, testing, and deploying Serverless applications.
+  ```bash
+  sam --version
+  ```
+* **Node.js (v20.x+) & npm:** JavaScript runtime for Lambda microservices & React SPA frontend.
+  ```bash
+  node -v
+  npm -v
+  ```
+* **Git:** Source control management.
+  ```bash
+  git --version
+  ```
 
-#### Download AWS CLI
+![CLI Tools Version Check Output](/images/5-Workshop/5.2-Prerequisite/check_version_installation.png)
 
-Download AWS CLI:
-[**AWS CLI Link**](https://s3.amazonaws.com/aws-cli/AWSCLI64PY3.msi)
+---
 
-Then install it following the instructions.
+### 2. Step-by-Step IAM User & Access Key Creation
 
-![CLI](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.2-Prerequisite/cli.png)
+Following AWS security best practices, never use the AWS Root Account for hands-on labs. Create a dedicated **IAM User** with administrator permissions:
 
-## UV Management Setup
+#### Step 2.1: Create IAM User in AWS Console
+1. Log in to the [AWS IAM Console](https://console.aws.amazon.com/iam/).
+2. In the left navigation pane, select **Users** ➔ Click **Create user**.
+3. Specify user details:
+   * **User name:** `WorkshopAdmin` (or a custom name).
+   * **Provide user access to the AWS Management Console:** *Optional if Web Console access is required*.
+4. Click **Next**.
 
-#### 1. Why use UV?
+#### Step 2.2: Attach Permissions
+1. Under **Permissions options**, select **Attach policies directly**.
+2. Search and select the managed policy: `AdministratorAccess` *(Required for SAM CLI to provision CloudFormation stacks, IAM Roles, Lambda, DynamoDB, API Gateway, Cognito, S3, CloudFront, SQS, Step Functions, etc.)*.
+3. Click **Next** ➔ Review details ➔ Click **Create user**.
 
-UV is fast, lightweight, and manages environments better than pip.
+#### Step 2.3: Generate Access Key ID & Secret Access Key
+1. Click on your newly created user (`WorkshopAdmin`) in the **Users** table.
+2. Select the **Security credentials** tab.
+3. Scroll down to the **Access keys** panel ➔ Click **Create access key**.
+4. Select the use case: **Command Line Interface (CLI)**.
+5. Check the confirmation checkbox *"I understand the above recommendation and want to proceed to create an access key."* ➔ Click **Next**.
+6. (Optional) Set a description tag (e.g., `AWS CLI for Workshop`) ➔ Click **Create access key**.
+7. **CRITICAL:** Download the `.csv` file containing the **Access Key ID** and **Secret Access Key** immediately. *(You will not be able to view the Secret Access Key again after closing this window)*.
 
-#### 2. Install UV on Windows
+---
 
-Run:
+### 3. Configure AWS CLI Credentials
 
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
-
-Add UV to PATH:
-
-```powershell
-$env:Path = "C:\Users\leamo\.local\bin;$env:Path"
-```
-
-![uvpath](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.2-Prerequisite/uv.png)
-
-> Restart your machine to apply the new PATH.
-
-#### 3. Initialize a UV Environment
-
-Inside your project directory:
-
-```bash
-uv init
-```
-
-![runuv](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.2-Prerequisite/uvinit.png)
-
-Then select the environment in VS Code.
-
-## Connect Your Machine to AWS CLI
-
-Go back to IAM to create an Access Key.
-
-#### Create Access Key and Configure AWS CLI
-
-1. In the user page: **Security credentials** → **Create access key**
-2. Choose **Command Line Interface (CLI)**
-
-#### Configure AWS CLI
-
-Run:
+Once your Access Keys are created, open your terminal and execute:
 
 ```bash
 aws configure
 ```
 
-Fill in:
+Enter your credentials generated in Step 2.3:
 
-- **AWS Access Key ID**
-- **AWS Secret Access Key**
-- **Default region name** (example: `ap-southeast-1`)
-- **Default output format**
-
-```bash
-json
+```text
+AWS Access Key ID [None]: AKIAXXXXXXXXXXXXXXXX
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: ap-southeast-1
+Default output format [None]: json
 ```
 
-![conectCLI](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.2-Prerequisite/conectcli.png)
-
-## Start AWS CLI AgentCore
-
-Run:
+Verify successful connection:
 
 ```bash
-uv run which agentcore
+aws sts get-caller-identity
 ```
 
-After running, it will download all necessary libraries for AWS AgentCore.
+A JSON response displaying your `UserId` and `Arn` confirms your AWS CLI is successfully configured!
 
-![run agentcore](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.2-Prerequisite/whichagent.png)
+---
 
-## Create Groq API
+### 4. Clone Project Source Repository
 
-Go to [Groq](https://console.groq.com/keys) and create an API key as shown.
-These external tools support RAG and are integrated through AWS AgentCore.
+Clone the project source repository into your working directory:
 
-![groqapi](/AWS-FCJ-Workshop-2025/images/5-Workshop/5.2-Prerequisite/groqapi.png)
+```bash
+cd ~/Documents/AWS
+git clone https://github.com/your-repo/smart-attendance-saas.git
+cd smart-attendance-saas
+```
+
+Source project file structure:
+
+```text
+smart-attendance-saas/
+├── backend/                  # Serverless Backend Infrastructure (AWS SAM)
+│   ├── src/                  # Lambda microservice handler functions
+│   ├── template.yaml         # AWS SAM Infrastructure Template
+│   └── samconfig.toml        # Deployment parameter configurations
+├── frontend/                 # React SPA Frontend (Vite + TailwindCSS)
+│   ├── src/                  # Components and Dashboard pages
+│   └── package.json          # Node dependencies
+└── platform_architecture.drawio # System architecture diagram
+```
+
+You are now ready to proceed to the backend deployment module!
