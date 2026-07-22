@@ -1,9 +1,9 @@
 ---
 title: "Testing & Resource Cleanup"
 date: 2024-01-01
-weight: 7
+weight: 5
 chapter: false
-pre: " <b> 5.7 </b> "
+pre: " <b> 5. </b> "
 ---
 
 # End-to-End Testing & Resource Cleanup
